@@ -68,27 +68,23 @@ export default function StatsSection() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-[0.74fr_1.26fr]" style={{ gap: "14px", alignItems: "stretch" }}>
 
-          {/* Left — square +9M€ (móvil: estética suave) */}
+          {/* Left — +9M€ (móvil: estética suave, mismas proporciones que los otros bloques) */}
           <div
-            className="sm:hidden"
+            className="flex sm:hidden"
             style={{
               position: "relative",
               overflow: "hidden",
               borderRadius: "22px",
-              aspectRatio: "1 / 1",
               background: "linear-gradient(100deg, #f7c4d9 0%, #fce0eb 38%, #fdf2f7 68%, #ffffff 100%)",
-              padding: "clamp(20px,1.8vw,28px)",
-              display: "flex",
+              padding: "clamp(18px,1.6vw,24px)",
               flexDirection: "column",
-              alignItems: "center",
               justifyContent: "center",
-              textAlign: "center",
             }}
           >
-            <div style={{ fontSize: "clamp(30px,3.2vw,44px)", fontWeight: 800, letterSpacing: "-0.05em", lineHeight: 0.84, color: "#EB0A5C" }}>
+            <div style={{ fontSize: "clamp(26px,2.8vw,38px)", fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.86, color: "#EB0A5C" }}>
               +{revenue}M€
             </div>
-            <div style={{ fontSize: "clamp(13px,1vw,15px)", fontWeight: 600, color: "#3a2731", marginTop: "10px", lineHeight: 1.35, maxWidth: "180px" }}>
+            <div style={{ fontSize: "clamp(13px,1vw,15px)", fontWeight: 600, color: "#3a2731", marginTop: "8px", lineHeight: 1.4 }}>
               Facturación generada para nuestros clientes
             </div>
           </div>
