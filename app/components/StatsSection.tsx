@@ -68,8 +68,34 @@ export default function StatsSection() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-[0.74fr_1.26fr]" style={{ gap: "14px", alignItems: "stretch" }}>
 
-          {/* Left — square +9M€ */}
+          {/* Left — square +9M€ (móvil: estética suave) */}
           <div
+            className="sm:hidden"
+            style={{
+              position: "relative",
+              overflow: "hidden",
+              borderRadius: "22px",
+              aspectRatio: "1 / 1",
+              background: "linear-gradient(100deg, #f7c4d9 0%, #fce0eb 38%, #fdf2f7 68%, #ffffff 100%)",
+              padding: "clamp(20px,1.8vw,28px)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+            }}
+          >
+            <div style={{ fontSize: "clamp(30px,3.2vw,44px)", fontWeight: 800, letterSpacing: "-0.05em", lineHeight: 0.84, color: "#EB0A5C" }}>
+              +{revenue}M€
+            </div>
+            <div style={{ fontSize: "clamp(13px,1vw,15px)", fontWeight: 600, color: "#3a2731", marginTop: "10px", lineHeight: 1.35, maxWidth: "180px" }}>
+              Facturación generada para nuestros clientes
+            </div>
+          </div>
+
+          {/* Left — square +9M€ (desktop: gradiente) */}
+          <div
+            className="hidden sm:flex"
             style={{
               position: "relative",
               overflow: "hidden",
@@ -78,7 +104,6 @@ export default function StatsSection() {
               background: "linear-gradient(160deg,#f0246e 0%, #EB0A5C 46%, #7c0533 100%)",
               color: "#fff",
               padding: "clamp(20px,1.8vw,28px)",
-              display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
