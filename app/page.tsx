@@ -185,13 +185,13 @@ export default function HomePage() {
                 Solicita asesoramiento gratuito
                 <ArrowRight />
               </a>
-              <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-4 mb-9">
+              <div className="flex flex-wrap gap-x-8 gap-y-4 mb-9">
                 {[
                   "Leads filtrados de calidad",
                   "Resultados medibles",
                   "Crecimiento predecible",
                 ].map((text) => (
-                  <div key={text} className="flex items-start gap-3 max-w-[190px]">
+                  <div key={text} className="flex items-start gap-3 max-w-none sm:max-w-[190px]">
                     <span className="flex-none grid place-items-center w-[26px] h-[26px] rounded-full bg-[#FFEAF2]">
                       <CheckIcon />
                     </span>
