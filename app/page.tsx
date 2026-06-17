@@ -268,12 +268,11 @@ export default function HomePage() {
             Confían en nosotros
           </p>
           <div className="relative w-full overflow-hidden marquee-mask">
-            <div className="flex w-max gap-[22px] items-center animate-marquee">
+            <div className="flex w-max gap-[14px] sm:gap-[22px] items-center animate-marquee">
               {[...logos, ...logos].map((logo, i) => (
                 <span
                   key={i}
-                  className="flex-none grid place-items-center w-[178px] h-[92px] rounded-[16px] bg-white border border-[#ececf0] shadow-[0_6px_18px_-12px_rgba(20,22,27,.3)]"
-                  style={{ padding: "0 22px" }}
+                  className="flex-none grid place-items-center w-[138px] h-[72px] sm:w-[178px] sm:h-[92px] rounded-[13px] sm:rounded-[16px] bg-white border border-[#ececf0] shadow-[0_6px_18px_-12px_rgba(20,22,27,.3)] px-[14px] sm:px-[22px]"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
