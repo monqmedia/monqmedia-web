@@ -225,9 +225,18 @@ export default function HomePage() {
                   Clientes potenciales generados al mes
                 </div>
               </div>
-              {/* Bar 2 — main */}
+              {/* Bar 2 — main (móvil: estética suave) */}
+              <div className="relative flex-1 max-w-[185px] h-full rounded-3xl bg-[rgba(235,10,92,.20)] px-4 py-5 flex flex-col justify-end backdrop-blur-sm sm:hidden">
+                <div className="text-[#c40a4d] text-3xl font-extrabold leading-none tracking-tight">
+                  +9M€
+                </div>
+                <div className="text-[11px] font-semibold text-[#8a5066] mt-2 leading-snug">
+                  Facturación generada para clientes
+                </div>
+              </div>
+              {/* Bar 2 — main (desktop: gradiente) */}
               <div
-                className="relative flex-1 max-w-[185px] h-full rounded-3xl text-white px-4 py-5 sm:px-6 flex flex-col justify-end"
+                className="relative flex-1 max-w-[185px] h-full rounded-3xl text-white px-4 py-5 sm:px-6 flex-col justify-end hidden sm:flex"
                 style={{
                   background: "linear-gradient(165deg,#EB0A5C,#c40a4d)",
                   boxShadow: "0 26px 54px -20px rgba(235,10,92,.55)",
