@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 import VideoCard from "@/app/components/VideoCard";
+import StatsSection from "@/app/components/StatsSection";
 
 export const metadata: Metadata = {
   title: {
@@ -24,52 +26,64 @@ export const metadata: Metadata = {
 };
 
 const logos = [
-  "Climelectric Solar",
-  "Solurgy",
-  "Bayo Solar",
-  "Elektrosol",
-  "MasRed",
-  "JCSolarlive",
-  "Tecfisur",
-  "Subvenziona",
-  "Nerosolar",
-  "Nibbio",
-  "Alfasol",
-  "Eres Energía",
-  "Neolux Energy",
-  "Solarclic",
+  { name: "Nerosolar",             src: "/logos/nerosolar.png", maxH: "38px" },
+  { name: "Vira Energy",           src: "/logos/vira.png",      maxH: "52px" },
+  { name: "ESR Energy Solutions",  src: "/logos/esr.png",       maxH: "74px" },
+  { name: "Elektrosol",            src: "/logos/elektrosol.png",maxH: "32px" },
+  { name: "Subvenziona",           src: "/logos/subvenziona.png",maxH:"32px" },
+  { name: "Solurgy Renovables",    src: "/logos/solurgy.png",   maxH: "44px" },
+  { name: "Arelis Energía Solar",  src: "/logos/arelis.png",    maxH: "46px" },
+  { name: "MasRed Ingeniería",     src: "/logos/masred.png",    maxH: "50px" },
+  { name: "Eres Energía",          src: "/logos/eres.png",      maxH: "52px" },
+  { name: "Pulso Solar",           src: "/logos/pulso.png",     maxH: "32px" },
+  { name: "Solvi Green Freedom",   src: "/logos/solvi.png",     maxH: "46px" },
+  { name: "Alfasol",               src: "/logos/alfasol.png",   maxH: "30px" },
+  { name: "Nibbio",                src: "/logos/nibbio.png",    maxH: "56px" },
+  { name: "Bayo Solar",            src: "/logos/bayo.png",      maxH: "66px" },
+  { name: "Sureste Refrigeración", src: "/logos/sureste.png",   maxH: "74px" },
+  { name: "Efistar",               src: "/logos/efistar.png",   maxH: "40px" },
+  { name: "iSolar",                src: "/logos/isolar.png",    maxH: "50px" },
 ];
 
 const testimonials = [
   {
     company: "Subvenziona",
     headline: "Más leads, gastando mucho menos",
-    quote:
-      '"El cambio ha sido brutal. Antes hacíamos nuestras propias campañas y no teníamos los resultados esperados. Ahora gastamos muchísimo menos y obtenemos muchos más leads, que luego convertimos en clientes finales."',
+    quote: (
+      <>
+        "El cambio ha sido brutal. Antes hacíamos nuestras propias campañas y no teníamos los resultados esperados. Ahora <strong>gastamos muchísimo menos y obtenemos muchos más leads</strong>, que luego convertimos en clientes finales."
+      </>
+    ),
     person: "Noel — CEO de Subvenziona.es",
     initials: "N",
     cover: "/duo-subvenziona.png",
-    videoId: "REEMPLAZAR_ID_1",
+    videoId: "Z71qxbKYOPc",
   },
   {
     company: "Solar Clic",
-    headline: "De 6-8 a 10-12 instalaciones al mes",
-    quote:
-      '"Desde que colaboramos con Monq Media, gracias a sus campañas de leads en redes sociales, hemos pasado de 6-8 instalaciones mensuales a una media de 10-12 de manera constante. Recomendamos sus servicios."',
+    headline: "10-12 instalaciones mensuales de forma estable",
+    quote: (
+      <>
+        "Desde que colaboramos con Monq Media, gracias a sus campañas de leads en redes sociales, hemos pasado <strong>de 6-8 instalaciones mensuales a una media de 10-12 de manera constante</strong>. Recomendamos sus servicios."
+      </>
+    ),
     person: "Antonio — CEO de Solarclic.es",
     initials: "A",
     cover: "/duo-solarclic.png",
-    videoId: "REEMPLAZAR_ID_2",
+    videoId: "1wIVs2OCoBc",
   },
   {
     company: "Vadesol Insular",
-    headline: "Más proyectos, de forma constante",
-    quote:
-      '"Trabajar con Monq Media nos ha dado un flujo de clientes estable y predecible. Un equipo que de verdad se implica en los resultados."',
-    person: "CEO de Vadesol Insular Instalet",
+    headline: "De la incertidumbre a proyectos constantes",
+    quote: (
+      <>
+        "Antes tenía mucha incertidumbre porque me llegaban pocos clientes, desde que trabajo con ellos me va muy bien, sé que todos los meses voy a tener bastantes clientes potenciales y <strong>he crecido en las instalaciones un 60%.</strong>"
+      </>
+    ),
+    person: "CEO de Vadesol Insular",
     initials: "CD",
     cover: "/duo-vadesol.png",
-    videoId: "REEMPLAZAR_ID_3",
+    videoId: "LEpVk_4VwG8",
   },
 ];
 
@@ -129,7 +143,7 @@ export default function HomePage() {
 
       <main>
         {/* ============ HERO ============ */}
-        <section className="relative px-4 sm:px-8 lg:px-[72px] py-12 sm:py-16 lg:py-24 overflow-hidden">
+        <section className="relative px-4 sm:px-8 lg:px-[72px] pt-5 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16 overflow-hidden">
           {/* bg glow */}
           <div
             className="absolute pointer-events-none"
@@ -148,7 +162,7 @@ export default function HomePage() {
             {/* Left: text */}
             <div>
               <h1 className="text-[38px] sm:text-[50px] lg:text-[66px] leading-[1.04] tracking-[-0.03em] font-normal text-[#14161b] mb-6">
-                Conseguimos una{" "}
+                Consígue una{" "}
                 <strong className="font-extrabold">
                   entrada recurrente de clientes interesados
                 </strong>{" "}
@@ -159,10 +173,9 @@ export default function HomePage() {
                 <strong className="font-extrabold">energías renovables</strong>
               </h1>
               <p className="text-base sm:text-[19px] leading-relaxed text-[#52575f] max-w-[560px] mb-8">
-                Te ayudamos a captar más clientes de verdad para tu servicio
-                —placas solares, autoconsumo, cargadores de coche eléctrico,
-                aerotermia— para que no dependas del boca a boca, plataformas
-                que no funcionan ni comerciales a puerta fría.
+                Aumenta las ventas de tu servicio —placas solares, autoconsumo,
+                cargadores de coche eléctrico, aerotermia— sin depender del boca
+                a boca, plataformas que no funcionan ni comerciales a puerta fría.
               </p>
               <div className="flex flex-wrap gap-x-8 gap-y-4 mb-9">
                 {[
@@ -241,18 +254,30 @@ export default function HomePage() {
         </section>
 
         {/* ============ LOGOS MARQUEE ============ */}
-        <section className="py-10 border-t border-b border-[#f0f0f2] bg-[#fbfbfc]">
+        <section className="pt-10 pb-4 border-t border-b border-[#f0f0f2] bg-[#fbfbfc]">
           <p className="text-center text-[13px] font-bold tracking-[0.14em] uppercase text-[#9aa0aa] mb-8">
-            Empresas que ya confían en nuestro método
+            Confían en nosotros
           </p>
           <div className="relative w-full overflow-hidden marquee-mask">
-            <div className="flex w-max gap-16 items-center animate-marquee">
+            <div className="flex w-max gap-[22px] items-center animate-marquee">
               {[...logos, ...logos].map((logo, i) => (
                 <span
                   key={i}
-                  className="text-[21px] font-extrabold tracking-[-0.02em] text-[#b9bdc4] whitespace-nowrap"
+                  className="flex-none grid place-items-center w-[178px] h-[92px] rounded-[16px] bg-white border border-[#ececf0] shadow-[0_6px_18px_-12px_rgba(20,22,27,.3)]"
+                  style={{ padding: "0 22px" }}
                 >
-                  {logo}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    style={{
+                      maxWidth: "100%",
+                      maxHeight: logo.maxH,
+                      objectFit: "contain",
+                      display: "block",
+                      borderRadius: "9px",
+                    }}
+                  />
                 </span>
               ))}
             </div>
@@ -260,7 +285,7 @@ export default function HomePage() {
         </section>
 
         {/* ============ VALUE PILLARS ============ */}
-        <section className="px-4 sm:px-8 lg:px-[72px] py-16 sm:py-20 lg:py-28">
+        <section id="que-ofrecemos" className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14">
           <div className="max-w-[1180px] mx-auto">
             <div className="text-center max-w-[760px] mx-auto mb-16">
               <div className="text-[15px] font-bold tracking-[0.16em] uppercase text-[#EB0A5C] mb-5">
@@ -348,86 +373,111 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ============ DIFERENCIADORES ============ */}
-        <section className="px-4 sm:px-8 lg:px-[72px] py-12 sm:py-16 lg:py-[72px] bg-[#fbfbfc] border-t border-[#f0f0f2]">
-          <div className="max-w-[1180px] mx-auto">
-            <div className="max-w-[720px] mb-12 sm:mb-14">
-              <div className="text-[13px] font-bold tracking-[0.16em] uppercase text-[#EB0A5C] mb-5">
-                Qué nos hace diferentes
+        {/* ============ TESTIMONIOS (DARK) ============ */}
+        <section
+          id="opiniones"
+          className="relative overflow-hidden px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14 text-white"
+          style={{ background: "linear-gradient(180deg,#101116,#15171e)" }}
+        >
+          {/* glows */}
+          <div
+            className="absolute top-[8%] left-[-160px] w-[480px] h-[480px] rounded-full pointer-events-none"
+            style={{
+              background: "radial-gradient(circle, rgba(235,10,92,.22), transparent 70%)",
+              filter: "blur(20px)",
+            }}
+          />
+          <div
+            className="absolute bottom-[-10%] right-[-140px] w-[420px] h-[420px] rounded-full pointer-events-none"
+            style={{
+              background: "radial-gradient(circle, rgba(235,10,92,.14), transparent 70%)",
+              filter: "blur(20px)",
+            }}
+          />
+
+          <div className="relative max-w-[1180px] mx-auto">
+            <div className="max-w-[680px] mb-12 sm:mb-14">
+              <div className="text-[15px] font-bold tracking-[0.16em] uppercase text-[#EB0A5C] mb-5">
+                Casos de éxito
               </div>
-              <h2 className="text-[30px] sm:text-[40px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] font-normal">
-                No generamos leads sin más{" "}
-                <strong className="font-extrabold">— generamos clientes</strong>
+              <h2 className="text-[30px] sm:text-[40px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] font-normal text-white">
+                Qué dicen{" "}
+                <strong className="font-extrabold">nuestros clientes</strong>
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Card 1 — pink */}
+
+            {/* Video cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {testimonials.map((t) => (
+                <VideoCard key={t.company} {...t} />
+              ))}
+            </div>
+
+            {/* Pulso Solar featured testimonial */}
+            <div className="relative mt-10 max-w-[1040px] mx-auto rounded-3xl overflow-hidden bg-[#1c1e26] border border-[#2a2d37] grid grid-cols-1 md:grid-cols-[278px_1fr]">
+              {/* Pink stat panel */}
               <div
-                className="relative overflow-hidden text-white rounded-3xl px-8 py-[38px]"
-                style={{
-                  background: "linear-gradient(160deg,#EB0A5C,#c40a4d)",
-                  boxShadow: "0 26px 54px -22px rgba(235,10,92,.5)",
-                }}
+                className="relative overflow-hidden flex flex-col justify-center gap-6 p-8 md:px-[34px] md:py-[40px]"
+                style={{ background: "linear-gradient(160deg,#EB0A5C,#c40a4d)" }}
               >
-                <span className="absolute top-[-22px] right-[6px] text-[150px] font-extrabold leading-none tracking-[-0.04em] pointer-events-none select-none" style={{ color: "rgba(255,255,255,0.13)" }}>
-                  01
-                </span>
-                <span className="relative grid place-items-center w-[58px] h-[58px] rounded-2xl mb-20 sm:mb-[84px]" style={{ background: "rgba(255,255,255,0.18)" }}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="4" />
-                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1" />
-                  </svg>
-                </span>
-                <h3 className="relative text-[22px] font-extrabold tracking-[-0.02em] leading-[1.15] mb-3">
-                  Conocemos el sector
-                </h3>
-                <p className="relative text-[15px] leading-relaxed text-[#ffe1ec]">
-                  Especializados en energías renovables, te ayudamos a aumentar el número de instalaciones y proyectos mensuales que realiza tu empresa.
-                </p>
+                <Image
+                  src="/pulso-logo.png"
+                  alt="Pulso Solar"
+                  width={140}
+                  height={105}
+                  style={{ filter: "drop-shadow(0 12px 26px rgba(0,0,0,.4))" }}
+                />
+                <div>
+                  <div className="text-[42px] sm:text-[54px] font-extrabold tracking-[-0.04em] leading-[0.9] text-white">
+                    +18%
+                  </div>
+                  <div className="text-[14px] font-semibold text-[#ffe1ec] mt-3 leading-snug">
+                    de aumento en sus ventas desde que trabajan con nosotros
+                  </div>
+                </div>
               </div>
-              {/* Card 2 */}
-              <div className="relative overflow-hidden bg-white border border-[#ededf0] rounded-3xl px-8 py-[38px] hover:shadow-[0_26px_50px_-26px_rgba(20,22,27,.25)] hover:border-[#f6cad9] transition-all duration-[350ms]">
-                <span className="absolute top-[-22px] right-[6px] text-[150px] font-extrabold leading-none tracking-[-0.04em] text-[#fbeaf1] pointer-events-none select-none">
-                  02
-                </span>
-                <span className="relative grid place-items-center w-[58px] h-[58px] rounded-2xl bg-[#FFEAF2] mb-20 sm:mb-[84px]">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2 3 7v6c0 5 3.5 8 9 9 5.5-1 9-4 9-9V7z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                </span>
-                <h3 className="relative text-[22px] font-extrabold tracking-[-0.02em] leading-[1.15] mb-3 text-[#14161b]">
-                  No somos una agencia normal
-                </h3>
-                <p className="relative text-[15px] leading-relaxed text-[#52575f]">
-                  Lo que nos diferencia es que nos enfocamos en tus resultados reales, y nos comprometemos con ellos de principio a fin.
+              {/* Quote */}
+              <div className="relative p-8 md:p-[46px] flex flex-col justify-center">
+                <svg
+                  width="46"
+                  height="46"
+                  viewBox="0 0 24 24"
+                  fill="rgba(235,10,92,.22)"
+                  className="absolute top-7 right-8"
+                >
+                  <path d="M10 8c-3 0-5 2-5 5s2 4 4 4 3-1 3-3-1-3-3-3c0-1 1-2 2-2zm9 0c-3 0-5 2-5 5s2 4 4 4 3-1 3-3-1-3-3-3c0-1 1-2 2-2z" />
+                </svg>
+                <p className="relative text-[15.5px] sm:text-[16.5px] leading-relaxed text-[#e7e9ef] italic mb-6 max-w-[640px]">
+                  Desde que trabajamos con Monq Media{" "}
+                  <strong className="text-white not-italic font-bold">
+                    {" "}hemos aumentado nuestras ventas en un 18%
+                  </strong>
+                  , lo que refleja la efectividad de su estrategia y su enfoque
+                  orientado a resultados. Destacamos su trato cercano, resolutivo y
+                  proactivo: su implicación marca realmente la diferencia. Sin duda,
+                  un equipo altamente recomendable para cualquier empresa que quiera
+                  dar un paso adelante en su crecimiento.
                 </p>
-              </div>
-              {/* Card 3 */}
-              <div className="relative overflow-hidden bg-white border border-[#ededf0] rounded-3xl px-8 py-[38px] hover:shadow-[0_26px_50px_-26px_rgba(20,22,27,.25)] hover:border-[#f6cad9] transition-all duration-[350ms]">
-                <span className="absolute top-[-22px] right-[6px] text-[150px] font-extrabold leading-none tracking-[-0.04em] text-[#fbeaf1] pointer-events-none select-none">
-                  03
-                </span>
-                <span className="relative grid place-items-center w-[58px] h-[58px] rounded-2xl bg-[#FFEAF2] mb-20 sm:mb-[84px]">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 20h18" />
-                    <path d="M7 20v-7M12 20V5M17 20v-10" />
-                    <path d="M12 5 18 3" />
-                  </svg>
-                </span>
-                <h3 className="relative text-[22px] font-extrabold tracking-[-0.02em] leading-[1.15] mb-3 text-[#14161b]">
-                  Superamos a tu competencia
-                </h3>
-                <p className="relative text-[15px] leading-relaxed text-[#52575f]">
-                  Destacamos tu negocio sobre el de tu competencia, lo que maximiza tu alcance y te hace cerrar más proyectos.
-                </p>
+                <div className="flex items-center gap-3">
+                  <span className="flex-none grid place-items-center w-[44px] h-[44px] rounded-full bg-[#EB0A5C] text-[16px] font-extrabold text-white">
+                    DB
+                  </span>
+                  <div>
+                    <div className="text-[14.5px] font-bold text-white">
+                      Daniel Ballester
+                    </div>
+                    <div className="text-[13px] text-[#9aa0aa]">
+                      CEO de Hegosun.com y Pulsosolar.es
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* ============ CASO DE ÉXITO — VIRA ENERGY ============ */}
-        <section className="px-4 sm:px-8 lg:px-[72px] py-16 sm:py-20 lg:py-28 bg-white">
+        <section className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14 bg-white">
           <div className="max-w-[1180px] mx-auto">
             {/* eyebrow */}
             <div className="flex items-center gap-6 mb-10 sm:mb-16">
@@ -508,7 +558,7 @@ export default function HomePage() {
                 <p className="text-[16.5px] leading-relaxed text-[#2b2f37] mb-5">
                   <strong className="font-bold">Vira Energy</strong> es una empresa
                   de autoconsumo solar y eficiencia energética para viviendas y
-                  empresas, con el lema «optimiza tu energía, transforma tu hogar».
+                  empresas, con sedes en Cataluña, Comunidad Valenciana y Madrid.
                 </p>
                 <p className="text-[16.5px] leading-relaxed text-[#52575f] mb-5">
                   Querían llenar la agenda de su equipo con solicitudes de estudio
@@ -523,7 +573,7 @@ export default function HomePage() {
                     interesados de verdad
                   </strong>
                   , filtrando a los curiosos y entregando solo solicitudes con
-                  intención real de instalar, para que su equipo dejara de perder
+                  intención real de agendar una visita técnica e instalar, para que su equipo dejara de perder
                   tiempo en llamadas que no llevaban a ningún sitio.
                 </p>
               </div>
@@ -541,7 +591,7 @@ export default function HomePage() {
                     x3,2
                   </div>
                   <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#ffd5e5] mt-auto leading-snug">
-                    más instalaciones cerradas al mes
+                    más instalaciones cerradas
                   </div>
                 </div>
                 <div
@@ -549,7 +599,7 @@ export default function HomePage() {
                   style={{ background: "rgba(235,10,92,.55)" }}
                 >
                   <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none">
-                    +180
+                    +400
                   </div>
                   <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#fff0f5] mt-auto leading-snug">
                     leads cualificados al mes
@@ -571,10 +621,10 @@ export default function HomePage() {
                   style={{ background: "rgba(235,10,92,.12)" }}
                 >
                   <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none text-[#c40a4d]">
-                    +340K€
+                    x11
                   </div>
                   <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#8a5066] mt-auto leading-snug">
-                    facturación adicional en 6 meses
+                    retorno por cada € invertido
                   </div>
                 </div>
               </div>
@@ -582,110 +632,88 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ============ TESTIMONIOS (DARK) ============ */}
-        <section
-          className="relative overflow-hidden px-4 sm:px-8 lg:px-[72px] py-16 sm:py-20 lg:py-28 text-white"
-          style={{ background: "linear-gradient(180deg,#101116,#15171e)" }}
-        >
-          {/* glows */}
-          <div
-            className="absolute top-[8%] left-[-160px] w-[480px] h-[480px] rounded-full pointer-events-none"
-            style={{
-              background: "radial-gradient(circle, rgba(235,10,92,.22), transparent 70%)",
-              filter: "blur(20px)",
-            }}
-          />
-          <div
-            className="absolute bottom-[-10%] right-[-140px] w-[420px] h-[420px] rounded-full pointer-events-none"
-            style={{
-              background: "radial-gradient(circle, rgba(235,10,92,.14), transparent 70%)",
-              filter: "blur(20px)",
-            }}
-          />
-
-          <div className="relative max-w-[1180px] mx-auto">
-            <div className="max-w-[680px] mb-12 sm:mb-14">
-              <div className="text-[15px] font-bold tracking-[0.16em] uppercase text-[#EB0A5C] mb-5">
-                Casos de éxito
+        {/* ============ DIFERENCIADORES ============ */}
+        <section id="nosotros" className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-12 sm:pb-16 lg:pb-[72px] bg-[#fbfbfc] border-t border-[#f0f0f2]">
+          <div className="max-w-[1180px] mx-auto">
+            <div className="max-w-[720px] mb-12 sm:mb-14">
+              <div className="text-[13px] font-bold tracking-[0.16em] uppercase text-[#EB0A5C] mb-5">
+                Qué nos hace diferentes
               </div>
-              <h2 className="text-[30px] sm:text-[40px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] font-normal text-white">
-                Qué dicen{" "}
-                <strong className="font-extrabold">nuestros clientes</strong>
+              <h2 className="text-[30px] sm:text-[40px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] font-normal">
+                No generamos leads sin más{" "}
+                <strong className="font-extrabold">— generamos clientes</strong>
               </h2>
             </div>
-
-            {/* Video cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {testimonials.map((t) => (
-                <VideoCard key={t.company} {...t} />
-              ))}
-            </div>
-
-            {/* Pulso Solar featured testimonial */}
-            <div className="relative mt-10 max-w-[1040px] mx-auto rounded-3xl overflow-hidden bg-[#1c1e26] border border-[#2a2d37] grid grid-cols-1 md:grid-cols-[278px_1fr]">
-              {/* Pink stat panel */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 — pink */}
               <div
-                className="relative overflow-hidden flex flex-col justify-center gap-6 p-8 md:px-[34px] md:py-[40px]"
-                style={{ background: "linear-gradient(160deg,#EB0A5C,#c40a4d)" }}
+                className="relative overflow-hidden text-white rounded-3xl px-8 py-[38px]"
+                style={{
+                  background: "linear-gradient(160deg,#EB0A5C,#c40a4d)",
+                  boxShadow: "0 26px 54px -22px rgba(235,10,92,.5)",
+                }}
               >
-                <Image
-                  src="/pulso-logo.png"
-                  alt="Pulso Solar"
-                  width={140}
-                  height={105}
-                  style={{ filter: "drop-shadow(0 12px 26px rgba(0,0,0,.4))" }}
-                />
-                <div>
-                  <div className="text-[42px] sm:text-[54px] font-extrabold tracking-[-0.04em] leading-[0.9] text-white">
-                    +18%
-                  </div>
-                  <div className="text-[14px] font-semibold text-[#ffe1ec] mt-3 leading-snug">
-                    de aumento en sus ventas desde que trabajan con nosotros
-                  </div>
-                </div>
-              </div>
-              {/* Quote */}
-              <div className="relative p-8 md:p-[46px] flex flex-col justify-center">
-                <svg
-                  width="46"
-                  height="46"
-                  viewBox="0 0 24 24"
-                  fill="rgba(235,10,92,.22)"
-                  className="absolute top-7 right-8"
-                >
-                  <path d="M10 8c-3 0-5 2-5 5s2 4 4 4 3-1 3-3-1-3-3-3c0-1 1-2 2-2zm9 0c-3 0-5 2-5 5s2 4 4 4 3-1 3-3-1-3-3-3c0-1 1-2 2-2z" />
-                </svg>
-                <p className="relative text-[15.5px] sm:text-[16.5px] leading-relaxed text-[#e7e9ef] italic mb-6 max-w-[640px]">
-                  Desde que trabajamos con Monq Media{" "}
-                  <strong className="text-white not-italic font-bold">
-                    hemos aumentado nuestras ventas en un 18%
-                  </strong>
-                  , lo que refleja la efectividad de su estrategia y su enfoque
-                  orientado a resultados. Destacamos su trato cercano, resolutivo y
-                  proactivo: su implicación marca realmente la diferencia. Sin duda,
-                  un equipo altamente recomendable para cualquier empresa que quiera
-                  dar un paso adelante en su crecimiento.
+                <span className="absolute top-[-22px] right-[6px] text-[150px] font-extrabold leading-none tracking-[-0.04em] pointer-events-none select-none" style={{ color: "rgba(255,255,255,0.13)" }}>
+                  01
+                </span>
+                <span className="relative grid place-items-center w-[58px] h-[58px] rounded-2xl mb-20 sm:mb-[84px]" style={{ background: "rgba(255,255,255,0.18)" }}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1" />
+                  </svg>
+                </span>
+                <h3 className="relative text-[22px] font-extrabold tracking-[-0.02em] leading-[1.15] mb-3">
+                  Conocemos el sector
+                </h3>
+                <p className="relative text-[15px] leading-relaxed text-[#ffe1ec]">
+                  Especializados en energías renovables, te ayudamos a aumentar el número de instalaciones y proyectos mensuales que realiza tu empresa.
                 </p>
-                <div className="flex items-center gap-3">
-                  <span className="flex-none grid place-items-center w-[44px] h-[44px] rounded-full bg-[#EB0A5C] text-[16px] font-extrabold text-white">
-                    DB
-                  </span>
-                  <div>
-                    <div className="text-[14.5px] font-bold text-white">
-                      Daniel Ballester
-                    </div>
-                    <div className="text-[13px] text-[#9aa0aa]">
-                      CEO de Hegosun.com y Pulsosolar.es
-                    </div>
-                  </div>
-                </div>
+              </div>
+              {/* Card 2 */}
+              <div className="relative overflow-hidden bg-white border border-[#ededf0] rounded-3xl px-8 py-[38px] hover:shadow-[0_26px_50px_-26px_rgba(20,22,27,.25)] hover:border-[#f6cad9] transition-all duration-[350ms]">
+                <span className="absolute top-[-22px] right-[6px] text-[150px] font-extrabold leading-none tracking-[-0.04em] text-[#fbeaf1] pointer-events-none select-none">
+                  02
+                </span>
+                <span className="relative grid place-items-center w-[58px] h-[58px] rounded-2xl bg-[#FFEAF2] mb-20 sm:mb-[84px]">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2 3 7v6c0 5 3.5 8 9 9 5.5-1 9-4 9-9V7z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </span>
+                <h3 className="relative text-[22px] font-extrabold tracking-[-0.02em] leading-[1.15] mb-3 text-[#14161b]">
+                  No somos una agencia normal
+                </h3>
+                <p className="relative text-[15px] leading-relaxed text-[#52575f]">
+                  Lo que nos diferencia es que nos enfocamos en tus resultados reales, y nos comprometemos con ellos de principio a fin.
+                </p>
+              </div>
+              {/* Card 3 */}
+              <div className="relative overflow-hidden bg-white border border-[#ededf0] rounded-3xl px-8 py-[38px] hover:shadow-[0_26px_50px_-26px_rgba(20,22,27,.25)] hover:border-[#f6cad9] transition-all duration-[350ms]">
+                <span className="absolute top-[-22px] right-[6px] text-[150px] font-extrabold leading-none tracking-[-0.04em] text-[#fbeaf1] pointer-events-none select-none">
+                  03
+                </span>
+                <span className="relative grid place-items-center w-[58px] h-[58px] rounded-2xl bg-[#FFEAF2] mb-20 sm:mb-[84px]">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 20h18" />
+                    <path d="M7 20v-7M12 20V5M17 20v-10" />
+                    <path d="M12 5 18 3" />
+                  </svg>
+                </span>
+                <h3 className="relative text-[22px] font-extrabold tracking-[-0.02em] leading-[1.15] mb-3 text-[#14161b]">
+                  Superamos a tu competencia
+                </h3>
+                <p className="relative text-[15px] leading-relaxed text-[#52575f]">
+                  Destacamos tu negocio sobre el de tu competencia, lo que maximiza tu alcance y te hace cerrar más proyectos.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
+        <StatsSection />
+
         {/* ============ PRE-CONTACT CTA ============ */}
-        <section className="px-4 sm:px-8 lg:px-[72px] py-16 sm:py-20 lg:py-28 bg-white">
+        <section className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-16 sm:pb-20 lg:pb-28 bg-white">
           <div
             className="relative overflow-hidden max-w-[1180px] mx-auto rounded-[30px] text-white px-8 py-10 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-center"
             style={{ background: "linear-gradient(150deg,#1a1c24,#0f1015)" }}
@@ -813,18 +841,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* ============ FOOTER ============ */}
-      <footer className="bg-[#0f1015] text-[#9aa0aa] px-4 sm:px-8 lg:px-[72px] py-10 flex flex-wrap gap-5 items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Image src="/monq-icon-white.png" alt="Monq Media" width={30} height={30} />
-          <span className="text-[17px] font-extrabold text-white tracking-[0.04em] uppercase">
-            monq media
-          </span>
-        </div>
-        <span className="text-[13.5px]">
-          © 2026 Monq Media — Marketing para energías renovables
-        </span>
-      </footer>
+      <Footer />
     </>
   );
 }

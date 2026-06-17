@@ -6,7 +6,7 @@ import Image from "next/image";
 interface VideoCardProps {
   company: string;
   headline: string;
-  quote: string;
+  quote: React.ReactNode;
   person: string;
   initials: string;
   cover: string;
@@ -62,15 +62,8 @@ export default function VideoCard({
                   "linear-gradient(180deg, rgba(27,7,18,.5) 0%, transparent 26%, transparent 70%, rgba(27,7,18,.85) 100%)",
               }}
             />
-            {/* Monq badge */}
-            <span className="absolute top-[15px] left-[17px] flex items-center gap-2 text-[11.5px] font-bold text-white/90 whitespace-nowrap">
-              <span className="grid place-items-center w-6 h-6 rounded-full bg-white/20">
-                <Image src="/monq-icon-white.png" alt="" width={13} height={13} />
-              </span>
-              Monq Media
-            </span>
-            {/* Headline */}
-            <span className="absolute left-5 right-[40%] top-[50px] bottom-[18px] flex flex-col justify-center">
+            {/* Headline — anchored to bottom-left */}
+            <span className="absolute left-5 right-[44%] bottom-5 flex flex-col">
               <span className="font-serif text-5xl leading-[0.6] text-[#ff8fbb] h-[26px] block">
                 &ldquo;
               </span>
@@ -79,8 +72,8 @@ export default function VideoCard({
               </span>
               <span className="mt-3 w-[34px] h-[3px] rounded-sm bg-[#EB0A5C]" />
             </span>
-            {/* Play button */}
-            <span className="absolute top-1/2 left-[76%] -translate-x-1/2 -translate-y-1/2 grid place-items-center w-[58px] h-[58px] rounded-full bg-[#EB0A5C] shadow-[0_12px_32px_-6px_rgba(235,10,92,.85)]">
+            {/* Play button — centered */}
+            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid place-items-center w-[40px] h-[40px] rounded-full bg-[#EB0A5C] shadow-[0_12px_32px_-6px_rgba(235,10,92,.85)]">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                 <path d="M8 5 L19 12 L8 19 Z" />
               </svg>

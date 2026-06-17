@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        marquee: "monqMarquee 38s linear infinite",
+        marquee: "monqMarquee 55s linear infinite",
         "pulse-ring": "monqPulse 6s ease-in-out infinite",
       },
       keyframes: {
