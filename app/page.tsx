@@ -161,7 +161,7 @@ export default function HomePage() {
           <div className="relative grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-[72px] items-center max-w-[1280px] mx-auto">
             {/* Left: text */}
             <div>
-              <h1 className="text-[38px] sm:text-[50px] lg:text-[66px] leading-[1.04] tracking-[-0.03em] font-normal text-[#14161b] mb-6">
+              <h1 className="text-[32px] sm:text-[50px] lg:text-[66px] leading-[1.04] tracking-[-0.03em] font-normal text-[#14161b] mb-6">
                 Consígue una{" "}
                 <strong className="font-extrabold">
                   entrada recurrente de clientes interesados
@@ -177,7 +177,15 @@ export default function HomePage() {
                 cargadores de coche eléctrico, aerotermia— sin depender del boca
                 a boca, plataformas que no funcionan ni comerciales a puerta fría.
               </p>
-              <div className="flex flex-wrap gap-x-8 gap-y-4 mb-9">
+              {/* Botón móvil — entre subtítulo y bullet points */}
+              <a
+                href="#contacto"
+                className="inline-flex sm:hidden items-center gap-2 px-8 py-4 rounded-full bg-[#EB0A5C] text-white text-base font-bold hover:bg-[#c40a4d] transition-colors shadow-[0_12px_30px_-8px_rgba(235,10,92,.5)] mb-8"
+              >
+                Solicita asesoramiento gratuito
+                <ArrowRight />
+              </a>
+              <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-4 mb-9">
                 {[
                   "Leads filtrados de calidad",
                   "Resultados medibles",
@@ -193,9 +201,10 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+              {/* Botón desktop — debajo de bullet points */}
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#EB0A5C] text-white text-base font-bold hover:bg-[#c40a4d] transition-colors shadow-[0_12px_30px_-8px_rgba(235,10,92,.5)]"
+                className="hidden sm:inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#EB0A5C] text-white text-base font-bold hover:bg-[#c40a4d] transition-colors shadow-[0_12px_30px_-8px_rgba(235,10,92,.5)]"
               >
                 Contáctanos
                 <ArrowRight />
