@@ -43,6 +43,7 @@ const logos = [
   { name: "Sureste Refrigeración", src: "/logos/sureste.png",   maxH: "74px" },
   { name: "Efistar",               src: "/logos/efistar.png",   maxH: "40px" },
   { name: "iSolar",                src: "/logos/isolar.png",    maxH: "50px" },
+  { name: "Turelectric",           src: "/logos/turelectric.png", maxH: "36px" },
 ];
 
 const testimonials = [
