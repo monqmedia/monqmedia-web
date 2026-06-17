@@ -51,7 +51,7 @@ const testimonials = [
     headline: "Más leads, gastando mucho menos",
     quote: (
       <>
-        "El cambio ha sido brutal. Antes hacíamos nuestras propias campañas y no teníamos los resultados esperados. Ahora <strong>gastamos muchísimo menos y obtenemos muchos más leads</strong>, que luego convertimos en clientes finales."
+        &ldquo;El cambio ha sido brutal. Antes hacíamos nuestras propias campañas y no teníamos los resultados esperados. Ahora <strong>gastamos muchísimo menos y obtenemos muchos más leads</strong>, que luego convertimos en clientes finales.&rdquo;
       </>
     ),
     person: "Noel — CEO de Subvenziona.es",
@@ -64,7 +64,7 @@ const testimonials = [
     headline: "10-12 instalaciones mensuales de forma estable",
     quote: (
       <>
-        "Desde que colaboramos con Monq Media, gracias a sus campañas de leads en redes sociales, hemos pasado <strong>de 6-8 instalaciones mensuales a una media de 10-12 de manera constante</strong>. Recomendamos sus servicios."
+        &ldquo;Desde que colaboramos con Monq Media, gracias a sus campañas de leads en redes sociales, hemos pasado <strong>de 6-8 instalaciones mensuales a una media de 10-12 de manera constante</strong>. Recomendamos sus servicios.&rdquo;
       </>
     ),
     person: "Antonio — CEO de Solarclic.es",
@@ -77,7 +77,7 @@ const testimonials = [
     headline: "De la incertidumbre a proyectos constantes",
     quote: (
       <>
-        "Antes tenía mucha incertidumbre porque me llegaban pocos clientes, desde que trabajo con ellos me va muy bien, sé que todos los meses voy a tener bastantes clientes potenciales y <strong>he crecido en las instalaciones un 60%.</strong>"
+        &ldquo;Antes tenía mucha incertidumbre porque me llegaban pocos clientes, desde que trabajo con ellos me va muy bien, sé que todos los meses voy a tener bastantes clientes potenciales y <strong>he crecido en las instalaciones un 60%.</strong>&rdquo;
       </>
     ),
     person: "CEO de Vadesol Insular",
