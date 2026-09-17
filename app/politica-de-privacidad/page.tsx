@@ -22,7 +22,7 @@ export default function PoliticaDePrivacidad() {
           </p>
 
           <div className="text-[15.5px] leading-relaxed text-[#52575f] mb-10">
-            <p>En Monq Media Labs S.L. Labs S.L., valoramos y respetamos tu privacidad. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que recopilamos a través de nuestro sitio web y nuestras actividades en línea, de conformidad con la normativa del Reglamento General de Protección de Datos (RGPD).</p>
+            <p>En Monq Media Labs S.L., valoramos y respetamos tu privacidad. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que recopilamos a través de nuestro sitio web y nuestras actividades en línea, de conformidad con la normativa del Reglamento General de Protección de Datos (RGPD).</p>
           </div>
 
           <Section n="1" title="Información que recopilamos">
@@ -103,7 +103,7 @@ export default function PoliticaDePrivacidad() {
               <p className="font-bold text-[#14161b]">Monq Media Labs S.L.</p>
               <p>CIF: B93968956</p>
               <p>Domicilio social: Calle Los Merineros, 25, 2° Dr., 42001, Soria, España</p>
-              <p>Correo electrónico: <a href="mailto:vili@monqmedia.com" className="text-[#EB0A5C] hover:underline">vili@monqmedia.com</a></p>
+              <p>Correo electrónico: <a href="mailto:info@monqmedia.com" className="text-[#EB0A5C] hover:underline">info@monqmedia.com</a></p>
             </div>
             <p className="mt-4">Gracias por confiar en Monq Media Labs S.L. Estamos comprometidos a proteger tu privacidad y asegurarnos de que tus datos personales sean tratados de manera segura y conforme a la normativa vigente.</p>
           </Section>

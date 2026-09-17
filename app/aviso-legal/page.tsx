@@ -27,7 +27,7 @@ export default function AvisoLegal() {
             <div className="rounded-2xl bg-[#fdf2f6] border border-[#f4d4e1] px-6 py-5 space-y-1">
               <p><strong className={strong}>Domicilio social:</strong> Calle Los Merineros, 25, 2° Dr., 42001, Soria, España</p>
               <p><strong className={strong}>Teléfono de contacto:</strong> 613062192</p>
-              <p><strong className={strong}>Email de contacto:</strong> <a href="mailto:vili@monqmedia.com" className="text-[#EB0A5C] hover:underline">vili@monqmedia.com</a></p>
+              <p><strong className={strong}>Email de contacto:</strong> <a href="mailto:info@monqmedia.com" className="text-[#EB0A5C] hover:underline">info@monqmedia.com</a></p>
             </div>
           </Section>
 
