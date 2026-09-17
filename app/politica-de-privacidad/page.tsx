@@ -15,14 +15,14 @@ export default function PoliticaDePrivacidad() {
         <div className="max-w-[760px] mx-auto px-4 sm:px-8 py-12 sm:py-16 lg:py-20">
           <p className="text-[13px] font-bold tracking-[0.14em] uppercase text-[#EB0A5C] mb-4">Legal</p>
           <h1 className="text-[30px] sm:text-[38px] font-extrabold tracking-tight text-[#14161b] mb-2">
-            Política de Privacidad de Monq Media
+            Política de Privacidad de Monq Media Labs S.L.
           </h1>
           <p className="text-[14px] text-[#9aa0aa] mb-10 pb-10 border-b border-[#f0f0f2]">
             Fecha de entrada en vigencia: 01/06/2023
           </p>
 
           <div className="text-[15.5px] leading-relaxed text-[#52575f] mb-10">
-            <p>En Monq Media, valoramos y respetamos tu privacidad. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que recopilamos a través de nuestro sitio web y nuestras actividades en línea, de conformidad con la normativa del Reglamento General de Protección de Datos (RGPD).</p>
+            <p>En Monq Media Labs S.L. Labs S.L., valoramos y respetamos tu privacidad. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que recopilamos a través de nuestro sitio web y nuestras actividades en línea, de conformidad con la normativa del Reglamento General de Protección de Datos (RGPD).</p>
           </div>
 
           <Section n="1" title="Información que recopilamos">
@@ -100,10 +100,12 @@ export default function PoliticaDePrivacidad() {
           <Section n="10" title="Contacto">
             <p>Si tienes alguna pregunta, inquietud o solicitud relacionada con esta Política de Privacidad o nuestras prácticas de privacidad, puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
             <div className="mt-4 rounded-2xl bg-[#fdf2f6] border border-[#f4d4e1] px-6 py-5 space-y-1">
-              <p className="font-bold text-[#14161b]">Monq Media</p>
+              <p className="font-bold text-[#14161b]">Monq Media Labs S.L.</p>
+              <p>CIF: B93968956</p>
+              <p>Domicilio social: Calle Los Merineros, 25, 2° Dr., 42001, Soria, España</p>
               <p>Correo electrónico: <a href="mailto:vili@monqmedia.com" className="text-[#EB0A5C] hover:underline">vili@monqmedia.com</a></p>
             </div>
-            <p className="mt-4">Gracias por confiar en Monq Media. Estamos comprometidos a proteger tu privacidad y asegurarnos de que tus datos personales sean tratados de manera segura y conforme a la normativa vigente.</p>
+            <p className="mt-4">Gracias por confiar en Monq Media Labs S.L. Estamos comprometidos a proteger tu privacidad y asegurarnos de que tus datos personales sean tratados de manera segura y conforme a la normativa vigente.</p>
           </Section>
         </div>
       </main>

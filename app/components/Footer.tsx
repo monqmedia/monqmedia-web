@@ -12,7 +12,7 @@ export default function Footer() {
           </span>
         </div>
         <span className="text-[13.5px]">
-          © 2026 Monq Media — Marketing para energías renovables
+          © 2026 Monq Media Labs S.L. — Marketing para energías renovables
         </span>
       </div>
       <div className="border-t border-[#1e2028] pt-5 flex flex-wrap gap-x-6 gap-y-2">
