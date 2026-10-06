@@ -126,9 +126,12 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Monq Media",
+  legalName: "Monq Media Labs S.L.",
   url: "https://www.monqmedia.com",
+  logo: "https://www.monqmedia.com/monq-icon-black.png",
   email: "info@monqmedia.com",
   telephone: "+34613062192",
+  areaServed: { "@type": "Country", name: "España" },
   description:
     "Agencia especializada en generación de leads exclusivos para instaladores de paneles solares y empresas de energías renovables en España.",
 };
