@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     locale: "es_ES",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export const viewport: Viewport = {
@@ -39,6 +43,7 @@ export default function RootLayout({
         className={`${jakarta.className} min-h-screen bg-white text-[#14161b] antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

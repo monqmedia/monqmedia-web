@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     absolute: "Monq Media | Leads exclusivos para instaladores de paneles solares",
   },
   description:
-    "Obtén leads exclusivos y de calidad para instalación de paneles solares en toda España.",
+    "Leads exclusivos y filtrados para instaladores de placas solares, autoconsumo, aerotermia y cargadores de coche eléctrico en toda España. Asesoramiento gratuito.",
   openGraph: {
     title: "Monq Media | Leads exclusivos para instaladores de paneles solares",
     description:
-      "Obtén leads exclusivos y de calidad para instalación de paneles solares en toda España.",
+      "Leads exclusivos y filtrados para instaladores de placas solares, autoconsumo, aerotermia y cargadores de coche eléctrico en toda España. Asesoramiento gratuito.",
     url: "https://www.monqmedia.com",
     siteName: "Monq Media",
     locale: "es_ES",
@@ -122,6 +122,25 @@ function ArrowRight() {
   );
 }
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Generación de leads para empresas de energías renovables",
+  serviceType: "Generación de leads",
+  provider: {
+    "@type": "Organization",
+    name: "Monq Media",
+    url: "https://www.monqmedia.com",
+  },
+  areaServed: { "@type": "Country", name: "España" },
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Instaladores y empresas de energías renovables",
+  },
+  description:
+    "Sistema de captación recurrente de clientes interesados para empresas de placas solares, autoconsumo, cargadores de coche eléctrico y aerotermia, con leads filtrados y resultados medibles.",
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -142,6 +161,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Header />
 
