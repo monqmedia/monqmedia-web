@@ -21,9 +21,6 @@ export const metadata: Metadata = {
     locale: "es_ES",
     type: "website",
   },
-  alternates: {
-    canonical: "https://www.monqmedia.com",
-  },
 };
 
 export const viewport: Viewport = {
