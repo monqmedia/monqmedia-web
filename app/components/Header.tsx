@@ -13,7 +13,7 @@ export default function Header() {
         </Link>
 
         <a
-          href="#contacto"
+          href="/#contacto"
           className="inline-flex items-center gap-2 px-[22px] py-[11px] rounded-full bg-[#EB0A5C] text-white text-[14.5px] font-bold hover:bg-[#c40a4d] transition-colors"
         >
           Contáctanos
