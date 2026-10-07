@@ -16,6 +16,9 @@ export default function Footer() {
         </span>
       </div>
       <div className="border-t border-[#1e2028] pt-5 flex flex-wrap gap-x-6 gap-y-2">
+        <Link href="/leads-placas-solares" className="text-[12.5px] hover:text-white transition-colors">
+          Leads para placas solares
+        </Link>
         <Link href="/politica-de-privacidad" className="text-[12.5px] hover:text-white transition-colors">
           Política de privacidad
         </Link>
