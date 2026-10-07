@@ -4,9 +4,9 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
 const URL = "https://www.monqmedia.com/leads-placas-solares";
-const TITLE = "Leads para instaladores de placas solares en España";
+const TITLE = "Leads cualificados para instaladores de placas solares";
 const DESCRIPTION =
-  "Cómo conseguir leads exclusivos y filtrados para tu empresa de placas solares y autoconsumo: qué son, en qué se diferencian de los leads compartidos y cómo funciona el sistema de Monq Media.";
+  "Leads cualificados y exclusivos para empresas de placas solares en toda España: llenamos la agenda de visitas de tus técnicos, con IA que contacta cada lead al instante y garantía de resultados por contrato.";
 const UPDATED = "2026-10-07";
 
 export const metadata: Metadata = {
@@ -25,24 +25,28 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "¿Qué es un lead de placas solares?",
-    a: "Es una persona o empresa que ha mostrado interés real en instalar placas solares y ha dejado sus datos para que un instalador la contacte, normalmente para pedir un estudio o presupuesto.",
+    q: "¿Qué es un lead cualificado de placas solares?",
+    a: "Es una persona o empresa con interés real en instalar placas solares, que ya ha sido filtrada y está dispuesta a recibir una visita técnica. No es un contacto suelto: es una oportunidad lista para tu equipo.",
   },
   {
     q: "¿Qué diferencia hay entre un lead exclusivo y uno compartido?",
-    a: "Un lead exclusivo solo lo recibe tu empresa. Un lead compartido se vende a varios instaladores a la vez, así que compites en precio desde la primera llamada y la tasa de cierre baja.",
+    a: "Un lead exclusivo solo lo recibe tu empresa. Un lead compartido lo venden las plataformas a varias instaladoras a la vez, que compiten por el mismo cliente y acaban bajando precios.",
   },
   {
-    q: "¿Para qué tipo de empresas trabaja Monq Media?",
-    a: "Para empresas de energías renovables en España: instaladores de placas solares y autoconsumo, cargadores de coche eléctrico y aerotermia.",
+    q: "¿Cuántas instalaciones extra puedo esperar?",
+    a: "De media, nuestros clientes añaden entre 7 y 10 instalaciones extra al mes en los primeros 60 días trabajando con nosotros. Además, ofrecemos garantía de resultados por contrato.",
   },
   {
-    q: "¿Cómo se filtran los leads?",
-    a: "El sistema está diseñado para descartar a los curiosos y entregar solo solicitudes con intención real de agendar una visita técnica e instalar, para que tu equipo no pierda tiempo en llamadas que no llevan a nada.",
+    q: "¿Qué pasa si mi equipo no llega a llamar a tiempo a los leads?",
+    a: "Implementamos un sistema de inteligencia artificial que contacta automáticamente a cada lead al momento, también en fin de semana o fuera de horario, para que no se enfríe y tu comercial reciba la visita casi hecha.",
   },
   {
-    q: "¿Cuánto cuesta empezar?",
-    a: "El primer paso es un asesoramiento gratuito y sin compromiso: analizamos tu empresa y te decimos si podemos ayudarte a crecer. Si no lo vemos claro, también te lo decimos.",
+    q: "Ya he probado otras agencias y no funcionó. ¿Qué cambia?",
+    a: "Nos especializamos solo en energías renovables y medimos el éxito en visitas e instalaciones, no en clics o contactos. Cada campaña es personalizada para tu empresa, respeta tu marca y está pensada a largo plazo.",
+  },
+  {
+    q: "¿Trabajáis en toda España?",
+    a: "Sí. Trabajamos con empresas instaladoras de placas solares y autoconsumo en toda España, y también con empresas de aerotermia y cargadores de coche eléctrico.",
   },
 ];
 
@@ -119,95 +123,171 @@ export default function LeadsPlacasSolaresPage() {
 
           <div className="rounded-2xl bg-[#fdf2f6] border border-[#f4d4e1] px-6 py-5 mb-8">
             <p className="text-[16px] sm:text-[17px] leading-[1.7] text-[#14161b]">
-              <strong>En resumen:</strong> un lead de placas solares es un
-              cliente potencial que ha pedido información para instalar
-              autoconsumo. Monq Media genera para instaladores de toda España{" "}
-              <strong>leads exclusivos y filtrados</strong>, con un sistema de
-              captación propio, medible y predecible, para no depender del boca
-              a boca, de plataformas de leads compartidos ni de la venta a
-              puerta fría.
+              <strong>En resumen:</strong> Monq Media es una agencia
+              especializada en captación de clientes para empresas de placas
+              solares en toda España. No vendemos contactos sueltos:{" "}
+              <strong>
+                generamos leads cualificados y exclusivos y llenamos la agenda de
+                visitas de tus técnicos
+              </strong>
+              . De media, nuestros clientes añaden entre 7 y 10 instalaciones
+              extra al mes en los primeros 60 días, con garantía de resultados
+              por contrato.
             </p>
           </div>
 
-          <h2 className={h2}>El problema de captar clientes de autoconsumo</h2>
-          <p className={p}>
-            Muchas empresas de placas solares llenan su agenda con tres fuentes:
-            el boca a boca, las plataformas que venden el mismo contacto a varios
-            instaladores y los comerciales a puerta fría. Las tres tienen el
-            mismo problema: no son predecibles y hacen perder mucho tiempo en
-            llamadas que no acaban en instalación.
-          </p>
+          <h2 className={h2}>Por qué a muchos instaladores no les salen las cuentas</h2>
+          <ul className="list-disc pl-6 space-y-3 mb-4">
+            <li className={li}>
+              <strong>Leads compartidos:</strong> las plataformas venden el mismo
+              lead a varias instaladoras, que compiten por el mismo cliente.
+            </li>
+            <li className={li}>
+              <strong>Agencias que no funcionan:</strong> muchas empresas ya han
+              probado agencias de marketing digital sin resultados, por falta de
+              calidad o de volumen de leads.
+            </li>
+            <li className={li}>
+              <strong>Leads que se enfrían:</strong> el comercial llega tarde, el
+              lead entra en fin de semana o fuera de horario, o se acumulan y el
+              equipo no da abasto.
+            </li>
+          </ul>
 
-          <h2 className={h2}>Leads exclusivos frente a leads compartidos</h2>
+          <h2 className={h2}>Leads cualificados, no contactos sueltos</h2>
+          <p className={p}>
+            El objetivo no es que recibas más formularios, sino que tu equipo
+            tenga la agenda llena de visitas técnicas con clientes que quieren
+            instalar. Por eso filtramos a los curiosos y solo te llegan
+            solicitudes con intención real.
+          </p>
           <div className="overflow-x-auto mb-4">
             <table className="w-full text-left text-[15px] border-collapse">
               <thead>
                 <tr className="border-b border-[#ececf0]">
                   <th className="py-3 pr-4 font-bold text-[#14161b]"></th>
-                  <th className="py-3 pr-4 font-bold text-[#14161b]">Exclusivo</th>
-                  <th className="py-3 font-bold text-[#14161b]">Compartido</th>
+                  <th className="py-3 pr-4 font-bold text-[#14161b]">Monq Media</th>
+                  <th className="py-3 font-bold text-[#14161b]">Plataforma de leads</th>
                 </tr>
               </thead>
               <tbody className="text-[#3a3d46]">
                 <tr className="border-b border-[#f0f0f2]">
-                  <td className="py-3 pr-4 font-semibold">Quién lo recibe</td>
-                  <td className="py-3 pr-4">Solo tu empresa</td>
-                  <td className="py-3">Varios instaladores a la vez</td>
+                  <td className="py-3 pr-4 font-semibold">Exclusividad</td>
+                  <td className="py-3 pr-4">Solo para tu empresa</td>
+                  <td className="py-3">Varias instaladoras a la vez</td>
                 </tr>
                 <tr className="border-b border-[#f0f0f2]">
-                  <td className="py-3 pr-4 font-semibold">Competencia</td>
-                  <td className="py-3 pr-4">Hablas tú primero</td>
-                  <td className="py-3">Guerra de precios desde la primera llamada</td>
+                  <td className="py-3 pr-4 font-semibold">Qué recibes</td>
+                  <td className="py-3 pr-4">Leads cualificados y visitas</td>
+                  <td className="py-3">Contactos sin filtrar</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Primer contacto</td>
+                  <td className="py-3 pr-4">Inmediato, con IA</td>
+                  <td className="py-3">Cuando tu equipo pueda</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Tu marca</td>
+                  <td className="py-3 pr-4">Campañas con tu marca</td>
+                  <td className="py-3">La marca de la plataforma</td>
                 </tr>
                 <tr>
-                  <td className="py-3 pr-4 font-semibold">Canal</td>
-                  <td className="py-3 pr-4">Propio y medible</td>
-                  <td className="py-3">Dependes de la plataforma</td>
+                  <td className="py-3 pr-4 font-semibold">Garantía</td>
+                  <td className="py-3 pr-4">Resultados por contrato</td>
+                  <td className="py-3">Pagas por contacto</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h2 className={h2}>Cómo funciona el sistema de Monq Media</h2>
-          <ul className="list-disc pl-6 space-y-3 mb-4">
+          <h2 className={h2}>IA que contacta tus leads al instante</h2>
+          <p className={p}>
+            Un lead de placas solares pierde valor cada hora que pasa sin
+            respuesta. Implementamos un sistema de inteligencia artificial que
+            contacta automáticamente a cada lead en cuanto entra, también en fin
+            de semana o fuera de horario, para que no se enfríe. Tu comercial
+            recibe el trabajo hecho: un cliente interesado y una visita lista
+            para agendar.
+          </p>
+
+          <h2 className={h2}>Cómo trabajamos</h2>
+          <ol className="list-decimal pl-6 space-y-3 mb-4">
             <li className={li}>
-              <strong>Filtrado:</strong> recibes leads de calidad, ya filtrados,
-              y ahorras llamadas innecesarias.
+              <strong>Análisis de tu empresa:</strong> asesoramiento gratuito y
+              sin compromiso para ver si podemos ayudarte.
             </li>
             <li className={li}>
-              <strong>Medible:</strong> sabemos en todo momento qué funciona y qué
-              se puede mejorar.
+              <strong>Campañas personalizadas:</strong> diseñadas para tu zona y
+              tu negocio, respetando siempre tu marca.
             </li>
             <li className={li}>
-              <strong>Predecible:</strong> un proceso que atrae clientes de forma
-              recurrente, sin depender del boca a boca ni de tocar puertas.
+              <strong>Filtrado y contacto inmediato:</strong> solo pasan los
+              leads con intención real, y la IA los contacta al momento.
             </li>
             <li className={li}>
-              <strong>Orientado a resultados:</strong> cada pieza del sistema
-              tiene su función y siempre apunta a ser rentable.
+              <strong>Agenda llena:</strong> tus técnicos reciben visitas con
+              clientes que quieren instalar.
             </li>
-          </ul>
+            <li className={li}>
+              <strong>Medición y largo plazo:</strong> sabemos qué funciona y
+              optimizamos para cumplir tus objetivos mes a mes.
+            </li>
+          </ol>
+
+          <h2 className={h2}>Casos de éxito en el sector solar</h2>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-left text-[15px] border-collapse">
+              <thead>
+                <tr className="border-b border-[#ececf0]">
+                  <th className="py-3 pr-4 font-bold text-[#14161b]">Empresa</th>
+                  <th className="py-3 font-bold text-[#14161b]">Resultado con Monq Media</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#3a3d46]">
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Vira Energy</td>
+                  <td className="py-3">
+                    x3,2 instalaciones cerradas, +400 leads cualificados al mes,
+                    -41&nbsp;% coste por cliente y x11 de retorno
+                  </td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Eco Max Energía</td>
+                  <td className="py-3">
+                    +30.000&nbsp;€ de beneficio mensual extra; somos su canal nº1
+                    de ventas
+                  </td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Pulso Solar</td>
+                  <td className="py-3">+20&nbsp;% de aumento en ventas</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Efistar</td>
+                  <td className="py-3">
+                    10-15 estudios extra para empresas cada mes en Andalucía
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-3 pr-4 font-semibold">Vadesol y Solarclic</td>
+                  <td className="py-3">
+                    Más instalaciones y un flujo mensual estable
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            En conjunto, generamos más de 2.000 clientes potenciales al mes y más
+            de 9 M€ de facturación para nuestros clientes.
+          </p>
 
           <h2 className={h2}>Para quién es</h2>
           <p className={p}>
-            Para empresas de energías renovables en España que quieren aumentar
-            el número de instalaciones y proyectos al mes:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li className={li}>Instaladores de placas solares y autoconsumo</li>
-            <li className={li}>Instaladores de cargadores de coche eléctrico</li>
-            <li className={li}>Empresas de aerotermia</li>
-          </ul>
-
-          <h2 className={h2}>Resultados</h2>
-          <p className={p}>
-            Monq Media genera más de 2.000 clientes potenciales al mes y más de
-            9 M€ de facturación para sus clientes. En el caso de{" "}
-            <strong>Vira Energy</strong>, empresa de autoconsumo con sedes en
-            Cataluña, Comunidad Valenciana y Madrid, el sistema logró x3,2
-            instalaciones cerradas, más de 400 leads cualificados al mes, un
-            41&nbsp;% menos de coste por cliente y un retorno de x11 por cada euro
-            invertido.
+            Para empresas instaladoras de placas solares y autoconsumo de toda
+            España que quieren más instalaciones al mes y un flujo de clientes
+            estable. También trabajamos con empresas de aerotermia y de
+            cargadores de coche eléctrico.
           </p>
 
           <h2 className={h2}>Preguntas frecuentes</h2>
@@ -222,10 +302,10 @@ export default function LeadsPlacasSolaresPage() {
 
           <div className="rounded-[24px] bg-[#0f1015] text-white px-6 py-8 sm:px-10 sm:py-10">
             <p className="text-[22px] sm:text-[26px] font-extrabold mb-3">
-              ¿Quieres más instalaciones al mes?
+              ¿Quieres la agenda de tus técnicos llena de visitas?
             </p>
             <p className="text-[#c9ccd3] mb-6">
-              Asesoramiento gratuito y 100% sin compromiso.
+              Asesoramiento gratuito y 100% sin compromiso. Garantía de resultados por contrato.
             </p>
             <Link
               href="/#contacto"
