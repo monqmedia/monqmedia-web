@@ -19,5 +19,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/sistema-ia-contacto-leads`,
+      lastModified: new Date("2026-10-08"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/casos-de-exito`,
+      lastModified: new Date("2026-10-08"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }

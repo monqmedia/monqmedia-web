@@ -19,6 +19,12 @@ export default function Footer() {
         <Link href="/leads-placas-solares" className="text-[12.5px] hover:text-white transition-colors">
           Leads para placas solares
         </Link>
+        <Link href="/sistema-ia-contacto-leads" className="text-[12.5px] hover:text-white transition-colors">
+          IA de contacto de leads
+        </Link>
+        <Link href="/casos-de-exito" className="text-[12.5px] hover:text-white transition-colors">
+          Casos de éxito
+        </Link>
         <Link href="/politica-de-privacidad" className="text-[12.5px] hover:text-white transition-colors">
           Política de privacidad
         </Link>
