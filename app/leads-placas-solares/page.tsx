@@ -207,7 +207,11 @@ export default function LeadsPlacasSolaresPage() {
             contacta automáticamente a cada lead en cuanto entra, también en fin
             de semana o fuera de horario, para que no se enfríe. Tu comercial
             recibe el trabajo hecho: un cliente interesado y una visita lista
-            para agendar.
+            para agendar.{" "}
+            <Link href="/sistema-ia-contacto-leads" className="text-[#EB0A5C] font-semibold hover:underline">
+              Cómo funciona el sistema de IA
+            </Link>
+            .
           </p>
 
           <h2 className={h2}>Cómo trabajamos</h2>
@@ -279,7 +283,11 @@ export default function LeadsPlacasSolaresPage() {
           </div>
           <p className={p}>
             En conjunto, generamos más de 2.000 clientes potenciales al mes y más
-            de 9 M€ de facturación para nuestros clientes.
+            de 9 M€ de facturación para nuestros clientes.{" "}
+            <Link href="/casos-de-exito" className="text-[#EB0A5C] font-semibold hover:underline">
+              Ver todos los casos de éxito
+            </Link>
+            .
           </p>
 
           <h2 className={h2}>Para quién es</h2>

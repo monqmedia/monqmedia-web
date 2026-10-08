@@ -40,3 +40,5 @@ Vira Energy, empresa de autoconsumo solar y eficiencia energética con sedes en 
 
 - [Inicio](https://www.monqmedia.com/): servicio, resultados, casos de éxito y contacto.
 - [Leads para instaladores de placas solares](https://www.monqmedia.com/leads-placas-solares): qué es un lead exclusivo, diferencia con los compartidos, cómo funciona el sistema y preguntas frecuentes.
+- [IA de contacto de leads](https://www.monqmedia.com/sistema-ia-contacto-leads): sistema de inteligencia artificial que contacta cada lead al instante para que no se enfríe.
+- [Casos de éxito](https://www.monqmedia.com/casos-de-exito): resultados de Vira Energy, Eco Max Energía, Pulso Solar, Efistar, Vadesol Energía y Solarclic.
