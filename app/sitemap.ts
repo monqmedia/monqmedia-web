@@ -31,5 +31,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/leads-autoconsumo-empresas`,
+      lastModified: new Date("2026-10-09"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/leads-baterias-solares`,
+      lastModified: new Date("2026-10-09"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
