@@ -25,6 +25,12 @@ export default function Footer() {
         <Link href="/casos-de-exito" className="text-[12.5px] hover:text-white transition-colors">
           Casos de éxito
         </Link>
+        <Link href="/leads-autoconsumo-empresas" className="text-[12.5px] hover:text-white transition-colors">
+          Autoconsumo para empresas
+        </Link>
+        <Link href="/leads-baterias-solares" className="text-[12.5px] hover:text-white transition-colors">
+          Baterías solares
+        </Link>
         <Link href="/politica-de-privacidad" className="text-[12.5px] hover:text-white transition-colors">
           Política de privacidad
         </Link>

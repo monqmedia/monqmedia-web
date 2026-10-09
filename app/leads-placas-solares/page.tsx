@@ -294,8 +294,16 @@ export default function LeadsPlacasSolaresPage() {
           <p className={p}>
             Para empresas instaladoras de placas solares y autoconsumo de toda
             España que quieren más instalaciones al mes y un flujo de clientes
-            estable. También trabajamos con empresas de aerotermia y de
-            cargadores de coche eléctrico.
+            estable, tanto en residencial como en{" "}
+            <Link href="/leads-autoconsumo-empresas" className="text-[#EB0A5C] font-semibold hover:underline">
+              autoconsumo para empresas
+            </Link>{" "}
+            y{" "}
+            <Link href="/leads-baterias-solares" className="text-[#EB0A5C] font-semibold hover:underline">
+              baterías solares
+            </Link>
+            . También trabajamos con empresas de aerotermia y de cargadores de
+            coche eléctrico.
           </p>
 
           <h2 className={h2}>Preguntas frecuentes</h2>
