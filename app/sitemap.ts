@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { posts } from "./blog/posts";
 
 const BASE_URL = "https://www.monqmedia.com";
 
@@ -6,6 +7,13 @@ const BASE_URL = "https://www.monqmedia.com";
 // y /contacto redirigen a anclas de la home (ver next.config.mjs), así que no
 // deben aparecer en el sitemap.
 export default function sitemap(): MetadataRoute.Sitemap {
+  const blog: MetadataRoute.Sitemap = posts.map((p) => ({
+    url: `${BASE_URL}/blog/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   return [
     {
       url: BASE_URL,
@@ -43,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(posts[0].date),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    ...blog,
   ];
 }
