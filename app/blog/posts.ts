@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import { SITE } from "@/app/components/ContentPage";
+
 export type Post = {
   slug: string;
   title: string;
@@ -8,6 +11,22 @@ export type Post = {
 
 // Más recientes primero.
 export const posts: Post[] = [
+  {
+    slug: "como-llenar-la-agenda-de-visitas-de-tus-tecnicos",
+    title: "Cómo llenar la agenda de visitas de tus técnicos de placas solares",
+    description:
+      "Guía para instaladoras solares: cómo pasar de leads sueltos a una agenda de visitas técnicas llena y predecible, sin saturar al equipo ni perder clientes.",
+    date: "2026-10-13",
+    dateLabel: "13 de octubre de 2026",
+  },
+  {
+    slug: "que-pedir-a-una-agencia-de-marketing-para-instaladores-solares",
+    title: "Qué pedir a una agencia de marketing para instaladores solares",
+    description:
+      "Las preguntas que debes hacer antes de contratar una agencia de marketing para tu empresa de placas solares, para no pagar por leads que no acaban en instalación.",
+    date: "2026-10-13",
+    dateLabel: "13 de octubre de 2026",
+  },
   {
     slug: "por-que-se-enfrian-los-leads-de-placas-solares",
     title: "Por qué se enfrían los leads de placas solares (y cómo evitarlo)",
@@ -30,4 +49,26 @@ export function getPost(slug: string): Post {
   const post = posts.find((p) => p.slug === slug);
   if (!post) throw new Error(`Post no encontrado: ${slug}`);
   return post;
+}
+
+export function postUrl(post: Post): string {
+  return `${SITE}/blog/${post.slug}`;
+}
+
+export function postMetadata(post: Post): Metadata {
+  const url = postUrl(post);
+  return {
+    title: post.title,
+    description: post.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${post.title} | Monq Media`,
+      description: post.description,
+      url,
+      siteName: "Monq Media",
+      locale: "es_ES",
+      type: "article",
+      publishedTime: post.date,
+    },
+  };
 }

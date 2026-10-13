@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContentPage, {
-  SITE,
   Table,
   a,
   articleJsonLd,
@@ -12,25 +11,12 @@ import ContentPage, {
   p,
   type Faq,
 } from "@/app/components/ContentPage";
-import { getPost } from "../posts";
+import { getPost, postMetadata, postUrl } from "../posts";
 
 const post = getPost("conseguir-clientes-placas-solares-sin-puerta-fria");
-const URL = `${SITE}/blog/${post.slug}`;
+const URL = postUrl(post);
 
-export const metadata: Metadata = {
-  title: post.title,
-  description: post.description,
-  alternates: { canonical: URL },
-  openGraph: {
-    title: `${post.title} | Monq Media`,
-    description: post.description,
-    url: URL,
-    siteName: "Monq Media",
-    locale: "es_ES",
-    type: "article",
-    publishedTime: post.date,
-  },
-};
+export const metadata: Metadata = postMetadata(post);
 
 const faqs: Faq[] = [
   {
