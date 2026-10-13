@@ -320,8 +320,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        {/* Contenedor del CTA flotante (solo visitas desde ia.monqmedia.com) */}
-        <div>
 
         {/* ============ VALUE PILLARS ============ */}
         <section id="que-ofrecemos" className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14">
@@ -829,8 +827,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-          <FloatingCta />
-        </div>
 
         {/* ============ CONTACTO ============ */}
         <section
@@ -883,6 +879,7 @@ export default function HomePage() {
       </main>
 
       <Footer />
+      <FloatingCta />
     </>
   );
 }
