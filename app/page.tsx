@@ -4,6 +4,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import VideoCard from "@/app/components/VideoCard";
 import StatsSection from "@/app/components/StatsSection";
+import FloatingCta from "@/app/components/FloatingCta";
 
 export const metadata: Metadata = {
   title: {
@@ -170,7 +171,7 @@ export default function HomePage() {
 
       <main>
         {/* ============ HERO ============ */}
-        <section data-hero className="relative px-4 sm:px-8 lg:px-[72px] pt-5 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16 overflow-hidden">
+        <section className="relative px-4 sm:px-8 lg:px-[72px] pt-5 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16 overflow-hidden">
           {/* bg glow */}
           <div
             className="absolute pointer-events-none"
@@ -289,6 +290,7 @@ export default function HomePage() {
           </div>
         </section>
 
+
         {/* ============ LOGOS MARQUEE ============ */}
         <section className="pt-10 pb-4 border-t border-b border-[#f0f0f2] bg-[#fbfbfc]">
           <p className="text-center text-[13px] font-bold tracking-[0.14em] uppercase text-[#9aa0aa] mb-8">
@@ -318,6 +320,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        {/* Contenedor del CTA flotante (solo visitas desde ia.monqmedia.com) */}
+        <div>
 
         {/* ============ VALUE PILLARS ============ */}
         <section id="que-ofrecemos" className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14">
@@ -825,6 +829,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+          <FloatingCta />
+        </div>
 
         {/* ============ CONTACTO ============ */}
         <section
