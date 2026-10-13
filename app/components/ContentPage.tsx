@@ -24,14 +24,48 @@ export function faqJsonLd(faqs: Faq[]) {
   };
 }
 
-export function breadcrumbJsonLd(name: string, url: string) {
+export type Crumb = { name: string; href: string };
+
+export function breadcrumbJsonLd(name: string, url: string, parent?: Crumb) {
+  const items = [{ name: "Inicio", item: SITE }];
+  if (parent) items.push({ name: parent.name, item: `${SITE}${parent.href}` });
+  items.push({ name, item: url });
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Inicio", item: SITE },
-      { "@type": "ListItem", position: 2, name, item: url },
-    ],
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      ...it,
+    })),
+  };
+}
+
+export function articleJsonLd(o: {
+  title: string;
+  description: string;
+  url: string;
+  published: string;
+  modified?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: o.title,
+    description: o.description,
+    url: o.url,
+    mainEntityOfPage: o.url,
+    datePublished: o.published,
+    dateModified: o.modified ?? o.published,
+    inLanguage: "es-ES",
+    image: `${SITE}/opengraph-image`,
+    author: { "@type": "Organization", name: "Monq Media", url: SITE },
+    publisher: {
+      "@type": "Organization",
+      name: "Monq Media",
+      url: SITE,
+      logo: { "@type": "ImageObject", url: `${SITE}/monq-icon-black.png` },
+    },
   };
 }
 
@@ -79,6 +113,7 @@ export function Table({
 export default function ContentPage({
   jsonLd,
   crumb,
+  parent,
   eyebrow,
   title,
   updated,
@@ -90,6 +125,7 @@ export default function ContentPage({
 }: {
   jsonLd: object[];
   crumb: string;
+  parent?: Crumb;
   eyebrow: string;
   title: string;
   updated: string;
@@ -112,7 +148,16 @@ export default function ContentPage({
             <Link href="/" className="hover:text-[#EB0A5C]">
               Inicio
             </Link>{" "}
-            / {crumb}
+            /{" "}
+            {parent && (
+              <>
+                <Link href={parent.href} className="hover:text-[#EB0A5C]">
+                  {parent.name}
+                </Link>{" "}
+                /{" "}
+              </>
+            )}
+            {crumb}
           </nav>
           <p className="text-[13px] font-bold tracking-[0.14em] uppercase text-[#EB0A5C] mb-4">
             {eyebrow}
