@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { chromeIOSScrollFix } from "@/app/components/crossSite";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <script dangerouslySetInnerHTML={{ __html: chromeIOSScrollFix }} />
       </body>
     </html>
   );

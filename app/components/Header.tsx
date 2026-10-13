@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useFromIa } from "@/app/components/useFromIa";
+import { crossSiteClick } from "@/app/components/crossSite";
 
 export default function Header() {
   const fromIa = useFromIa();
@@ -20,7 +21,8 @@ export default function Header() {
         <div className="flex items-center gap-3 min-w-0">
           {fromIa && (
             <a
-              href="https://ia.monqmedia.com"
+              href="https://ia.monqmedia.com/?from=web"
+              onClick={crossSiteClick}
               className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-[10px] rounded-full text-[#2A64E6] text-[10.5px] sm:text-[12.5px] leading-[1.15] text-center font-extrabold tracking-[0.03em] border-2 border-transparent shadow-[0_8px_24px_-10px_rgba(42,100,230,.65)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-10px_rgba(42,100,230,.8)] transition-[transform,box-shadow] duration-200"
               style={{
                 backgroundImage:
