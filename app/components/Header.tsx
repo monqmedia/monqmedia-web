@@ -64,7 +64,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/[0.82] backdrop-blur-md border-b border-[#f0f0f2]">
+      <header className={`sticky top-0 z-50 border-b border-[#f0f0f2] ${fromIa ? "bg-white/[0.97] sm:bg-white/[0.82] sm:backdrop-blur-md" : "bg-white/[0.82] backdrop-blur-md"}`}>
         <div className="flex items-center justify-between gap-3 px-4 sm:px-8 lg:px-[72px] py-[14px] sm:py-[18px]">
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 shrink-0">
             <Image src="/monq-icon-black.png" alt="Monq Media" width={34} height={34} className="w-[28px] h-[28px] sm:w-[34px] sm:h-[34px]" />
@@ -77,7 +77,7 @@ export default function Header() {
             {fromIa && (
               <a
                 href="https://ia.monqmedia.com"
-                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-[10px] rounded-full text-[#0E1116] text-[10.5px] sm:text-[12.5px] leading-[1.15] text-center font-extrabold tracking-[0.02em] border-2 border-transparent shadow-[0_8px_22px_-12px_rgba(42,100,230,.6)] hover:-translate-y-0.5 transition-transform"
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-[10px] rounded-full text-[#2A64E6] text-[10.5px] sm:text-[12.5px] leading-[1.15] text-center font-extrabold tracking-[0.03em] border-2 border-transparent shadow-[0_8px_24px_-10px_rgba(42,100,230,.65)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-10px_rgba(42,100,230,.8)] transition-[transform,box-shadow] duration-200"
                 style={{
                   backgroundImage:
                     "linear-gradient(#fff,#fff),linear-gradient(120deg,#4C8DFF,#2A64E6,#15399E)",
@@ -86,7 +86,7 @@ export default function Header() {
                 }}
               >
                 SISTEMA COMERCIAL CON IA
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2A64E6" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 w-3 h-3 sm:w-[14px] sm:h-[14px]">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 w-3 h-3 sm:w-[14px] sm:h-[14px]">
                   <path d="M7 17L17 7" />
                   <path d="M8 7h9v9" />
                 </svg>
@@ -102,14 +102,10 @@ export default function Header() {
         </div>
       </header>
 
-      {fromIa && (
+      {fromIa && ctaVisible && (
         <a
           href="/#contacto"
-          aria-hidden={!ctaVisible}
-          tabIndex={ctaVisible ? 0 : -1}
-          className={`sm:hidden fixed left-1/2 z-50 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#EB0A5C] text-white text-[15px] font-bold whitespace-nowrap shadow-[0_14px_32px_-10px_rgba(235,10,92,.7)] transition-[opacity,transform,visibility] duration-300 ${
-            ctaVisible ? "visible opacity-100 -translate-x-1/2 translate-y-0" : "invisible opacity-0 -translate-x-1/2 translate-y-3 pointer-events-none"
-          }`}
+          className="sm:hidden fixed left-1/2 -translate-x-1/2 z-50 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#EB0A5C] text-white text-[15px] font-bold whitespace-nowrap shadow-[0_14px_32px_-10px_rgba(235,10,92,.7)] animate-[cta-in_.3s_ease-out]"
           style={{ bottom: "calc(16px + env(safe-area-inset-bottom))" }}
         >
           Contáctanos
