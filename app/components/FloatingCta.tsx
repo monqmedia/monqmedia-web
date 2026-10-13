@@ -3,15 +3,19 @@
 import { useEffect, useState } from "react";
 import { useFromIa } from "@/app/components/useFromIa";
 
-// CTA flotante en móvil para visitas desde ia.monqmedia.com: visible desde el
-// inicio y oculto mientras se ve #contacto o el footer (igual que en ia.monqmedia.com).
+// CTA flotante en móvil para visitas desde ia.monqmedia.com: visible tras el
+// paso del hero y oculto mientras se ve el hero, #contacto o el footer (igual que en ia.monqmedia.com).
 export default function FloatingCta() {
   const fromIa = useFromIa();
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(true);
 
   useEffect(() => {
     if (!fromIa) return;
-    const targets = [document.querySelector("#contacto"), document.querySelector("footer")].filter(
+    const targets = [
+      document.querySelector("[data-hero]"),
+      document.querySelector("#contacto"),
+      document.querySelector("footer"),
+    ].filter(
       (el): el is Element => !!el
     );
     const onScreen = new Set<Element>();
