@@ -170,7 +170,7 @@ export default function HomePage() {
 
       <main>
         {/* ============ HERO ============ */}
-        <section className="relative px-4 sm:px-8 lg:px-[72px] pt-5 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16 overflow-hidden">
+        <section data-hero className="relative px-4 sm:px-8 lg:px-[72px] pt-5 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16 overflow-hidden">
           {/* bg glow */}
           <div
             className="absolute pointer-events-none"
