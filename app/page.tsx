@@ -520,7 +520,7 @@ export default function HomePage() {
                 className="flex-1 h-px"
                 style={{ background: "linear-gradient(90deg,transparent,#f1c9d8)" }}
               />
-              <span className="flex-none text-[15px] font-bold tracking-[0.18em] uppercase text-[#EB0A5C] text-center">
+              <span className="min-w-0 text-[12px] sm:text-[15px] font-bold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#EB0A5C] text-center">
                 Nuestro último caso de éxito
               </span>
               <span

@@ -107,8 +107,8 @@ export default function Header() {
           href="/#contacto"
           aria-hidden={!ctaVisible}
           tabIndex={ctaVisible ? 0 : -1}
-          className={`sm:hidden fixed left-1/2 z-50 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#EB0A5C] text-white text-[15px] font-bold whitespace-nowrap shadow-[0_14px_32px_-10px_rgba(235,10,92,.7)] transition-all duration-300 ${
-            ctaVisible ? "opacity-100 -translate-x-1/2 translate-y-0" : "opacity-0 -translate-x-1/2 translate-y-[160%] pointer-events-none"
+          className={`sm:hidden fixed left-1/2 z-50 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#EB0A5C] text-white text-[15px] font-bold whitespace-nowrap shadow-[0_14px_32px_-10px_rgba(235,10,92,.7)] transition-[opacity,transform,visibility] duration-300 ${
+            ctaVisible ? "visible opacity-100 -translate-x-1/2 translate-y-0" : "invisible opacity-0 -translate-x-1/2 translate-y-3 pointer-events-none"
           }`}
           style={{ bottom: "calc(16px + env(safe-area-inset-bottom))" }}
         >
