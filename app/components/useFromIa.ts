@@ -18,3 +18,12 @@ export function useFromIa() {
   }, []);
   return fromIa;
 }
+
+// Diagnóstico temporal: ?nh desactiva el botón del header, ?nf el CTA flotante.
+export function useDebugFlag(name: "nh" | "nf") {
+  const [on, setOn] = useState(false);
+  useEffect(() => {
+    setOn(new URLSearchParams(window.location.search).has(name));
+  }, [name]);
+  return on;
+}

@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useFromIa } from "@/app/components/useFromIa";
+import { useDebugFlag, useFromIa } from "@/app/components/useFromIa";
 
 export default function Header() {
-  const fromIa = useFromIa();
+  const fromIaRaw = useFromIa();
+  const noHeader = useDebugFlag("nh");
+  const fromIa = fromIaRaw && !noHeader;
 
   return (
     <header className="sticky top-0 z-50 bg-white/[0.82] backdrop-blur-md border-b border-[#f0f0f2]">
