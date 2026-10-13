@@ -2,20 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useDebugFlag, useFromIa } from "@/app/components/useFromIa";
+import { useFromIa } from "@/app/components/useFromIa";
 
 export default function Header() {
-  const fromIaRaw = useFromIa();
-  const noHeader = useDebugFlag("nh");
-  const fromIa = fromIaRaw && !noHeader;
+  const fromIa = useFromIa();
 
   return (
-    <header
-      className={`sticky top-0 z-50 border-b border-[#f0f0f2] ${
-        // En móvil, blur del header + CTA fijo bloquea el scroll en iOS: sin blur cuando viene de IA
-        fromIa ? "bg-white/[0.97] sm:bg-white/[0.82] sm:backdrop-blur-md" : "bg-white/[0.82] backdrop-blur-md"
-      }`}
-    >
+    <header className="sticky top-0 z-50 bg-white/[0.82] backdrop-blur-md border-b border-[#f0f0f2]">
       <div className="flex items-center justify-between gap-3 px-4 sm:px-8 lg:px-[72px] py-[14px] sm:py-[18px]">
         <Link href="/" className="flex items-center gap-2.5 sm:gap-3 shrink-0">
           <Image src="/monq-icon-black.png" alt="Monq Media" width={34} height={34} className="w-[28px] h-[28px] sm:w-[34px] sm:h-[34px]" />

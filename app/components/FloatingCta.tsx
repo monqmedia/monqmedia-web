@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useDebugFlag, useFromIa } from "@/app/components/useFromIa";
+import { useFromIa } from "@/app/components/useFromIa";
 
 // CTA flotante en móvil para visitas desde ia.monqmedia.com: visible desde el
 // inicio y oculto mientras se ve #contacto o el footer (igual que en ia.monqmedia.com).
 export default function FloatingCta() {
-  const fromIaRaw = useFromIa();
-  const noFloat = useDebugFlag("nf");
-  const fromIa = fromIaRaw && !noFloat;
+  const fromIa = useFromIa();
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
