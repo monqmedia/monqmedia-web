@@ -152,6 +152,13 @@ const organizationSchema = {
   email: "info@monqmedia.com",
   telephone: "+34613062192",
   areaServed: { "@type": "Country", name: "España" },
+  subOrganization: {
+    "@type": "Organization",
+    name: "MONQ &IA",
+    url: "https://ia.monqmedia.com",
+    description:
+      "Sistemas de inteligencia artificial que contactan, hacen seguimiento y reactivan leads en automático.",
+  },
   description:
     "Agencia especializada en generación de leads exclusivos para instaladores de paneles solares y empresas de energías renovables en España.",
 };

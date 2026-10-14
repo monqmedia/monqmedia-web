@@ -62,6 +62,7 @@ const jsonLd = [
     serviceType: "Contacto automático de leads con inteligencia artificial",
     url: URL,
     provider: { "@type": "Organization", name: "Monq Media", url: SITE },
+    brand: { "@type": "Brand", name: "MONQ &IA", url: "https://ia.monqmedia.com" },
     areaServed: { "@type": "Country", name: "España" },
     description: DESCRIPTION,
   },
@@ -150,6 +151,14 @@ export default function SistemaIaContactoLeadsPage() {
           clientes que quieren instalar.
         </li>
       </ol>
+      <p className={p}>
+        Este sistema lo desarrolla{" "}
+        <a href="https://ia.monqmedia.com" className={a}>
+          MONQ &amp;IA
+        </a>
+        , nuestra rama de inteligencia artificial, que lo aplica también en
+        otros sectores.
+      </p>
       <p className={p}>
         El resultado es lo que de verdad importa: más visitas y más
         instalaciones. De media, nuestros clientes añaden entre 7 y 10

@@ -12,6 +12,22 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "como-cualificar-un-lead-de-placas-solares",
+    title: "Cómo cualificar un lead de placas solares antes de enviar al técnico",
+    description:
+      "Las preguntas y señales que separan a un curioso de un cliente que quiere instalar placas solares, para que tus técnicos solo hagan visitas que pueden cerrarse.",
+    date: "2026-10-14",
+    dateLabel: "14 de octubre de 2026",
+  },
+  {
+    slug: "leads-exclusivos-o-compartidos-placas-solares",
+    title: "Leads exclusivos o compartidos: qué le sale más rentable a una instaladora",
+    description:
+      "Por qué el precio por lead engaña y cómo calcular lo que de verdad cuesta cada instalación cuando compras leads compartidos frente a leads exclusivos.",
+    date: "2026-10-14",
+    dateLabel: "14 de octubre de 2026",
+  },
+  {
     slug: "como-llenar-la-agenda-de-visitas-de-tus-tecnicos",
     title: "Cómo llenar la agenda de visitas de tus técnicos de placas solares",
     description:
