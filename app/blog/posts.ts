@@ -12,6 +12,22 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "seguimiento-de-presupuestos-de-placas-solares",
+    title: "Seguimiento de presupuestos de placas solares: cómo cerrar más instalaciones",
+    description:
+      "Qué hacer después de entregar un presupuesto de placas solares para que no se quede en un cajón: cuándo llamar, qué decir y cómo automatizar el seguimiento.",
+    date: "2026-10-15",
+    dateLabel: "15 de octubre de 2026",
+  },
+  {
+    slug: "marketing-local-para-instaladoras-solares",
+    title: "Marketing local para instaladoras solares: captar clientes en tu zona",
+    description:
+      "Cómo una instaladora de placas solares puede captar clientes en su provincia o región sin desperdiciar visitas fuera de su radio de trabajo.",
+    date: "2026-10-15",
+    dateLabel: "15 de octubre de 2026",
+  },
+  {
     slug: "como-cualificar-un-lead-de-placas-solares",
     title: "Cómo cualificar un lead de placas solares antes de enviar al técnico",
     description:
