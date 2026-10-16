@@ -52,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/leads-aerotermia`,
+      lastModified: new Date("2026-10-16"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(posts[0].date),
       changeFrequency: "weekly",

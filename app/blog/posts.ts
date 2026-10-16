@@ -12,6 +12,14 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "coste-de-captar-un-cliente-de-autoconsumo",
+    title: "Cuánto cuesta captar un cliente de autoconsumo y cómo calcularlo",
+    description:
+      "Cómo calcular el coste real de captar un cliente de placas solares, qué gastos incluir y qué palancas lo bajan sin reducir la calidad de los leads.",
+    date: "2026-10-16",
+    dateLabel: "16 de octubre de 2026",
+  },
+  {
     slug: "seguimiento-de-presupuestos-de-placas-solares",
     title: "Seguimiento de presupuestos de placas solares: cómo cerrar más instalaciones",
     description:
