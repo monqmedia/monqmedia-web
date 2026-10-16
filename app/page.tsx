@@ -8,14 +8,14 @@ import FloatingCta from "@/app/components/FloatingCta";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Monq Media | Leads exclusivos para instaladores de paneles solares",
+    absolute: "Monq Media | Leads y clientes para instaladores de placas solares y fotovoltaica",
   },
   description:
-    "Leads exclusivos y filtrados para instaladores de placas solares, autoconsumo, aerotermia y cargadores de coche eléctrico en toda España. Asesoramiento gratuito.",
+    "Captación de clientes y leads cualificados para instaladores de placas solares y empresas fotovoltaicas en toda España. Llenamos la agenda de visitas técnicas. Garantía de resultados.",
   openGraph: {
-    title: "Monq Media | Leads exclusivos para instaladores de paneles solares",
+    title: "Monq Media | Leads y clientes para instaladores de placas solares y fotovoltaica",
     description:
-      "Leads exclusivos y filtrados para instaladores de placas solares, autoconsumo, aerotermia y cargadores de coche eléctrico en toda España. Asesoramiento gratuito.",
+      "Captación de clientes y leads cualificados para instaladores de placas solares y empresas fotovoltaicas en toda España. Llenamos la agenda de visitas técnicas. Garantía de resultados.",
     url: "https://www.monqmedia.com",
     siteName: "Monq Media",
     locale: "es_ES",
@@ -152,6 +152,15 @@ const organizationSchema = {
   email: "info@monqmedia.com",
   telephone: "+34613062192",
   areaServed: { "@type": "Country", name: "España" },
+  knowsAbout: [
+    "Captación de clientes para instaladores de placas solares",
+    "Leads de energía solar fotovoltaica",
+    "Autoconsumo solar residencial y para empresas",
+    "Paneles solares y baterías",
+    "Aerotermia",
+    "Cargadores de coche eléctrico",
+    "Contacto de leads con inteligencia artificial",
+  ],
   subOrganization: {
     "@type": "Organization",
     name: "MONQ &IA",
