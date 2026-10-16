@@ -4,10 +4,10 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
 const URL = "https://www.monqmedia.com/leads-placas-solares";
-const TITLE = "Leads cualificados para instaladores de placas solares";
+const TITLE = "Leads de placas solares y fotovoltaica para instaladores";
 const DESCRIPTION =
-  "Leads cualificados y exclusivos para empresas de placas solares en toda España: llenamos la agenda de visitas de tus técnicos, con IA que contacta cada lead al instante y garantía de resultados por contrato.";
-const UPDATED = "2026-10-07";
+  "Leads cualificados y exclusivos para instaladores de placas solares, paneles solares y empresas fotovoltaicas en toda España: llenamos la agenda de visitas técnicas, con IA que contacta cada lead al instante y garantía por contrato.";
+const UPDATED = "2026-10-16";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -43,6 +43,10 @@ const faqs = [
   {
     q: "Ya he probado otras agencias y no funcionó. ¿Qué cambia?",
     a: "Nos especializamos solo en energías renovables y medimos el éxito en visitas e instalaciones, no en clics o contactos. Cada campaña es personalizada para tu empresa, respeta tu marca y está pensada a largo plazo.",
+  },
+  {
+    q: "¿Trabajáis con empresas fotovoltaicas o solo con instaladores de placas solares?",
+    a: "Con ambos: instaladores de placas solares o paneles solares, empresas fotovoltaicas y empresas de autoconsumo, tanto residencial como para empresas. El servicio es el mismo: clientes potenciales cualificados y visitas técnicas agendadas.",
   },
   {
     q: "¿Trabajáis en toda España?",
@@ -118,7 +122,7 @@ export default function LeadsPlacasSolaresPage() {
           </h1>
           <p className="text-[14px] text-[#9aa0aa] mb-10 pb-8 border-b border-[#f0f0f2]">
             Actualizado el{" "}
-            <time dateTime={UPDATED}>7 de octubre de 2026</time> · Monq Media
+            <time dateTime={UPDATED}>16 de octubre de 2026</time> · Monq Media
           </p>
 
           <div className="rounded-2xl bg-[#fdf2f6] border border-[#f4d4e1] px-6 py-5 mb-8">
