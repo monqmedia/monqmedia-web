@@ -302,8 +302,11 @@ export default function LeadsPlacasSolaresPage() {
             <Link href="/leads-baterias-solares" className="text-[#EB0A5C] font-semibold hover:underline">
               baterías solares
             </Link>
-            . También trabajamos con empresas de aerotermia y de cargadores de
-            coche eléctrico.
+            . También trabajamos con empresas de{" "}
+            <Link href="/leads-aerotermia" className="text-[#EB0A5C] font-semibold hover:underline">
+              aerotermia
+            </Link>{" "}
+            y de cargadores de coche eléctrico.
           </p>
 
           <h2 className={h2}>Preguntas frecuentes</h2>
