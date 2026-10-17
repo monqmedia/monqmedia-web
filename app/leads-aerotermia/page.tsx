@@ -121,6 +121,10 @@ export default function LeadsAerotermiaPage() {
         <Link href="/leads-placas-solares" className={a}>
           leads de placas solares
         </Link>
+        . También captamos clientes para{" "}
+        <Link href="/leads-cargadores-coche-electrico" className={a}>
+          cargadores de coche eléctrico
+        </Link>
         . Y si quieres ver cómo funciona el contacto inmediato, mira nuestro{" "}
         <Link href="/sistema-ia-contacto-leads" className={a}>
           sistema de IA de contacto de leads

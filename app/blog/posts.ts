@@ -12,6 +12,14 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "marketing-para-empresas-fotovoltaicas",
+    title: "Marketing para empresas fotovoltaicas: qué funciona para conseguir instalaciones",
+    description:
+      "Guía de marketing para empresas fotovoltaicas e instaladores de paneles solares: qué canales funcionan, qué medir y cómo convertir clientes potenciales en visitas e instalaciones.",
+    date: "2026-10-17",
+    dateLabel: "17 de octubre de 2026",
+  },
+  {
     slug: "coste-de-captar-un-cliente-de-autoconsumo",
     title: "Cuánto cuesta captar un cliente de autoconsumo y cómo calcularlo",
     description:

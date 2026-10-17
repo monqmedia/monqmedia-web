@@ -310,7 +310,11 @@ export default function LeadsPlacasSolaresPage() {
             <Link href="/leads-aerotermia" className="text-[#EB0A5C] font-semibold hover:underline">
               aerotermia
             </Link>{" "}
-            y de cargadores de coche eléctrico.
+            y de{" "}
+            <Link href="/leads-cargadores-coche-electrico" className="text-[#EB0A5C] font-semibold hover:underline">
+              cargadores de coche eléctrico
+            </Link>
+            .
           </p>
 
           <h2 className={h2}>Preguntas frecuentes</h2>
