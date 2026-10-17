@@ -13,9 +13,9 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 
 const URL = `${SITE}/leads-baterias-solares`;
-const TITLE = "Leads para instaladores de baterías solares";
+const TITLE = "Leads para instaladores de baterías solares y almacenamiento";
 const DESCRIPTION =
-  "Leads cualificados de clientes interesados en baterías solares, tanto para instalaciones nuevas como para quien ya tiene placas. Llenamos la agenda de visitas de tus técnicos en toda España.";
+  "Clientes potenciales interesados en baterías solares y almacenamiento fotovoltaico, tanto para instalaciones nuevas como para quien ya tiene paneles solares. Llenamos la agenda de visitas de tus técnicos en toda España.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -72,8 +72,8 @@ export default function LeadsBateriasSolaresPage() {
       crumb="Leads de baterías solares"
       eyebrow="Almacenamiento solar"
       title={TITLE}
-      updated="2026-10-09"
-      updatedLabel="9 de octubre de 2026"
+      updated="2026-10-17"
+      updatedLabel="17 de octubre de 2026"
       summary={
         <>
           Monq Media capta clientes interesados en baterías solares, tanto para

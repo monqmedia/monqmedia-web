@@ -34,6 +34,9 @@ export default function Footer() {
         <Link href="/leads-aerotermia" className="text-[12.5px] hover:text-white transition-colors">
           Aerotermia
         </Link>
+        <Link href="/leads-cargadores-coche-electrico" className="text-[12.5px] hover:text-white transition-colors">
+          Cargadores de coche eléctrico
+        </Link>
         <Link href="/blog" className="text-[12.5px] hover:text-white transition-colors">
           Blog
         </Link>

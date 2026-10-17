@@ -12,9 +12,9 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 
 const URL = `${SITE}/casos-de-exito`;
-const TITLE = "Casos de éxito de empresas de placas solares";
+const TITLE = "Casos de éxito de empresas de placas solares y fotovoltaica";
 const DESCRIPTION =
-  "Resultados reales de instaladoras de placas solares que trabajan con Monq Media: Vira Energy, Eco Max Energía, Pulso Solar, Efistar, Vadesol Energía y Solarclic.";
+  "Resultados reales de instaladoras de placas solares y empresas fotovoltaicas que trabajan con Monq Media: Vira Energy, Eco Max Energía, Pulso Solar, Efistar, Vadesol Energía y Solarclic.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -106,8 +106,8 @@ export default function CasosDeExitoPage() {
       crumb="Casos de éxito"
       eyebrow="Resultados"
       title={TITLE}
-      updated="2026-10-08"
-      updatedLabel="8 de octubre de 2026"
+      updated="2026-10-17"
+      updatedLabel="17 de octubre de 2026"
       summary={
         <>
           instaladoras de placas solares de toda España trabajan con Monq Media

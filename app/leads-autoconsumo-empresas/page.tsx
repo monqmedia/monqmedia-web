@@ -13,9 +13,9 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 
 const URL = `${SITE}/leads-autoconsumo-empresas`;
-const TITLE = "Leads de autoconsumo solar para empresas e industria";
+const TITLE = "Leads de autoconsumo fotovoltaico para empresas e industria";
 const DESCRIPTION =
-  "Captamos empresas, naves e industrias interesadas en autoconsumo solar y llenamos la agenda de estudios y visitas técnicas de tu instaladora. Leads cualificados y exclusivos en toda España.";
+  "Captamos empresas, naves e industrias interesadas en autoconsumo solar o instalaciones fotovoltaicas y llenamos la agenda de estudios y visitas técnicas de tu instaladora. Clientes cualificados y exclusivos en toda España.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -80,8 +80,8 @@ export default function LeadsAutoconsumoEmpresasPage() {
       crumb="Leads de autoconsumo para empresas"
       eyebrow="Autoconsumo industrial y comercial"
       title={TITLE}
-      updated="2026-10-09"
-      updatedLabel="9 de octubre de 2026"
+      updated="2026-10-17"
+      updatedLabel="17 de octubre de 2026"
       summary={
         <>
           Monq Media capta empresas, comercios, naves e industrias interesadas

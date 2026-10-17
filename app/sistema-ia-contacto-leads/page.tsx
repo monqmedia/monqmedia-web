@@ -13,9 +13,9 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 
 const URL = `${SITE}/sistema-ia-contacto-leads`;
-const TITLE = "IA que contacta tus leads de placas solares al instante";
+const TITLE = "IA que contacta tus leads de placas solares y fotovoltaica al instante";
 const DESCRIPTION =
-  "Sistema de inteligencia artificial que contacta automáticamente cada lead de placas solares en cuanto entra, también en fin de semana, para que no se enfríe y tu comercial reciba visitas listas para agendar.";
+  "Sistema de inteligencia artificial que contacta automáticamente cada lead de placas solares o fotovoltaica en cuanto entra, también en fin de semana, para que no se enfríe y tu comercial reciba visitas técnicas listas para agendar.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -77,8 +77,8 @@ export default function SistemaIaContactoLeadsPage() {
       crumb="IA de contacto de leads"
       eyebrow="Inteligencia artificial"
       title={TITLE}
-      updated="2026-10-08"
-      updatedLabel="8 de octubre de 2026"
+      updated="2026-10-17"
+      updatedLabel="17 de octubre de 2026"
       summary={
         <>
           un lead que nadie contacta a tiempo se enfría. Monq Media implementa
