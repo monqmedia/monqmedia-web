@@ -12,6 +12,7 @@ import ContentPage, {
   type Faq,
 } from "@/app/components/ContentPage";
 import { getPost, postMetadata, postUrl } from "../posts";
+import RelatedPosts from "../RelatedPosts";
 
 const post = getPost("conseguir-clientes-placas-solares-sin-puerta-fria");
 const URL = postUrl(post);
@@ -151,6 +152,7 @@ export default function Article() {
         </Link>
         .
       </p>
+      <RelatedPosts slug={post.slug} />
     </ContentPage>
   );
 }

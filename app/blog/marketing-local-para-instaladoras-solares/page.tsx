@@ -12,6 +12,7 @@ import ContentPage, {
   type Faq,
 } from "@/app/components/ContentPage";
 import { getPost, postMetadata, postUrl } from "../posts";
+import RelatedPosts from "../RelatedPosts";
 
 const post = getPost("marketing-local-para-instaladoras-solares");
 const URL = postUrl(post);
@@ -128,6 +129,7 @@ export default function Article() {
         </Link>
         .
       </p>
+      <RelatedPosts slug={post.slug} />
     </ContentPage>
   );
 }

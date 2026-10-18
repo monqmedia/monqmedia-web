@@ -79,7 +79,7 @@ export const posts: Post[] = [
     slug: "por-que-se-enfrian-los-leads-de-placas-solares",
     title: "Por qué se enfrían los leads de placas solares (y cómo evitarlo)",
     description:
-      "Las causas por las que una instaladora pierde leads de placas solares antes de llegar a la visita técnica y cómo evitarlo con contacto inmediato y un buen filtro.",
+      "Las causas por las que una instaladora de placas solares o fotovoltaica pierde clientes potenciales antes de la visita técnica, y cómo evitarlo con contacto inmediato y un buen filtro.",
     date: "2026-10-10",
     dateLabel: "10 de octubre de 2026",
   },
@@ -87,7 +87,7 @@ export const posts: Post[] = [
     slug: "conseguir-clientes-placas-solares-sin-puerta-fria",
     title: "Cómo conseguir clientes de placas solares sin puerta fría",
     description:
-      "Alternativas a la puerta fría, el boca a boca y los leads compartidos para que una instaladora solar tenga la agenda de visitas llena de forma predecible.",
+      "Alternativas a la puerta fría, el boca a boca y los leads compartidos para que una instaladora de placas solares o empresa fotovoltaica tenga la agenda de visitas llena de forma predecible.",
     date: "2026-10-10",
     dateLabel: "10 de octubre de 2026",
   },
