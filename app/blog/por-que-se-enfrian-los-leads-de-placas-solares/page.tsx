@@ -12,6 +12,7 @@ import ContentPage, {
   type Faq,
 } from "@/app/components/ContentPage";
 import { getPost, postMetadata, postUrl } from "../posts";
+import RelatedPosts from "../RelatedPosts";
 
 const post = getPost("por-que-se-enfrian-los-leads-de-placas-solares");
 const URL = postUrl(post);
@@ -140,6 +141,7 @@ export default function Article() {
         visitas: de media, nuestros clientes añaden entre 7 y 10 instalaciones
         extra al mes en los primeros 60 días.
       </p>
+      <RelatedPosts slug={post.slug} />
     </ContentPage>
   );
 }
