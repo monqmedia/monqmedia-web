@@ -12,6 +12,22 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "objeciones-cliente-placas-solares",
+    title: "Objeciones del cliente de placas solares y cómo responderlas",
+    description:
+      "Las dudas más habituales de un cliente antes de instalar paneles solares (precio, plazos, tejado, confianza) y cómo responderlas para pasar del presupuesto a la instalación.",
+    date: "2026-10-19",
+    dateLabel: "19 de octubre de 2026",
+  },
+  {
+    slug: "como-vender-autoconsumo-a-empresas",
+    title: "Cómo vender autoconsumo fotovoltaico a empresas",
+    description:
+      "Qué cambia al vender placas solares a empresas, naves e industrias: quién decide, qué argumentos funcionan y cómo llenar la agenda de estudios energéticos.",
+    date: "2026-10-19",
+    dateLabel: "19 de octubre de 2026",
+  },
+  {
     slug: "marketing-para-empresas-fotovoltaicas",
     title: "Marketing para empresas fotovoltaicas: qué funciona para conseguir instalaciones",
     description:
