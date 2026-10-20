@@ -12,6 +12,22 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "por-que-fallan-las-campanas-de-una-instaladora-solar",
+    title: "Por qué fallan las campañas de Facebook y Google de una instaladora solar",
+    description:
+      "Los errores más comunes en campañas de Meta Ads y Google Ads para placas solares y fotovoltaica, y cómo corregirlos para conseguir leads cualificados y visitas técnicas.",
+    date: "2026-10-20",
+    dateLabel: "20 de octubre de 2026",
+  },
+  {
+    slug: "ayudas-placas-solares-como-argumento-de-venta",
+    title: "Ayudas y bonificaciones para placas solares: cómo usarlas para vender",
+    description:
+      "Cómo una empresa de paneles solares puede usar subvenciones, deducciones y bonificaciones como argumento de venta sin prometer de más ni frenar la decisión del cliente.",
+    date: "2026-10-20",
+    dateLabel: "20 de octubre de 2026",
+  },
+  {
     slug: "objeciones-cliente-placas-solares",
     title: "Objeciones del cliente de placas solares y cómo responderlas",
     description:
