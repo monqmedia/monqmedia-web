@@ -12,6 +12,22 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "presupuesto-de-placas-solares-que-convierte",
+    title: "Cómo hacer un presupuesto de placas solares que el cliente acepte",
+    description:
+      "Qué debe incluir un presupuesto de instalación fotovoltaica para que el cliente lo entienda, confíe y lo firme: ahorro, componentes, plazos, garantías y siguiente paso.",
+    date: "2026-10-21",
+    dateLabel: "21 de octubre de 2026",
+  },
+  {
+    slug: "resenas-google-instaladora-placas-solares",
+    title: "Reseñas en Google para instaladoras de placas solares: cómo conseguirlas",
+    description:
+      "Por qué las reseñas en Google pesan tanto al elegir empresa de paneles solares y cómo pedirlas a tus clientes de autoconsumo de forma sencilla y constante.",
+    date: "2026-10-21",
+    dateLabel: "21 de octubre de 2026",
+  },
+  {
     slug: "por-que-fallan-las-campanas-de-una-instaladora-solar",
     title: "Por qué fallan las campañas de Facebook y Google de una instaladora solar",
     description:
