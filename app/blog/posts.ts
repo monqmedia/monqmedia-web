@@ -12,6 +12,22 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "crm-para-instaladores-de-placas-solares",
+    title: "CRM para instaladores de placas solares: qué debe tener para vender más",
+    description:
+      "Qué funciones necesita un CRM para una empresa de paneles solares o instalaciones fotovoltaicas: entrada de leads, contacto inmediato, agenda de visitas técnicas y seguimiento.",
+    date: "2026-10-22",
+    dateLabel: "22 de octubre de 2026",
+  },
+  {
+    slug: "vender-placas-solares-en-invierno",
+    title: "Cómo vender placas solares en otoño e invierno",
+    description:
+      "Cómo mantener la agenda de visitas y las ventas de energía solar en los meses fríos: qué cambia en el cliente, qué argumentos usar y cómo planificar la captación.",
+    date: "2026-10-22",
+    dateLabel: "22 de octubre de 2026",
+  },
+  {
     slug: "presupuesto-de-placas-solares-que-convierte",
     title: "Cómo hacer un presupuesto de placas solares que el cliente acepte",
     description:
