@@ -85,9 +85,9 @@ export const posts: Post[] = [
   },
   {
     slug: "marketing-para-empresas-fotovoltaicas",
-    title: "Marketing para empresas fotovoltaicas: qué funciona para conseguir instalaciones",
+    title: "Marketing para empresas fotovoltaicas: cómo conseguir más clientes e instalaciones",
     description:
-      "Guía de marketing para empresas fotovoltaicas e instaladores de paneles solares: qué canales funcionan, qué medir y cómo convertir clientes potenciales en visitas e instalaciones.",
+      "Guía práctica de marketing para empresas fotovoltaicas e instaladores de paneles solares: qué canales funcionan, qué medir y cómo llenar la agenda de visitas técnicas con clientes que instalan.",
     date: "2026-10-17",
     dateLabel: "17 de octubre de 2026",
   },
@@ -109,9 +109,9 @@ export const posts: Post[] = [
   },
   {
     slug: "marketing-local-para-instaladoras-solares",
-    title: "Marketing local para instaladoras solares: captar clientes en tu zona",
+    title: "Marketing local para instaladores de placas solares: clientes en tu zona",
     description:
-      "Cómo una instaladora de placas solares puede captar clientes en su provincia o región sin desperdiciar visitas fuera de su radio de trabajo.",
+      "Cómo conseguir clientes de placas solares en tu provincia: Google, Perfil de Empresa, reseñas y anuncios locales, sin perder visitas fuera de tu radio de trabajo.",
     date: "2026-10-15",
     dateLabel: "15 de octubre de 2026",
   },
