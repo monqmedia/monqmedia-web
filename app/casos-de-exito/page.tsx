@@ -10,6 +10,7 @@ import ContentPage, {
   p,
   type Faq,
 } from "@/app/components/ContentPage";
+import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = `${SITE}/casos-de-exito`;
 const TITLE = "Casos de éxito de empresas de placas solares y fotovoltaica";
@@ -148,6 +149,10 @@ export default function CasosDeExitoPage() {
         , para que sus técnicos tengan la agenda llena de visitas con clientes
         que quieren instalar.
       </p>
+      <RelatedPosts
+        title="Guías para instaladores"
+        slugs={["como-llenar-la-agenda-de-visitas-de-tus-tecnicos", "que-pedir-a-una-agencia-de-marketing-para-instaladores-solares", "presupuesto-de-placas-solares-que-convierte"]}
+      />
     </ContentPage>
   );
 }
