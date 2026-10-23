@@ -5,10 +5,10 @@ import Footer from "@/app/components/Footer";
 import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = "https://www.monqmedia.com/leads-placas-solares";
-const TITLE = "Leads de placas solares y fotovoltaica para instaladores";
+const TITLE = "Leads de placas solares exclusivos para instaladores";
 const DESCRIPTION =
-  "Leads cualificados y exclusivos para instaladores de placas solares, paneles solares y empresas fotovoltaicas en toda España: llenamos la agenda de visitas técnicas, con IA que contacta cada lead al instante y garantía por contrato.";
-const UPDATED = "2026-10-16";
+  "Leads de placas solares exclusivos (no compartidos) para instaladores y empresas fotovoltaicas de toda España. Visitas técnicas agendadas, IA que contacta cada lead al instante y garantía de resultados por contrato.";
+const UPDATED = "2026-10-23";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -25,6 +25,18 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
+  {
+    q: "¿Cuánto cuesta un lead de placas solares?",
+    a: "Depende de la zona, el tipo de cliente (vivienda o empresa) y la competencia. Más que el precio por lead, importa el coste por instalación: un lead barato y compartido suele salir más caro que uno exclusivo y cualificado. En el asesoramiento gratuito te damos una estimación para tu zona.",
+  },
+  {
+    q: "¿Vendéis leads de placas solares sueltos?",
+    a: "No. No vendemos contactos sueltos ni compartidos: creamos campañas con tu marca, filtramos a los clientes potenciales y te entregamos leads exclusivos y visitas técnicas agendadas.",
+  },
+  {
+    q: "¿Cómo se generan los leads de placas solares?",
+    a: "Con campañas en Google y Meta (Facebook e Instagram) diseñadas para tu zona y tu marca, páginas y formularios que filtran a los curiosos, y un sistema de IA que contacta a cada lead al momento para cualificarlo y agendar la visita.",
+  },
   {
     q: "¿Qué es un lead cualificado de placas solares?",
     a: "Es una persona o empresa con interés real en instalar placas solares, que ya ha sido filtrada y está dispuesta a recibir una visita técnica. No es un contacto suelto: es una oportunidad lista para tu equipo.",
@@ -123,7 +135,7 @@ export default function LeadsPlacasSolaresPage() {
           </h1>
           <p className="text-[14px] text-[#9aa0aa] mb-10 pb-8 border-b border-[#f0f0f2]">
             Actualizado el{" "}
-            <time dateTime={UPDATED}>16 de octubre de 2026</time> · Monq Media
+            <time dateTime={UPDATED}>23 de octubre de 2026</time> · Monq Media
           </p>
 
           <div className="rounded-2xl bg-[#fdf2f6] border border-[#f4d4e1] px-6 py-5 mb-8">
@@ -158,6 +170,84 @@ export default function LeadsPlacasSolaresPage() {
               equipo no da abasto.
             </li>
           </ul>
+
+          <h2 className={h2}>Qué incluye el servicio de leads para placas solares</h2>
+          <ul className="list-disc pl-6 space-y-3 mb-4">
+            <li className={li}>
+              <strong>Campañas con tu marca</strong> en Google y Meta (Facebook
+              e Instagram), segmentadas por las provincias o zonas donde
+              instalas.
+            </li>
+            <li className={li}>
+              <strong>Páginas y formularios que filtran</strong> a los curiosos
+              con preguntas sobre vivienda, tejado y factura.
+            </li>
+            <li className={li}>
+              <strong>Contacto inmediato con IA</strong> por llamada y
+              WhatsApp, también por la noche y en fin de semana.
+            </li>
+            <li className={li}>
+              <strong>Visitas técnicas agendadas</strong> en el calendario de
+              tu equipo, con el cliente ya cualificado.
+            </li>
+            <li className={li}>
+              <strong>Seguimiento y medición</strong> hasta la instalación:
+              sabemos cuánto cuesta cada cliente y qué campaña lo trajo.
+            </li>
+          </ul>
+
+          <h2 className={h2}>Cómo generar leads para instaladores de placas solares</h2>
+          <p className={p}>
+            Una empresa fotovoltaica puede conseguir clientes potenciales por
+            varias vías. La clave no es usarlas todas, sino que cada una traiga
+            visitas que acaben en instalación:
+          </p>
+          <ol className="list-decimal pl-6 space-y-3 mb-4">
+            <li className={li}>
+              <strong>Publicidad en Google:</strong> capta a quien ya busca
+              placas solares en tu zona. Alta intención, requiere buena
+              selección de búsquedas.
+            </li>
+            <li className={li}>
+              <strong>Publicidad en Facebook e Instagram:</strong> genera
+              volumen de solicitudes de presupuesto; necesita filtro para no
+              llenar la agenda de curiosos.
+            </li>
+            <li className={li}>
+              <strong>SEO y presencia local:</strong> web, Perfil de Empresa de
+              Google y reseñas. Más lento, pero rentable a largo plazo. Ver{" "}
+              <Link href="/blog/marketing-local-para-instaladoras-solares" className="text-[#EB0A5C] font-semibold hover:underline">
+                marketing local para instaladoras
+              </Link>
+              .
+            </li>
+            <li className={li}>
+              <strong>Recomendaciones y clientes actuales:</strong> referidos y
+              venta de baterías, aerotermia o cargadores a quien ya tiene
+              placas.
+            </li>
+            <li className={li}>
+              <strong>Comprar leads a plataformas:</strong> rápido, pero el
+              mismo contacto suele venderse a varias instaladoras. Ver{" "}
+              <Link href="/blog/leads-exclusivos-o-compartidos-placas-solares" className="text-[#EB0A5C] font-semibold hover:underline">
+                leads exclusivos o compartidos
+              </Link>
+              .
+            </li>
+          </ol>
+
+          <h2 className={h2}>¿Cuánto cuesta un lead de placas solares?</h2>
+          <p className={p}>
+            No hay un precio único: cambia según la provincia, si el cliente es
+            una vivienda o una empresa y la competencia en la zona. Por eso
+            recomendamos fijarse en el <strong>coste por instalación</strong>,
+            no en el coste por lead. Con nuestros clientes, Vira Energy redujo
+            un 41&nbsp;% su coste por cliente. Aprende a calcularlo en{" "}
+            <Link href="/blog/coste-de-captar-un-cliente-de-autoconsumo" className="text-[#EB0A5C] font-semibold hover:underline">
+              cuánto cuesta captar un cliente de autoconsumo
+            </Link>
+            .
+          </p>
 
           <h2 className={h2}>Leads cualificados, no contactos sueltos</h2>
           <p className={p}>
@@ -293,6 +383,14 @@ export default function LeadsPlacasSolaresPage() {
               Ver todos los casos de éxito
             </Link>
             .
+          </p>
+
+          <h2 className={h2}>Leads de placas solares en toda España</h2>
+          <p className={p}>
+            Trabajamos con instaladoras de todo el país. Tenemos casos de éxito
+            en Cataluña, Comunidad Valenciana, Madrid y Andalucía, y adaptamos
+            cada campaña a las zonas donde tu equipo puede instalar, para no
+            perder visitas fuera de tu radio de trabajo.
           </p>
 
           <h2 className={h2}>Para quién es</h2>

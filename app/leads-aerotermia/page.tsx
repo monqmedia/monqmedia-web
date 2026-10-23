@@ -13,9 +13,9 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 
 const URL = `${SITE}/leads-aerotermia`;
-const TITLE = "Leads cualificados para empresas de aerotermia";
+const TITLE = "Leads de aerotermia cualificados y exclusivos para instaladores";
 const DESCRIPTION =
-  "Captamos clientes interesados en aerotermia y llenamos la agenda de visitas técnicas de tu empresa con leads cualificados y exclusivos, en toda España.";
+  "Leads de aerotermia exclusivos para instaladores y empresas de climatización de toda España: clientes interesados de verdad, contactados al momento y visitas técnicas agendadas.";
 
 export const metadata: Metadata = {
   title: TITLE,

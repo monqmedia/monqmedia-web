@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/leads-placas-solares`,
-      lastModified: new Date("2026-10-17"),
+      lastModified: new Date("2026-10-23"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -50,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-10-17"),
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/publicidad-placas-solares`,
+      lastModified: new Date("2026-10-23"),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/leads-aerotermia`,
