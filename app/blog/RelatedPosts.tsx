@@ -3,16 +3,27 @@ import { h2 } from "@/app/components/ContentPage";
 import { posts } from "./posts";
 
 // Tres artículos relacionados: los siguientes en la lista (circular), para
-// repartir el enlazado interno entre todos los posts.
-export default function RelatedPosts({ slug }: { slug: string }) {
+// repartir el enlazado interno entre todos los posts. Las páginas de servicio
+// pasan `slugs` para enlazar a guías concretas.
+export default function RelatedPosts({
+  slug,
+  slugs,
+  title = "Sigue leyendo",
+}: {
+  slug?: string;
+  slugs?: string[];
+  title?: string;
+}) {
   const i = posts.findIndex((p) => p.slug === slug);
-  const related = [1, 2, 3]
-    .map((n) => posts[(i + n) % posts.length])
-    .filter((p) => p.slug !== slug);
+  const related = slugs
+    ? posts.filter((p) => slugs.includes(p.slug))
+    : [1, 2, 3]
+        .map((n) => posts[(i + n) % posts.length])
+        .filter((p) => p.slug !== slug);
 
   return (
     <section aria-label="Artículos relacionados">
-      <h2 className={h2}>Sigue leyendo</h2>
+      <h2 className={h2}>{title}</h2>
       <ul className="space-y-4 mb-4">
         {related.map((p) => (
           <li key={p.slug}>

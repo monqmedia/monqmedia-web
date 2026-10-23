@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = "https://www.monqmedia.com/leads-placas-solares";
 const TITLE = "Leads de placas solares y fotovoltaica para instaladores";
@@ -316,6 +317,11 @@ export default function LeadsPlacasSolaresPage() {
             </Link>
             .
           </p>
+
+          <RelatedPosts
+            title="Guías para instaladores"
+            slugs={["como-cualificar-un-lead-de-placas-solares", "leads-exclusivos-o-compartidos-placas-solares", "por-que-fallan-las-campanas-de-una-instaladora-solar"]}
+          />
 
           <h2 className={h2}>Preguntas frecuentes</h2>
           <div className="space-y-6 mb-12">

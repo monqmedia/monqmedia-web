@@ -11,6 +11,7 @@ import ContentPage, {
   p,
   type Faq,
 } from "@/app/components/ContentPage";
+import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = `${SITE}/sistema-ia-contacto-leads`;
 const TITLE = "IA que contacta tus leads de placas solares y fotovoltaica al instante";
@@ -169,6 +170,10 @@ export default function SistemaIaContactoLeadsPage() {
         </Link>
         .
       </p>
+      <RelatedPosts
+        title="Guías para instaladores"
+        slugs={["por-que-se-enfrian-los-leads-de-placas-solares", "crm-para-instaladores-de-placas-solares", "seguimiento-de-presupuestos-de-placas-solares"]}
+      />
     </ContentPage>
   );
 }

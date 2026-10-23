@@ -12,6 +12,14 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "vender-aerotermia-y-cargadores-a-clientes-de-placas-solares",
+    title: "Cómo vender aerotermia y cargadores a tus clientes de placas solares",
+    description:
+      "Venta cruzada para empresas de energía solar: cuándo ofrecer aerotermia, baterías o un cargador de coche eléctrico a quien ya tiene autoconsumo, y cómo hacerlo sin presionar.",
+    date: "2026-10-23",
+    dateLabel: "23 de octubre de 2026",
+  },
+  {
     slug: "crm-para-instaladores-de-placas-solares",
     title: "CRM para instaladores de placas solares: qué debe tener para vender más",
     description:

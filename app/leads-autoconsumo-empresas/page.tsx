@@ -11,6 +11,7 @@ import ContentPage, {
   p,
   type Faq,
 } from "@/app/components/ContentPage";
+import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = `${SITE}/leads-autoconsumo-empresas`;
 const TITLE = "Leads de autoconsumo fotovoltaico para empresas e industria";
@@ -159,6 +160,10 @@ export default function LeadsAutoconsumoEmpresasPage() {
         </Link>
         .
       </p>
+      <RelatedPosts
+        title="Guías para instaladores"
+        slugs={["como-vender-autoconsumo-a-empresas", "marketing-para-empresas-fotovoltaicas", "coste-de-captar-un-cliente-de-autoconsumo"]}
+      />
     </ContentPage>
   );
 }
