@@ -242,7 +242,11 @@ export default function LeadsPlacasSolaresPage() {
             una vivienda o una empresa y la competencia en la zona. Por eso
             recomendamos fijarse en el <strong>coste por instalación</strong>,
             no en el coste por lead. Con nuestros clientes, Vira Energy redujo
-            un 41&nbsp;% su coste por cliente. Aprende a calcularlo en{" "}
+            un 41&nbsp;% su coste por cliente. Calcula tus números con nuestra{" "}
+            <Link href="/calculadora-leads-placas-solares" className="text-[#EB0A5C] font-semibold hover:underline">
+              calculadora de leads para placas solares
+            </Link>{" "}
+            o aprende a calcularlo en{" "}
             <Link href="/blog/coste-de-captar-un-cliente-de-autoconsumo" className="text-[#EB0A5C] font-semibold hover:underline">
               cuánto cuesta captar un cliente de autoconsumo
             </Link>

@@ -80,7 +80,12 @@ export default function Article() {
       </div>
       <p className={p}>
         Calcúlalo por mes y por canal. Así sabrás qué fuente de clientes te
-        sale rentable y cuál solo parece barata.
+        sale rentable y cuál solo parece barata. Para hacerlo en segundos,
+        usa nuestra{" "}
+        <Link href="/calculadora-leads-placas-solares" className={a}>
+          calculadora de leads para placas solares
+        </Link>
+        .
       </p>
 
       <h2 className={h2}>Qué gastos incluir</h2>
