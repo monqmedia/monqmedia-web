@@ -52,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/calculadora-leads-placas-solares`,
+      lastModified: new Date("2026-10-24"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/publicidad-placas-solares`,
       lastModified: new Date("2026-10-23"),
       changeFrequency: "monthly",

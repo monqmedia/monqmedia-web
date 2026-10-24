@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import ContactTracker from "@/app/components/ContactTracker";
 import "./globals.css";
 import { chromeIOSScrollFix } from "@/app/components/crossSite";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <ContactTracker />
         <script dangerouslySetInnerHTML={{ __html: chromeIOSScrollFix }} />
       </body>
     </html>
