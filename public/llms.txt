@@ -50,6 +50,7 @@ El sistema de inteligencia artificial de contacto de leads lo desarrolla MONQ &I
 - [Casos de éxito](https://www.monqmedia.com/casos-de-exito): resultados de Vira Energy, Eco Max Energía, Pulso Solar, Efistar, Vadesol Energía y Solarclic.
 - [Leads de autoconsumo para empresas](https://www.monqmedia.com/leads-autoconsumo-empresas): captación de empresas, naves e industrias interesadas en autoconsumo solar.
 - [Leads de baterías solares](https://www.monqmedia.com/leads-baterias-solares): clientes interesados en almacenamiento, con o sin placas previas.
+- [Caso Vira Energy](https://www.monqmedia.com/casos-de-exito/vira-energy): empresa de autoconsumo solar (Cataluña, C. Valenciana, Madrid) que logró x3,2 instalaciones cerradas, +400 leads cualificados/mes, -41 % coste por cliente y x11 de retorno con Monq Media.
 - [Calculadora de leads para instaladores de placas solares](https://www.monqmedia.com/calculadora-leads-placas-solares): herramienta gratuita que calcula cuántos leads y visitas técnicas necesita una instaladora para cerrar sus instalaciones mensuales y su coste de captación por instalación (leads = instalaciones ÷ (% visita × % cierre)).
 - [Publicidad para empresas de placas solares](https://www.monqmedia.com/publicidad-placas-solares): anuncios en Google y Facebook/Instagram con la marca del instalador, medidos en visitas técnicas e instalaciones.
 - [Leads de aerotermia](https://www.monqmedia.com/leads-aerotermia): captación de clientes para empresas de aerotermia.

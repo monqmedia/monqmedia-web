@@ -35,6 +35,7 @@ const cases = [
   {
     name: "Vira Energy",
     headline: "x3,2 instalaciones cerradas",
+    href: "/casos-de-exito/vira-energy",
     text: "Empresa de autoconsumo solar y eficiencia energética para viviendas y empresas, con sedes en Cataluña, Comunidad Valenciana y Madrid. Querían llenar la agenda de su equipo con solicitudes de estudio energético gratuito, sin depender de plataformas de leads compartidos ni de la captación a puerta fría. Con Monq Media logran y sostienen x3,2 instalaciones cerradas, más de 400 leads cualificados al mes, un 41 % menos de coste por cliente captado y un retorno de x11 por cada euro invertido.",
   },
   {
@@ -132,6 +133,13 @@ export default function CasosDeExitoPage() {
             {c.name}: {c.headline}
           </h2>
           <p className={p}>{c.text}</p>
+          {"href" in c && c.href && (
+            <p className={p}>
+              <Link href={c.href} className={a}>
+                Ver el caso completo de {c.name}
+              </Link>
+            </p>
+          )}
         </section>
       ))}
 

@@ -158,7 +158,11 @@ export default function SistemaIaContactoLeadsPage() {
           MONQ &amp;IA
         </a>
         , nuestra rama de inteligencia artificial, que lo aplica también en
-        otros sectores.
+        otros sectores. Más detalle sobre el canal de mensajería en{" "}
+        <a href="https://ia.monqmedia.com/agente-ia-whatsapp/" className={a}>
+          agente de IA para WhatsApp
+        </a>
+        .
       </p>
       <p className={p}>
         El resultado es lo que de verdad importa: más visitas y más
