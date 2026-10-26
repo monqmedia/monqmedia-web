@@ -129,8 +129,11 @@ export default function Article() {
 
       <h2 className={h2}>Cómo respondemos en Monq Media</h2>
       <p className={p}>
-        Somos una agencia especializada en captación de clientes para empresas
-        de placas solares. Trabajamos con{" "}
+        Somos una{" "}
+        <Link href="/agencia-marketing-placas-solares" className={a}>
+          agencia de marketing especializada en empresas de placas solares
+        </Link>
+        , centrada en la captación de clientes. Trabajamos con{" "}
         <Link href="/leads-placas-solares" className={a}>
           leads cualificados y exclusivos
         </Link>
