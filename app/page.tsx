@@ -5,6 +5,7 @@ import Footer from "@/app/components/Footer";
 import VideoCard from "@/app/components/VideoCard";
 import StatsSection from "@/app/components/StatsSection";
 import FloatingCta from "@/app/components/FloatingCta";
+import HeroBars from "@/app/components/HeroBars";
 
 export const metadata: Metadata = {
   title: {
@@ -256,53 +257,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: stat bars */}
-            <div className="relative flex items-end justify-center gap-3 sm:gap-4 h-[220px] sm:h-[320px] lg:h-[480px] mt-4 lg:mt-0">
-              {/* glow */}
-              <div
-                className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 pointer-events-none"
-                style={{
-                  width: "115%",
-                  height: "75%",
-                  borderRadius: "50%",
-                  background:
-                    "radial-gradient(ellipse at center, rgba(235,10,92,.18), rgba(235,10,92,0) 70%)",
-                  filter: "blur(28px)",
-                }}
-              />
-              {/* Bar 1 */}
-              <div className="relative flex-1 max-w-[170px] h-[62%] rounded-3xl bg-[rgba(235,10,92,.10)] px-4 py-5 sm:px-5 flex flex-col justify-end backdrop-blur-sm">
-                <div className="text-[#EB0A5C] text-2xl sm:text-[32px] lg:text-[40px] font-extrabold leading-none tracking-tight">
-                  +2.000
-                </div>
-                <div className="text-[11px] sm:text-[13.5px] font-semibold text-[#8a5066] mt-2 leading-snug">
-                  Clientes potenciales generados al mes
-                </div>
-              </div>
-              {/* Bar 2 — main */}
-              <div
-                className="relative flex-1 max-w-[185px] h-full rounded-3xl text-white px-4 py-5 sm:px-6 flex flex-col justify-end"
-                style={{
-                  background: "linear-gradient(165deg,#EB0A5C,#c40a4d)",
-                  boxShadow: "0 26px 54px -20px rgba(235,10,92,.55)",
-                }}
-              >
-                <div className="text-3xl sm:text-[38px] lg:text-[46px] font-extrabold leading-none tracking-tight">
-                  +9M€
-                </div>
-                <div className="text-[11px] sm:text-[13.5px] font-semibold text-[#ffd5e5] mt-2 leading-snug">
-                  Facturación generada para clientes
-                </div>
-              </div>
-              {/* Bar 3 */}
-              <div className="relative flex-1 max-w-[170px] h-[80%] rounded-3xl bg-[rgba(235,10,92,.20)] px-4 py-5 sm:px-5 flex flex-col justify-end backdrop-blur-sm">
-                <div className="text-[#c40a4d] text-2xl sm:text-[32px] lg:text-[40px] font-extrabold leading-none tracking-tight">
-                  +1M€
-                </div>
-                <div className="text-[11px] sm:text-[13.5px] font-semibold text-[#8a5066] mt-2 leading-snug">
-                  Invertidos en publicidad
-                </div>
-              </div>
-            </div>
+            <HeroBars />
           </div>
         </section>
 
