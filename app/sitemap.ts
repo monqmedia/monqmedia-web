@@ -52,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/agencia-marketing-placas-solares`,
+      lastModified: new Date("2026-10-26"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/casos-de-exito/vira-energy`,
       lastModified: new Date("2026-10-25"),
       changeFrequency: "monthly",

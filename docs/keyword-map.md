@@ -18,7 +18,8 @@ Notas de datos (23/10/2026):
 
 | URL | Consulta principal | Variantes |
 | --- | --- | --- |
-| / | monq media; agencia de marketing para instaladores de placas solares | leads exclusivos para instaladores de paneles solares |
+| / | monq media (marca) | leads exclusivos para instaladores de paneles solares |
+| /agencia-marketing-placas-solares | agencia de marketing para instaladores de placas solares | agencia marketing fotovoltaica, agencia marketing energía solar, agencia para empresas fotovoltaicas |
 | /leads-placas-solares | leads placas solares | leads fotovoltaica, comprar leads placas solares, generar leads instaladores, precio lead placas solares, clientes para instaladores solares |
 | /casos-de-exito/vira-energy | caso de éxito instaladora placas solares (Vira Energy) | resultados marketing autoconsumo |
 | /calculadora-leads-placas-solares | calculadora leads placas solares | cuántos leads necesito, coste por instalación, tasa de cierre placas solares |
@@ -56,6 +57,5 @@ Notas de datos (23/10/2026):
 
 ## Huecos por cubrir (prioridad)
 
-1. "agencia de marketing para instaladores de placas solares / empresas fotovoltaicas" — decidir si la home o una página propia.
-2. Casos individuales (/casos-de-exito/vira-energy, …).
+1. Casos individuales restantes (Eco Max, Pulso Solar, Efistar) cuando haya más detalle.
 3. "cómo conseguir clientes para mi empresa de placas solares" (long-tail, reforzar artículo existente antes de crear otro).
