@@ -321,8 +321,15 @@ export default function HomePage() {
 
               {/* Text */}
               <div>
-                <h2 className="text-[34px] sm:text-[44px] lg:text-[52px] leading-[1.02] tracking-[-0.03em] font-extrabold text-[#EB0A5C] mb-6">
-                  Vira Energy
+                <h2 className="mb-6">
+                  <Image
+                    src="/vira-logo-color.png"
+                    alt="Vira Energy"
+                    width={1481}
+                    height={560}
+                    className="h-[58px] sm:h-[70px] lg:h-[78px] w-auto"
+                    sizes="210px"
+                  />
                 </h2>
                 <p className="text-[16.5px] leading-relaxed text-[#2b2f37] mb-5">
                   <strong className="font-bold">Vira Energy</strong> es una empresa
