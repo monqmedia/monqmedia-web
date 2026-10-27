@@ -58,6 +58,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/glosario-captacion-placas-solares`,
+      lastModified: new Date("2026-10-27"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/casos-de-exito/vira-energy`,
       lastModified: new Date("2026-10-25"),
       changeFrequency: "monthly",

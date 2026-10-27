@@ -34,6 +34,9 @@ export default function Footer() {
         <Link href="/calculadora-leads-placas-solares" className="text-[12.5px] hover:text-white transition-colors">
           Calculadora de leads
         </Link>
+        <Link href="/glosario-captacion-placas-solares" className="text-[12.5px] hover:text-white transition-colors">
+          Glosario
+        </Link>
         <Link href="/leads-autoconsumo-empresas" className="text-[12.5px] hover:text-white transition-colors">
           Autoconsumo para empresas
         </Link>
