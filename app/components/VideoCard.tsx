@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import BrandVideo from "@/app/components/BrandVideo";
 
 interface VideoCardProps {
   company: string;
@@ -11,6 +12,8 @@ interface VideoCardProps {
   initials: string;
   cover: string;
   videoId: string;
+  /** Vídeo propio (MP4). Si existe, se usa el reproductor de la web en lugar de YouTube. */
+  videoSrc?: string;
 }
 
 export default function VideoCard({
@@ -21,25 +24,12 @@ export default function VideoCard({
   initials,
   cover,
   videoId,
+  videoSrc,
 }: VideoCardProps) {
   const [playing, setPlaying] = useState(false);
 
-  return (
-    <div className="flex flex-col bg-[#1c1e26] border border-[#2a2d37] rounded-[22px] overflow-hidden">
-      <div className="relative w-full aspect-[16/10]">
-        {playing ? (
-          <iframe
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-            title={company}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="absolute inset-0 w-full h-full border-0"
-          />
-        ) : (
-          <button
-            onClick={() => setPlaying(true)}
-            className="absolute inset-0 w-full h-full border-0 cursor-pointer p-0 text-left overflow-hidden bg-[#1b0712]"
-          >
+  const coverEl = (
+    <>
             <Image
               src={cover}
               alt={company}
@@ -78,6 +68,32 @@ export default function VideoCard({
                 <path d="M8 5 L19 12 L8 19 Z" />
               </svg>
             </span>
+    </>
+  );
+
+  return (
+    <div className="flex flex-col bg-[#1c1e26] border border-[#2a2d37] rounded-[22px] overflow-hidden">
+      <div className="relative w-full aspect-[16/10]">
+        {videoSrc ? (
+          <div className="absolute inset-0 overflow-hidden bg-[#1b0712]">
+            <BrandVideo src={videoSrc} title={company}>
+              {coverEl}
+            </BrandVideo>
+          </div>
+        ) : playing ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+            title={company}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full border-0"
+          />
+        ) : (
+          <button
+            onClick={() => setPlaying(true)}
+            className="absolute inset-0 w-full h-full border-0 cursor-pointer p-0 text-left overflow-hidden bg-[#1b0712]"
+          >
+            {coverEl}
           </button>
         )}
       </div>
