@@ -6,6 +6,7 @@ import VideoCard from "@/app/components/VideoCard";
 import StatsSection from "@/app/components/StatsSection";
 import FloatingCta from "@/app/components/FloatingCta";
 import HeroBars from "@/app/components/HeroBars";
+import FeaturedVideo from "@/app/components/FeaturedVideo";
 
 export const metadata: Metadata = {
   title: {
@@ -292,89 +293,108 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ============ VALUE PILLARS ============ */}
-        <section id="que-ofrecemos" className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14">
+        {/* ============ CASO DE ÉXITO — VIRA ENERGY ============ */}
+        <section className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14 bg-white">
           <div className="max-w-[1180px] mx-auto">
-            <div className="text-center max-w-[760px] mx-auto mb-16">
-              <div className="text-[15px] font-bold tracking-[0.16em] uppercase text-[#EB0A5C] mb-5">
-                Un sistema que realmente funciona
-              </div>
-              <h2 className="text-[30px] sm:text-[40px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] font-normal">
-                Acelera el crecimiento de tu{" "}
-                <strong className="font-extrabold">
-                  negocio de energías renovables
-                </strong>
-              </h2>
+            {/* eyebrow */}
+            <div className="flex items-center gap-6 mb-10 sm:mb-16">
+              <span
+                className="flex-1 h-px"
+                style={{ background: "linear-gradient(90deg,transparent,#f1c9d8)" }}
+              />
+              <span className="min-w-0 text-[12px] sm:text-[15px] font-bold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#EB0A5C] text-center">
+                Nuestro último caso de éxito
+              </span>
+              <span
+                className="flex-1 h-px"
+                style={{ background: "linear-gradient(90deg,#f1c9d8,transparent)" }}
+              />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-x-16 lg:gap-x-[90px]">
-              {/* Pillar 1 */}
-              <div className="flex gap-5 items-start">
-                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="7" height="7" rx="2" stroke="#EB0A5C" />
-                    <rect x="14" y="3" width="7" height="7" rx="2" stroke="#14161b" />
-                    <rect x="3" y="14" width="7" height="7" rx="2" stroke="#14161b" />
-                    <rect x="14" y="14" width="7" height="7" rx="2" stroke="#EB0A5C" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
-                    Resultados
-                  </h3>
-                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
-                    Implementamos un sistema ya probado en el que cada pieza tiene su función, y siempre apunta a ser rentable.
-                  </p>
-                </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              {/* Vídeo del caso de éxito */}
+              <FeaturedVideo
+                videoId="V0mn59tMAf4"
+                cover="/vira-video.webp"
+                title="Vira Energy: el 40% de nuestras instalaciones, gracias a Monq Media"
+              />
+
+              {/* Text */}
+              <div>
+                <h2 className="text-[34px] sm:text-[44px] lg:text-[52px] leading-[1.02] tracking-[-0.03em] font-extrabold text-[#EB0A5C] mb-6">
+                  Vira Energy
+                </h2>
+                <p className="text-[16.5px] leading-relaxed text-[#2b2f37] mb-5">
+                  <strong className="font-bold">Vira Energy</strong> es una empresa
+                  de autoconsumo solar y eficiencia energética para viviendas y
+                  empresas, con sedes en Cataluña, Comunidad Valenciana y Madrid.
+                </p>
+                <p className="text-[16.5px] leading-relaxed text-[#52575f] mb-5">
+                  Querían llenar la agenda de su equipo con solicitudes de estudio
+                  energético gratuito, sin depender de plataformas de leads
+                  compartidos ni de la captación a puerta fría. Necesitaban un canal
+                  propio, predecible y rentable.
+                </p>
+                <p className="text-[16.5px] leading-relaxed text-[#52575f]">
+                  El reto consistió en{" "}
+                  <strong className="font-bold text-[#2b2f37]">
+                    construir un sistema de captación recurrente de clientes
+                    interesados de verdad
+                  </strong>
+                  , filtrando a los curiosos y entregando solo solicitudes con
+                  intención real de agendar una visita técnica e instalar, para que su equipo dejara de perder
+                  tiempo en llamadas que no llevaban a ningún sitio.
+                </p>
               </div>
-              {/* Pillar 2 */}
-              <div className="flex gap-5 items-start">
-                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 19 L4 5 M4 19 L20 19" stroke="#14161b" />
-                    <path d="M7 15 L11 10 L14 13 L19 7" stroke="#EB0A5C" />
-                    <path d="M19 7 L19 11 M19 7 L15 7" stroke="#EB0A5C" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
-                    Medible
-                  </h3>
-                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
-                    Las cifras no mienten: sabemos en todo momento qué funciona y qué se puede mejorar, para tomar decisiones acertadas.
-                  </p>
+            </div>
+
+            {/* Stats */}
+            <div className="mt-12 sm:mt-16 lg:mt-[72px]">
+              <h3 className="text-center text-xl sm:text-2xl lg:text-[28px] font-extrabold tracking-[-0.02em] text-[#14161b] mb-8">
+                En Monq Media logramos y sostenemos para{" "}
+                <span className="text-[#EB0A5C]">Vira Energy</span>
+              </h3>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+                <div className="rounded-[22px] bg-[#EB0A5C] text-white px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col">
+                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none">
+                    x3,2
+                  </div>
+                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#ffd5e5] mt-auto leading-snug">
+                    más instalaciones cerradas
+                  </div>
                 </div>
-              </div>
-              {/* Pillar 3 */}
-              <div className="flex gap-5 items-start">
-                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 5 H21 L14 13 V20 L10 18 V13 Z" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
-                    Filtrado
-                  </h3>
-                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
-                    Ahorráis llamadas innecesarias —y por tanto tiempo— porque recibís leads de calidad, ya filtrados.
-                  </p>
+                <div
+                  className="rounded-[22px] text-white px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col"
+                  style={{ background: "rgba(235,10,92,.55)" }}
+                >
+                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none">
+                    +400
+                  </div>
+                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#fff0f5] mt-auto leading-snug">
+                    leads cualificados al mes
+                  </div>
                 </div>
-              </div>
-              {/* Pillar 4 */}
-              <div className="flex gap-5 items-start">
-                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 8 H15 M15 8 L11 4 M15 8 L11 12" stroke="#14161b" />
-                    <path d="M19 16 H9 M9 16 L13 12 M9 16 L13 20" stroke="#EB0A5C" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
-                    Predecible
-                  </h3>
-                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
-                    No dependemos del boca a boca, llamadas en frío ni tocar puertas. Creamos un proceso que atrae clientes de forma recurrente.
-                  </p>
+                <div
+                  className="rounded-[22px] px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col text-[#14161b]"
+                  style={{ background: "rgba(235,10,92,.28)" }}
+                >
+                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none text-[#c40a4d]">
+                    ‑41%
+                  </div>
+                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#7a3a52] mt-auto leading-snug">
+                    coste por cliente captado
+                  </div>
+                </div>
+                <div
+                  className="rounded-[22px] px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col text-[#14161b]"
+                  style={{ background: "rgba(235,10,92,.12)" }}
+                >
+                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none text-[#c40a4d]">
+                    x11
+                  </div>
+                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#8a5066] mt-auto leading-snug">
+                    retorno por cada € invertido
+                  </div>
                 </div>
               </div>
             </div>
@@ -484,156 +504,89 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ============ CASO DE ÉXITO — VIRA ENERGY ============ */}
-        <section className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14 bg-white">
+        {/* ============ VALUE PILLARS ============ */}
+        <section id="que-ofrecemos" className="px-4 sm:px-8 lg:px-[72px] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10 lg:pb-14">
           <div className="max-w-[1180px] mx-auto">
-            {/* eyebrow */}
-            <div className="flex items-center gap-6 mb-10 sm:mb-16">
-              <span
-                className="flex-1 h-px"
-                style={{ background: "linear-gradient(90deg,transparent,#f1c9d8)" }}
-              />
-              <span className="min-w-0 text-[12px] sm:text-[15px] font-bold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#EB0A5C] text-center">
-                Nuestro último caso de éxito
-              </span>
-              <span
-                className="flex-1 h-px"
-                style={{ background: "linear-gradient(90deg,#f1c9d8,transparent)" }}
-              />
+            <div className="text-center max-w-[760px] mx-auto mb-16">
+              <div className="text-[15px] font-bold tracking-[0.16em] uppercase text-[#EB0A5C] mb-5">
+                Un sistema que realmente funciona
+              </div>
+              <h2 className="text-[30px] sm:text-[40px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] font-normal">
+                Acelera el crecimiento de tu{" "}
+                <strong className="font-extrabold">
+                  negocio de energías renovables
+                </strong>
+              </h2>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              {/* Browser mockup */}
-              <div className="relative pt-3 pb-8">
-                <div
-                  className="absolute pointer-events-none"
-                  style={{
-                    inset: "-6% -4% 0 4%",
-                    borderRadius: "24px",
-                    background:
-                      "radial-gradient(ellipse at center, rgba(235,10,92,.14), transparent 70%)",
-                    filter: "blur(22px)",
-                  }}
-                />
-                <div
-                  className="relative rounded-[14px] overflow-hidden bg-white border border-[#e8e8ec]"
-                  style={{ boxShadow: "0 34px 74px -28px rgba(20,22,27,.45)" }}
-                >
-                  {/* Chrome bar */}
-                  <div className="flex items-center gap-2 px-4 py-[11px] bg-[#f4f4f6] border-b border-[#e8e8ec]">
-                    <span className="w-[11px] h-[11px] rounded-full bg-[#ff5f57]" />
-                    <span className="w-[11px] h-[11px] rounded-full bg-[#febc2e]" />
-                    <span className="w-[11px] h-[11px] rounded-full bg-[#28c840]" />
-                    <span className="ml-3 flex-1 max-w-[260px] h-5 rounded-[6px] bg-[#e6e6ea] flex items-center px-3 text-[11px] font-semibold text-[#9aa0aa]">
-                      viraenergy.es
-                    </span>
-                  </div>
-                  {/* Screenshot */}
-                  <div className="relative w-full aspect-[16/10]">
-                    <Image
-                      src="/vira-desktop.png"
-                      alt="Web de Vira Energy"
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                </div>
-                {/* Phone overlay */}
-                <div
-                  className="absolute left-[-6px] bottom-[-6px] w-[23%] min-w-[104px] rounded-[20px] bg-[#14161b] p-[5px] border border-[#2a2d37]"
-                  style={{ boxShadow: "0 26px 52px -20px rgba(20,22,27,.55)" }}
-                >
-                  <div className="rounded-[15px] overflow-hidden bg-black">
-                    <div className="relative aspect-[9/18]">
-                      <Image
-                        src="/vira-mobile.png"
-                        alt="Web de Vira Energy en móvil"
-                        fill
-                        className="object-cover object-top"
-                        sizes="25vw"
-                      />
-                    </div>
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-x-16 lg:gap-x-[90px]">
+              {/* Pillar 1 */}
+              <div className="flex gap-5 items-start">
+                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="2" stroke="#EB0A5C" />
+                    <rect x="14" y="3" width="7" height="7" rx="2" stroke="#14161b" />
+                    <rect x="3" y="14" width="7" height="7" rx="2" stroke="#14161b" />
+                    <rect x="14" y="14" width="7" height="7" rx="2" stroke="#EB0A5C" />
+                  </svg>
+                </span>
+                <div>
+                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
+                    Resultados
+                  </h3>
+                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
+                    Implementamos un sistema ya probado en el que cada pieza tiene su función, y siempre apunta a ser rentable.
+                  </p>
                 </div>
               </div>
-
-              {/* Text */}
-              <div>
-                <h2 className="text-[34px] sm:text-[44px] lg:text-[52px] leading-[1.02] tracking-[-0.03em] font-extrabold text-[#EB0A5C] mb-6">
-                  Vira Energy
-                </h2>
-                <p className="text-[16.5px] leading-relaxed text-[#2b2f37] mb-5">
-                  <strong className="font-bold">Vira Energy</strong> es una empresa
-                  de autoconsumo solar y eficiencia energética para viviendas y
-                  empresas, con sedes en Cataluña, Comunidad Valenciana y Madrid.
-                </p>
-                <p className="text-[16.5px] leading-relaxed text-[#52575f] mb-5">
-                  Querían llenar la agenda de su equipo con solicitudes de estudio
-                  energético gratuito, sin depender de plataformas de leads
-                  compartidos ni de la captación a puerta fría. Necesitaban un canal
-                  propio, predecible y rentable.
-                </p>
-                <p className="text-[16.5px] leading-relaxed text-[#52575f]">
-                  El reto consistió en{" "}
-                  <strong className="font-bold text-[#2b2f37]">
-                    construir un sistema de captación recurrente de clientes
-                    interesados de verdad
-                  </strong>
-                  , filtrando a los curiosos y entregando solo solicitudes con
-                  intención real de agendar una visita técnica e instalar, para que su equipo dejara de perder
-                  tiempo en llamadas que no llevaban a ningún sitio.
-                </p>
+              {/* Pillar 2 */}
+              <div className="flex gap-5 items-start">
+                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 19 L4 5 M4 19 L20 19" stroke="#14161b" />
+                    <path d="M7 15 L11 10 L14 13 L19 7" stroke="#EB0A5C" />
+                    <path d="M19 7 L19 11 M19 7 L15 7" stroke="#EB0A5C" />
+                  </svg>
+                </span>
+                <div>
+                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
+                    Medible
+                  </h3>
+                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
+                    Las cifras no mienten: sabemos en todo momento qué funciona y qué se puede mejorar, para tomar decisiones acertadas.
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Stats */}
-            <div className="mt-12 sm:mt-16 lg:mt-[72px]">
-              <h3 className="text-center text-xl sm:text-2xl lg:text-[28px] font-extrabold tracking-[-0.02em] text-[#14161b] mb-8">
-                En Monq Media logramos y sostenemos para{" "}
-                <span className="text-[#EB0A5C]">Vira Energy</span>
-              </h3>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-                <div className="rounded-[22px] bg-[#EB0A5C] text-white px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col">
-                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none">
-                    x3,2
-                  </div>
-                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#ffd5e5] mt-auto leading-snug">
-                    más instalaciones cerradas
-                  </div>
+              {/* Pillar 3 */}
+              <div className="flex gap-5 items-start">
+                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 5 H21 L14 13 V20 L10 18 V13 Z" />
+                  </svg>
+                </span>
+                <div>
+                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
+                    Filtrado
+                  </h3>
+                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
+                    Ahorráis llamadas innecesarias —y por tanto tiempo— porque recibís leads de calidad, ya filtrados.
+                  </p>
                 </div>
-                <div
-                  className="rounded-[22px] text-white px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col"
-                  style={{ background: "rgba(235,10,92,.55)" }}
-                >
-                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none">
-                    +400
-                  </div>
-                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#fff0f5] mt-auto leading-snug">
-                    leads cualificados al mes
-                  </div>
-                </div>
-                <div
-                  className="rounded-[22px] px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col text-[#14161b]"
-                  style={{ background: "rgba(235,10,92,.28)" }}
-                >
-                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none text-[#c40a4d]">
-                    ‑41%
-                  </div>
-                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#7a3a52] mt-auto leading-snug">
-                    coste por cliente captado
-                  </div>
-                </div>
-                <div
-                  className="rounded-[22px] px-6 py-8 sm:px-[26px] sm:py-[30px] min-h-[140px] sm:min-h-[172px] flex flex-col text-[#14161b]"
-                  style={{ background: "rgba(235,10,92,.12)" }}
-                >
-                  <div className="text-3xl sm:text-[38px] font-extrabold tracking-[-0.03em] leading-none text-[#c40a4d]">
-                    x11
-                  </div>
-                  <div className="text-[13px] sm:text-[14.5px] font-semibold text-[#8a5066] mt-auto leading-snug">
-                    retorno por cada € invertido
-                  </div>
+              </div>
+              {/* Pillar 4 */}
+              <div className="flex gap-5 items-start">
+                <span className="flex-none grid place-items-center w-[54px] h-[54px] rounded-[15px] bg-[#FFEAF2]">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 8 H15 M15 8 L11 4 M15 8 L11 12" stroke="#14161b" />
+                    <path d="M19 16 H9 M9 16 L13 12 M9 16 L13 20" stroke="#EB0A5C" />
+                  </svg>
+                </span>
+                <div>
+                  <h3 className="text-[21px] font-extrabold tracking-[-0.02em] mt-1 mb-2">
+                    Predecible
+                  </h3>
+                  <p className="text-[15.5px] leading-relaxed text-[#52575f]">
+                    No dependemos del boca a boca, llamadas en frío ni tocar puertas. Creamos un proceso que atrae clientes de forma recurrente.
+                  </p>
                 </div>
               </div>
             </div>
