@@ -47,13 +47,13 @@ export default function FeaturedVideo({ videoId, cover, title, videoSrc, caption
         style={{
           inset: "-7% -6% -9% -6%",
           borderRadius: "40px",
-          background: "radial-gradient(ellipse at 50% 60%, rgba(235,10,92,.24), rgba(235,10,92,.08) 45%, transparent 72%)",
+          background: "radial-gradient(ellipse at 50% 60%, rgba(20,22,27,.22), rgba(20,22,27,.07) 45%, transparent 72%)",
           filter: "blur(30px)",
         }}
       />
       <div
         className="relative w-full aspect-video rounded-[22px] overflow-hidden bg-[#1b0712] border border-[#e8e8ec]"
-        style={{ boxShadow: "0 28px 60px -26px rgba(235,10,92,.38), 0 18px 44px -24px rgba(20,22,27,.35)" }}
+        style={{ boxShadow: "0 28px 60px -26px rgba(20,22,27,.42), 0 12px 30px -18px rgba(20,22,27,.25)" }}
       >
         {videoSrc ? (
           <BrandVideo src={videoSrc} title={title}>
