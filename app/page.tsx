@@ -315,7 +315,7 @@ export default function HomePage() {
               {/* Vídeo del caso de éxito */}
               <FeaturedVideo
                 videoId="V0mn59tMAf4"
-                cover="/vira-video.webp"
+                cover="/vira-video-v2.webp"
                 title="Vira Energy: el 40% de nuestras instalaciones, gracias a Monq Media"
               />
 

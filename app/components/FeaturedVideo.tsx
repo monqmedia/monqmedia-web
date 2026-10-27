@@ -19,15 +19,15 @@ export default function FeaturedVideo({ videoId, cover, title }: FeaturedVideoPr
       <div
         className="absolute pointer-events-none"
         style={{
-          inset: "-6% -4% -4% 4%",
-          borderRadius: "24px",
-          background: "radial-gradient(ellipse at center, rgba(235,10,92,.16), transparent 70%)",
-          filter: "blur(22px)",
+          inset: "-7% -6% -9% -6%",
+          borderRadius: "40px",
+          background: "radial-gradient(ellipse at 50% 60%, rgba(235,10,92,.24), rgba(235,10,92,.08) 45%, transparent 72%)",
+          filter: "blur(30px)",
         }}
       />
       <div
         className="relative w-full aspect-video rounded-[22px] overflow-hidden bg-[#1b0712] border border-[#e8e8ec]"
-        style={{ boxShadow: "0 34px 74px -28px rgba(20,22,27,.45)" }}
+        style={{ boxShadow: "0 28px 60px -26px rgba(235,10,92,.38), 0 18px 44px -24px rgba(20,22,27,.35)" }}
       >
         {playing ? (
           <iframe
