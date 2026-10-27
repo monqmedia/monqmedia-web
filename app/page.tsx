@@ -62,6 +62,7 @@ const testimonials = [
     initials: "N",
     cover: "/duo-subvenziona.png",
     videoId: "Z71qxbKYOPc",
+    videoSrc: "/videos/subvenziona.mp4",
   },
   {
     company: "Solar Clic",
@@ -75,6 +76,7 @@ const testimonials = [
     initials: "A",
     cover: "/duo-solarclic.png",
     videoId: "1wIVs2OCoBc",
+    videoSrc: "/videos/solarclic.mp4",
   },
   {
     company: "Vadesol Insular",
@@ -88,6 +90,7 @@ const testimonials = [
     initials: "SH",
     cover: "/duo-vadesol.png",
     videoId: "LEpVk_4VwG8",
+    videoSrc: "/videos/vadesol.mp4",
   },
 ];
 
