@@ -84,8 +84,8 @@ const testimonials = [
         &ldquo;Antes tenía mucha incertidumbre porque me llegaban pocos clientes, desde que trabajo con ellos me va muy bien, sé que todos los meses voy a tener bastantes clientes potenciales y <strong>he crecido en las instalaciones un 60%.</strong>&rdquo;
       </>
     ),
-    person: "CEO de Vadesol Insular",
-    initials: "CD",
+    person: "Sergio - CEO de Vadesolinsular.es",
+    initials: "SH",
     cover: "/duo-vadesol.png",
     videoId: "LEpVk_4VwG8",
   },
