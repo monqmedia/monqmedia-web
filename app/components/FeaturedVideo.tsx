@@ -10,11 +10,13 @@ interface FeaturedVideoProps {
   title: string;
   /** Vídeo propio (MP4). Si existe, se usa el reproductor de la web en lugar de YouTube. */
   videoSrc?: string;
+  /** Pie del vídeo (texto discreto debajo). */
+  caption?: string;
 }
 
 // Vídeo destacado (caso de éxito): miniatura con botón rosa como las VideoCard;
 // el reproductor de YouTube solo se carga al pulsar.
-export default function FeaturedVideo({ videoId, cover, title, videoSrc }: FeaturedVideoProps) {
+export default function FeaturedVideo({ videoId, cover, title, videoSrc, caption }: FeaturedVideoProps) {
   const [playing, setPlaying] = useState(false);
 
   const coverEl = (
@@ -30,7 +32,7 @@ export default function FeaturedVideo({ videoId, cover, title, videoSrc }: Featu
               className="absolute inset-0 pointer-events-none"
               style={{ background: "linear-gradient(180deg, transparent 55%, rgba(27,7,18,.45) 100%)" }}
             />
-            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid place-items-center w-[56px] h-[56px] sm:w-[68px] sm:h-[68px] rounded-full bg-[#EB0A5C] shadow-[0_12px_32px_-6px_rgba(235,10,92,.85)] transition-transform duration-200 group-hover:scale-110">
+            <span className="absolute top-[77%] left-[29%] -translate-x-1/2 -translate-y-1/2 grid place-items-center w-[56px] h-[56px] sm:w-[68px] sm:h-[68px] rounded-full bg-[#EB0A5C] shadow-[0_12px_32px_-6px_rgba(235,10,92,.85)] transition-transform duration-200 group-hover:scale-110">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="white" className="ml-[3px]">
                 <path d="M8 5 L19 12 L8 19 Z" />
               </svg>
@@ -75,6 +77,11 @@ export default function FeaturedVideo({ videoId, cover, title, videoSrc }: Featu
           </button>
         )}
       </div>
+      {caption && (
+        <p className="relative mt-4 text-center text-[13.5px] sm:text-[14px] leading-snug italic text-[#8a8f99]">
+          {caption}
+        </p>
+      )}
     </div>
   );
 }
