@@ -12,6 +12,14 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "reactivar-leads-antiguos-placas-solares",
+    title: "Cómo reactivar leads antiguos de placas solares",
+    description:
+      "Tu base de datos de solicitudes de presupuesto y presupuestos sin cerrar es una fuente de instalaciones sin coste de anuncios. Cómo reactivar leads de placas solares paso a paso.",
+    date: "2026-10-28",
+    dateLabel: "28 de octubre de 2026",
+  },
+  {
     slug: "vender-aerotermia-y-cargadores-a-clientes-de-placas-solares",
     title: "Cómo vender aerotermia y cargadores a tus clientes de placas solares",
     description:

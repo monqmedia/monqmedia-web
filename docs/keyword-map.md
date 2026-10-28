@@ -55,6 +55,7 @@ Notas de datos (23/10/2026):
 | crm-para-instaladores-de-placas-solares | CRM instaladores placas solares |
 | vender-placas-solares-en-invierno | vender placas solares en invierno |
 | vender-aerotermia-y-cargadores-a-clientes-de-placas-solares | venta cruzada aerotermia/cargadores |
+| reactivar-leads-antiguos-placas-solares | reactivar leads placas solares / base de datos de leads |
 
 ## Huecos por cubrir (prioridad)
 
