@@ -7,6 +7,9 @@ export type Post = {
   description: string;
   date: string;
   dateLabel: string;
+  // Última revisión sustancial (dateModified); si no hay, se usa `date`.
+  updated?: string;
+  updatedLabel?: string;
 };
 
 // Más recientes primero.
@@ -117,6 +120,8 @@ export const posts: Post[] = [
   },
   {
     slug: "marketing-local-para-instaladoras-solares",
+    updated: "2026-10-29",
+    updatedLabel: "29 de octubre de 2026",
     title: "Marketing local para instaladores de placas solares: clientes en tu zona",
     description:
       "Cómo conseguir clientes de placas solares en tu provincia: Google, Perfil de Empresa, reseñas y anuncios locales, sin perder visitas fuera de tu radio de trabajo.",
