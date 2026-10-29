@@ -9,7 +9,7 @@ const BASE_URL = "https://www.monqmedia.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const blog: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${BASE_URL}/blog/${p.slug}`,
-    lastModified: new Date(p.date),
+    lastModified: new Date(p.updated ?? p.date),
     changeFrequency: "monthly",
     priority: 0.6,
   }));

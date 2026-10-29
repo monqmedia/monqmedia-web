@@ -33,6 +33,14 @@ const faqs: Faq[] = [
     a: "Sí, trabajamos con empresas de toda España. Por ejemplo, con Vira Energy (Cataluña, Comunidad Valenciana y Madrid) o con Efistar en Andalucía.",
   },
   {
+    q: "¿Cómo aparezco en el mapa de Google al buscar placas solares?",
+    a: "Con un Perfil de Empresa de Google completo: categoría correcta, zona de servicio real, fotos de instalaciones, publicaciones y reseñas constantes de clientes.",
+  },
+  {
+    q: "¿Debo crear una página por cada ciudad?",
+    a: "Solo si tiene contenido propio y útil, como instalaciones y casos reales de esa zona. Muchas páginas casi iguales por ciudad pueden perjudicar tu posicionamiento.",
+  },
+  {
     q: "¿Qué pasa si quiero crecer a otra provincia?",
     a: "Se puede ampliar la zona de las campañas de forma progresiva, a medida que tu equipo tiene capacidad para atender visitas allí.",
   },
@@ -44,6 +52,7 @@ const jsonLd = [
     description: post.description,
     url: URL,
     published: post.date,
+    modified: post.updated,
   }),
   faqJsonLd(faqs),
   breadcrumbJsonLd(post.title, URL, { name: "Blog", href: "/blog" }),
@@ -57,15 +66,17 @@ export default function Article() {
       parent={{ name: "Blog", href: "/blog" }}
       eyebrow="Blog · Marketing"
       title={post.title}
-      updated={post.date}
-      updatedLabel={post.dateLabel}
+      updated={post.updated ?? post.date}
+      updatedLabel={post.updatedLabel ?? post.dateLabel}
       summary={
         <>
           para una instaladora solar, el mejor lead es el que está{" "}
           <strong>dentro de su radio de trabajo</strong>. El marketing local
-          consiste en atraer clientes solo de las zonas donde tu equipo puede
-          hacer visitas e instalaciones de forma rentable, y crecer a nuevas
-          provincias cuando tengas capacidad.
+          combina cuatro piezas: un Perfil de Empresa de Google completo y con
+          reseñas, una web que demuestre instalaciones en tu zona, anuncios
+          limitados a donde puedes instalar y la medición del coste por
+          instalación en cada zona. Así llenas la agenda de visitas técnicas
+          sin perder dinero en desplazamientos.
         </>
       }
       faqs={faqs}
@@ -90,25 +101,92 @@ export default function Article() {
         ]}
       />
 
-      <h2 className={h2}>Tácticas de marketing local que funcionan</h2>
+
+      <h2 className={h2}>1. Perfil de Empresa de Google: tu escaparate local</h2>
+      <p className={p}>
+        Cuando alguien busca «placas solares» o «instaladores de placas
+        solares cerca de mí», Google muestra primero el mapa con fichas de
+        empresas. Para aparecer ahí:
+      </p>
       <ul className="list-disc pl-6 space-y-3 mb-4">
         <li className={li}>
-          <strong>Campañas limitadas a tu zona</strong> (provincia, comarca o
-          códigos postales).
+          <strong>Categoría principal correcta</strong> relacionada con energía
+          solar y las secundarias que apliquen (baterías, aerotermia…).
         </li>
         <li className={li}>
-          <strong>Mensajes con referencias locales:</strong> el cliente confía
-          más en una empresa que trabaja cerca.
+          <strong>Zona de servicio</strong> con los municipios o provincias
+          donde realmente instalas.
         </li>
         <li className={li}>
-          <strong>Ficha de Google Business Profile</strong> completa y con
-          reseñas de clientes reales.
+          <strong>Fotos reales de instalaciones</strong> y del equipo, y
+          publicaciones periódicas.
         </li>
         <li className={li}>
-          <strong>Crecimiento por fases:</strong> amplía la zona cuando tu
-          equipo tenga capacidad, no antes.
+          <strong>Reseñas constantes</strong> de clientes, respondiendo a
+          todas. Ver{" "}
+          <Link href="/blog/resenas-google-instaladora-placas-solares" className={a}>
+            cómo conseguir reseñas en Google
+          </Link>
+          .
         </li>
       </ul>
+
+      <h2 className={h2}>2. Una web que demuestre que trabajas en la zona</h2>
+      <p className={p}>
+        Más que crear muchas páginas casi iguales por ciudad (Google las
+        penaliza), muestra pruebas reales: instalaciones hechas en cada zona,
+        casos con fotos y testimonios, y los municipios donde trabajas. Si
+        creas una página por zona, que tenga contenido propio de verdad.
+      </p>
+
+      <h2 className={h2}>3. Anuncios limitados a donde puedes instalar</h2>
+      <Table
+        head={["Canal", "Cómo hacerlo local"]}
+        rows={[
+          ["Google Ads", "Ubicación por provincias, municipios o radio; búsquedas tipo «placas solares + ciudad»"],
+          ["Facebook e Instagram", "Segmentación por radio o códigos postales; creatividades con instalaciones de la zona"],
+          ["Formularios", "Pedir el código postal para descartar leads fuera de tu radio"],
+        ]}
+      />
+      <p className={p}>
+        Más detalle en{" "}
+        <Link href="/publicidad-placas-solares" className={a}>
+          publicidad para empresas de placas solares
+        </Link>
+        .
+      </p>
+
+      <h2 className={h2}>4. Referencias y boca a boca en la zona</h2>
+      <ul className="list-disc pl-6 space-y-3 mb-4">
+        <li className={li}>
+          <strong>Clientes como prescriptores:</strong> pide recomendaciones
+          tras cada instalación bien hecha.
+        </li>
+        <li className={li}>
+          <strong>Mensajes con referencias locales:</strong> «más de X
+          instalaciones en tu comarca» convence más que un mensaje genérico
+          (usa siempre tus cifras reales).
+        </li>
+        <li className={li}>
+          <strong>Venta a clientes actuales:</strong> baterías, aerotermia o
+          cargadores. Ver{" "}
+          <Link href="/blog/vender-aerotermia-y-cargadores-a-clientes-de-placas-solares" className={a}>
+            venta cruzada
+          </Link>
+          .
+        </li>
+      </ul>
+
+      <h2 className={h2}>5. Mide el coste por instalación en cada zona</h2>
+      <p className={p}>
+        No todas las zonas rinden igual. Calcula cuánto te cuesta cada
+        instalación por provincia o comarca, incluyendo desplazamientos, y
+        reparte la inversión donde sale más rentable. Puedes empezar con la{" "}
+        <Link href="/calculadora-leads-placas-solares" className={a}>
+          calculadora de leads para placas solares
+        </Link>
+        . Y amplía a nuevas zonas por fases, cuando tu equipo tenga capacidad.
+      </p>
 
       <h2 className={h2}>Cómo lo hacemos en Monq Media</h2>
       <p className={p}>
