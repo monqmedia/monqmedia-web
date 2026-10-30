@@ -15,7 +15,7 @@ export default function FormSection() {
   return (
     <div>
       <h2 className="text-[28px] sm:text-[38px] leading-[1.08] tracking-[-0.03em] font-extrabold text-[#14161b] mb-6 text-center lg:text-left">
-        <span className="text-[#EB0A5C]">{t.n}</span> {t.t}
+        <span className="text-[#437EEF]">{t.n}</span> {t.t}
       </h2>
       <BookingForm onStepChange={setStep} />
     </div>

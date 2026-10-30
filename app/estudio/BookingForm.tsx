@@ -8,7 +8,7 @@ type Lead = { name: string; phone: string; email: string };
 type Booking = { start: string; end: string; meetUrl: string | null };
 
 const TZ = "Europe/Madrid";
-const PINK = "#EB0A5C";
+const PINK = "#437EEF";
 
 const fmt = (iso: string, opts: Intl.DateTimeFormatOptions) =>
   new Intl.DateTimeFormat("es-ES", { timeZone: TZ, ...opts }).format(new Date(iso));
@@ -41,7 +41,7 @@ function calendarLinks(b: Booking) {
 }
 
 const inputCls =
-  "w-full rounded-xl border border-[#e3e5ea] bg-white px-4 py-3.5 text-[15.5px] text-[#14161b] placeholder:text-[#a0a5ae] outline-none focus:border-[#EB0A5C] focus:ring-4 focus:ring-[#EB0A5C]/10 transition";
+  "w-full rounded-xl border border-[#e3e5ea] bg-white px-4 py-3.5 text-[15.5px] text-[#14161b] placeholder:text-[#a0a5ae] outline-none focus:border-[#437EEF] focus:ring-4 focus:ring-[#437EEF]/10 transition";
 
 export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 | 2 | 3) => void }) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
@@ -137,7 +137,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
           <button
             type="submit"
             disabled={sending}
-            className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[#EB0A5C] px-6 py-4 text-[16px] font-bold text-white shadow-[0_14px_32px_-12px_rgba(235,10,92,.7)] hover:bg-[#c40a4d] transition-colors disabled:opacity-60"
+            className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[#437EEF] px-6 py-4 text-[16px] font-bold text-white shadow-[0_14px_32px_-12px_rgba(67,126,239,.7)] hover:bg-[#2F66D6] transition-colors disabled:opacity-60"
           >
             {sending ? "Enviando…" : "Siguiente"}
             <Arrow />
@@ -161,10 +161,10 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
                     key={d.date}
                     onClick={() => { setDayIdx(i); setSelected(null); }}
                     className={`rounded-xl border px-1 py-2.5 text-center transition-colors ${
-                      i === dayIdx ? "border-[#EB0A5C] bg-[#FFF1F6]" : "border-[#e3e5ea] bg-white hover:border-[#f3a9c4]"
+                      i === dayIdx ? "border-[#437EEF] bg-[#EEF4FF]" : "border-[#e3e5ea] bg-white hover:border-[#A9C5FA]"
                     }`}
                   >
-                    <span className={`block text-[12.5px] font-bold ${i === dayIdx ? "text-[#EB0A5C]" : "text-[#52575f]"}`}>{dayLabel(d.date, i)}</span>
+                    <span className={`block text-[12.5px] font-bold ${i === dayIdx ? "text-[#437EEF]" : "text-[#52575f]"}`}>{dayLabel(d.date, i)}</span>
                     <span className="block text-[20px] font-extrabold leading-tight text-[#14161b]">{dayDate(d.date).getUTCDate()}</span>
                     <span className="block text-[11.5px] text-[#8a8f99]">
                       {new Intl.DateTimeFormat("es-ES", { timeZone: "UTC", month: "short" }).format(dayDate(d.date)).replace(".", "")}
@@ -198,7 +198,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
                     <button
                       key={s.start}
                       onClick={() => setSelected(s.start)}
-                      className="rounded-xl border border-[#d9dbe1] bg-white py-3.5 text-[15px] font-semibold text-[#14161b] hover:border-[#EB0A5C] hover:text-[#EB0A5C] transition-colors"
+                      className="rounded-xl border border-[#d9dbe1] bg-white py-3.5 text-[15px] font-semibold text-[#14161b] hover:border-[#437EEF] hover:text-[#437EEF] transition-colors"
                     >
                       {time(s.start)}
                     </button>
@@ -213,7 +213,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
 
       {step === 3 && booking && (
         <div className="text-center">
-          <span className="mx-auto grid place-items-center w-14 h-14 rounded-full bg-[#FFF1F6]">
+          <span className="mx-auto grid place-items-center w-14 h-14 rounded-full bg-[#EEF4FF]">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke={PINK} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
           </span>
           <h3 className="mt-4 text-[22px] font-extrabold tracking-tight text-[#14161b]">Tu estudio está reservado</h3>
@@ -237,7 +237,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
           <div className="mt-5 flex flex-col gap-2.5">
             {(() => {
               const l = calendarLinks(booking);
-              const cls = "rounded-xl border border-[#d9dbe1] py-3 text-[14.5px] font-semibold text-[#14161b] hover:border-[#EB0A5C] transition-colors";
+              const cls = "rounded-xl border border-[#d9dbe1] py-3 text-[14.5px] font-semibold text-[#14161b] hover:border-[#437EEF] transition-colors";
               return (
                 <>
                   <a className={cls} href={l.google} target="_blank" rel="noopener">Añadir a Google Calendar</a>

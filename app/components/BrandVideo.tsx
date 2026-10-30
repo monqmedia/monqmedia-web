@@ -7,6 +7,8 @@ interface BrandVideoProps {
   title: string;
   /** Portada (miniatura, titulares, botón de play) que se muestra antes de reproducir. */
   children: React.ReactNode;
+  /** Color de los controles (por defecto, el rosa de la web). */
+  accent?: string;
 }
 
 const fmt = (s: number) => {
@@ -17,7 +19,7 @@ const fmt = (s: number) => {
 
 // Reproductor propio (sin YouTube): arranca con un solo toque, se reproduce
 // dentro de la página en móvil y usa controles con la estética de la web.
-export default function BrandVideo({ src, title, children }: BrandVideoProps) {
+export default function BrandVideo({ src, title, children, accent = "#EB0A5C" }: BrandVideoProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const hideTimer = useRef<ReturnType<typeof setTimeout>>();
@@ -138,15 +140,15 @@ export default function BrandVideo({ src, title, children }: BrandVideoProps) {
             aria-valuenow={Math.round(time)}
           >
             <div className="w-full h-[4px] rounded-full bg-white/25 overflow-hidden">
-              <div className="h-full bg-[#EB0A5C]" style={{ width: `${progress}%` }} />
+              <div className="h-full" style={{ width: `${progress}%`, background: accent }} />
             </div>
             <div
-              className="absolute w-[12px] h-[12px] -ml-[6px] rounded-full bg-white shadow-[0_0_0_3px_rgba(235,10,92,.6)]"
-              style={{ left: `${progress}%` }}
+              className="absolute w-[12px] h-[12px] -ml-[6px] rounded-full bg-white"
+              style={{ left: `${progress}%`, boxShadow: `0 0 0 3px ${accent}99` }}
             />
           </div>
           <div className="mt-2 flex items-center gap-3 text-white">
-            <button onClick={toggle} aria-label={playing ? "Pausar" : "Reproducir"} className="grid place-items-center w-8 h-8 rounded-full bg-[#EB0A5C]">
+            <button onClick={toggle} aria-label={playing ? "Pausar" : "Reproducir"} className="grid place-items-center w-8 h-8 rounded-full" style={{ background: accent }}>
               {playing ? (
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>
               ) : (

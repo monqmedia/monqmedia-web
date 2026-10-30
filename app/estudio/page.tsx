@@ -80,7 +80,7 @@ function CtaButton({ className = "" }: { className?: string }) {
   return (
     <a
       href="#formulario"
-      className={`inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#EB0A5C] px-8 py-4 text-[16px] font-bold text-white shadow-[0_14px_32px_-12px_rgba(235,10,92,.75)] hover:bg-[#c40a4d] transition-colors ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#437EEF] px-8 py-4 text-[16px] font-bold text-white shadow-[0_14px_32px_-12px_rgba(67,126,239,.75)] hover:bg-[#2F66D6] transition-colors ${className}`}
     >
       Recibe tu estudio gratuito
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h13" /><path d="M12 5l7 7-7 7" /></svg>
@@ -96,7 +96,7 @@ export default function EstudioPage() {
         <section className="relative overflow-hidden px-4 sm:px-8 pt-8 sm:pt-10 pb-10 sm:pb-14">
           <div
             className="absolute pointer-events-none"
-            style={{ top: "-160px", left: "50%", transform: "translateX(-50%)", width: "820px", height: "520px", borderRadius: "50%", background: "radial-gradient(circle, rgba(235,10,92,.09), transparent 70%)" }}
+            style={{ top: "-160px", left: "50%", transform: "translateX(-50%)", width: "820px", height: "520px", borderRadius: "50%", background: "radial-gradient(circle, rgba(67,126,239,.09), transparent 70%)" }}
           />
           <div className="relative max-w-[760px] mx-auto text-center">
             <div className="flex justify-center items-center gap-2.5">
@@ -104,21 +104,21 @@ export default function EstudioPage() {
               <span className="text-[17px] font-extrabold tracking-[0.04em] uppercase">monq media</span>
             </div>
 
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#f6c4d6] bg-[#FFF3F7] px-4 py-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#EB0A5C]" />
-              <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.06em] uppercase text-[#c40a4d]">
+            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#C9DAFC] bg-[#F2F6FF] px-4 py-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#437EEF]" />
+              <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.06em] uppercase text-[#2F66D6]">
                 Para instaladoras de placas solares y energías renovables
               </span>
             </div>
 
             <h1 className="mt-5 text-[32px] sm:text-[46px] lg:text-[54px] leading-[1.04] tracking-[-0.035em] font-extrabold text-[#14161b] text-balance">
-              Te conseguimos <span className="text-[#EB0A5C]">clientes interesados de verdad</span> en instalar placas solares, cada mes.
+              Te conseguimos <span className="text-[#437EEF]">clientes interesados de verdad</span> en instalar placas solares, cada mes.
             </h1>
 
             <CtaButton className="mt-8 w-full sm:w-auto" />
 
             <div className="mt-4 flex items-center justify-center gap-2 text-[14px] text-[#52575f]">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 17l6-6 4 4 6-7M14 8h6v6" /></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#437EEF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 17l6-6 4 4 6-7M14 8h6v6" /></svg>
               <span><strong className="text-[#14161b]">+9M€</strong> facturados para nuestros clientes</span>
             </div>
           </div>
@@ -127,8 +127,8 @@ export default function EstudioPage() {
           <div className="relative max-w-[920px] mx-auto mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-3 rounded-[22px] border border-[#ececf0] bg-white shadow-[0_20px_50px_-36px_rgba(20,22,27,.35)] divide-y md:divide-y-0 md:divide-x divide-[#f0f0f3]">
             {FEATURES.map((f) => (
               <div key={f.title} className="flex gap-4 p-5 sm:p-6">
-                <span className="flex-none grid place-items-center w-10 h-10 rounded-full bg-[#FFEAF2]">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EB0A5C" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">{f.icon}</svg>
+                <span className="flex-none grid place-items-center w-10 h-10 rounded-full bg-[#E8F0FE]">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#437EEF" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">{f.icon}</svg>
                 </span>
                 <div>
                   <h3 className="text-[15.5px] font-extrabold text-[#14161b] leading-snug">{f.title}</h3>
@@ -147,15 +147,15 @@ export default function EstudioPage() {
             <aside className="lg:pt-2">
               <div className="text-[12px] font-bold tracking-[0.16em] uppercase text-[#8a8f99] mb-3 text-center lg:text-left">Caso de éxito</div>
               <div className="relative overflow-hidden rounded-[22px] bg-[#14161b] p-6 sm:p-7 text-white">
-                <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(235,10,92,.35), transparent 70%)" }} />
+                <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(67,126,239,.35), transparent 70%)" }} />
                 <div className="relative">
-                  <div className="text-[44px] font-extrabold tracking-[-0.04em] leading-none text-[#EB0A5C]">+28%</div>
-                  <div className="mt-1 text-[13px] font-semibold text-[#ffd5e5]">de aumento en sus ventas</div>
+                  <div className="text-[44px] font-extrabold tracking-[-0.04em] leading-none text-[#437EEF]">+28%</div>
+                  <div className="mt-1 text-[13px] font-semibold text-[#CFE0FF]">de aumento en sus ventas</div>
                   <p className="mt-5 text-[15px] leading-relaxed italic text-[#e7e9ef]">
                     &ldquo;Desde que trabajamos con Monq Media hemos aumentado nuestras ventas en un 28%. Destacamos su trato cercano, resolutivo y proactivo: su implicación marca realmente la diferencia.&rdquo;
                   </p>
                   <div className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
-                    <span className="flex-none grid place-items-center w-10 h-10 rounded-full bg-[#EB0A5C] text-[14px] font-extrabold">DB</span>
+                    <span className="flex-none grid place-items-center w-10 h-10 rounded-full bg-[#437EEF] text-[14px] font-extrabold">DB</span>
                     <div>
                       <div className="text-[13.5px] font-extrabold tracking-[0.04em] uppercase">Daniel Ballester</div>
                       <div className="text-[12.5px] text-[#9aa0aa]">CEO de Hegosun.com y Pulsosolar.es</div>
@@ -188,7 +188,7 @@ export default function EstudioPage() {
                   <CaseVideo src={c.src} cover={c.cover} title={`${c.company}: testimonio`} />
                   <div className="mt-6 text-center px-1 sm:px-6">
                     <div className="text-[23px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] font-extrabold uppercase text-[#14161b]">
-                      <span className="text-[#EB0A5C]">{c.stat}</span> {c.statRest}
+                      <span className="text-[#437EEF]">{c.stat}</span> {c.statRest}
                     </div>
                     <p className={`${playfair.className} mt-3 text-[16px] sm:text-[17px] leading-relaxed text-[#52575f]`}>&ldquo;{c.quote}&rdquo;</p>
                   </div>
