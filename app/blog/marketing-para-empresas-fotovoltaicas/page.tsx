@@ -21,6 +21,14 @@ export const metadata: Metadata = postMetadata(post);
 
 const faqs: Faq[] = [
   {
+    q: "¿Cómo hago un plan de marketing para mi empresa fotovoltaica?",
+    a: "En cinco pasos: define tu cliente y tu zona, elige los canales (Google, Meta, web y Perfil de Empresa), prepara páginas y formularios que filtren, organiza el contacto inmediato y el seguimiento, y mide el coste por instalación para invertir donde funciona.",
+  },
+  {
+    q: "¿Cuánto debe invertir una empresa fotovoltaica en marketing?",
+    a: "Parte de tu objetivo de instalaciones: con tus tasas de conversión calcula cuántos leads necesitas y cuánto cuestan. Nuestra calculadora de leads para placas solares lo hace en segundos.",
+  },
+  {
     q: "¿Qué tipo de marketing funciona mejor para una empresa fotovoltaica?",
     a: "El que genera visitas técnicas e instalaciones, no solo visibilidad: campañas de captación con la marca de la empresa, dirigidas a su zona, con filtro de calidad y contacto inmediato de cada lead.",
   },
@@ -44,6 +52,7 @@ const jsonLd = [
     description: post.description,
     url: URL,
     published: post.date,
+    modified: post.updated,
   }),
   faqJsonLd(faqs),
   breadcrumbJsonLd(post.title, URL, { name: "Blog", href: "/blog" }),
@@ -57,8 +66,8 @@ export default function Article() {
       parent={{ name: "Blog", href: "/blog" }}
       eyebrow="Blog · Marketing"
       title={post.title}
-      updated={post.date}
-      updatedLabel={post.dateLabel}
+      updated={post.updated ?? post.date}
+      updatedLabel={post.updatedLabel ?? post.dateLabel}
       summary={
         <>
           el marketing para empresas fotovoltaicas funciona cuando se mide en{" "}
@@ -79,6 +88,57 @@ export default function Article() {
         conseguir clics baratos trae contactos que no llegan a visita. El
         sector fotovoltaico necesita un enfoque que acompañe al cliente hasta
         la instalación.
+      </p>
+
+      <h2 className={h2}>Plan de marketing para una empresa fotovoltaica en 5 pasos</h2>
+      <ol className="list-decimal pl-6 space-y-3 mb-4">
+        <li className={li}>
+          <strong>Cliente y zona:</strong> vivienda, empresa o ambos, y las
+          provincias donde tu equipo puede instalar. Para negocios, mira{" "}
+          <Link href="/blog/como-vender-autoconsumo-a-empresas" className={a}>
+            cómo vender autoconsumo a empresas
+          </Link>
+          .
+        </li>
+        <li className={li}>
+          <strong>Propuesta clara:</strong> por qué elegirte (servicio,
+          garantías, instalaciones en la zona, financiación si la ofreces).
+        </li>
+        <li className={li}>
+          <strong>Canales:</strong> Google para quien ya busca, Meta para
+          generar demanda, y web y Perfil de Empresa para la confianza.
+        </li>
+        <li className={li}>
+          <strong>Conversión y contacto:</strong> páginas y formularios que
+          filtran, contacto en minutos y seguimiento de cada presupuesto.
+        </li>
+        <li className={li}>
+          <strong>Medición:</strong> coste por instalación por canal y por
+          zona, revisado cada mes.
+        </li>
+      </ol>
+
+      <h2 className={h2}>El embudo: del anuncio a la instalación</h2>
+      <Table
+        head={["Etapa", "Qué medir", "Cómo mejorarla"]}
+        rows={[
+          ["Anuncio", "Coste por lead", "Mensaje con tu marca y zona bien segmentada"],
+          ["Lead", "% que llega a visita técnica", "Contacto inmediato y cualificación"],
+          ["Visita técnica", "% que recibe presupuesto", "Visitas solo a clientes con intención"],
+          ["Presupuesto", "% que firma", "Presupuesto claro y seguimiento planificado"],
+          ["Instalación", "Coste por instalación y retorno", "Invertir más en lo que funciona"],
+        ]}
+      />
+      <p className={p}>
+        Calcula tus números con la{" "}
+        <Link href="/calculadora-leads-placas-solares" className={a}>
+          calculadora de leads para placas solares
+        </Link>{" "}
+        y repasa los términos en el{" "}
+        <Link href="/glosario-captacion-placas-solares" className={a}>
+          glosario de captación
+        </Link>
+        .
       </p>
 
       <h2 className={h2}>Canales: qué aporta cada uno</h2>
@@ -139,9 +199,12 @@ export default function Article() {
 
       <h2 className={h2}>Cómo lo hacemos en Monq Media</h2>
       <p className={p}>
-        Somos una agencia especializada en captación de clientes para
-        instaladores de placas solares y empresas fotovoltaicas de toda
-        España. Combinamos campañas personalizadas con tu marca,{" "}
+        Somos una{" "}
+        <Link href="/agencia-marketing-placas-solares" className={a}>
+          agencia de marketing especializada en empresas de placas solares
+        </Link>{" "}
+        y fotovoltaicas de toda España, centrada en la captación de
+        clientes. Combinamos campañas personalizadas con tu marca,{" "}
         <Link href="/leads-placas-solares" className={a}>
           leads cualificados y exclusivos
         </Link>{" "}
