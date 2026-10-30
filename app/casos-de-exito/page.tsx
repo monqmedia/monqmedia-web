@@ -45,8 +45,8 @@ const cases = [
   },
   {
     name: "Pulso Solar",
-    headline: "+20 % en ventas",
-    text: "Aumentaron sus ventas un 20 % trabajando con Monq Media. Daniel Ballester, CEO de Hegosun.com y Pulsosolar.es, destaca: «su trato cercano, resolutivo y proactivo: su implicación marca realmente la diferencia».",
+    headline: "+28 % en ventas",
+    text: "Aumentaron sus ventas un 28 % trabajando con Monq Media. Daniel Ballester, CEO de Hegosun.com y Pulsosolar.es, destaca: «su trato cercano, resolutivo y proactivo: su implicación marca realmente la diferencia».",
   },
   {
     name: "Efistar",

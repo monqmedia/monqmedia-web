@@ -148,7 +148,7 @@ export default function PublicidadPlacasSolaresPage() {
         rows={[
           ["Vira Energy", "x3,2 instalaciones cerradas, +400 leads cualificados al mes, -41 % coste por cliente"],
           ["Eco Max Energía", "+30.000 € de beneficio mensual extra"],
-          ["Pulso Solar", "+20 % de ventas"],
+          ["Pulso Solar", "+28 % de ventas"],
           ["Efistar", "10-15 estudios extra para empresas al mes en Andalucía"],
         ]}
       />

@@ -162,7 +162,7 @@ export default function AgenciaMarketingPlacasSolaresPage() {
         rows={[
           ["Vira Energy", "x3,2 instalaciones cerradas, +400 leads cualificados al mes, x11 de retorno"],
           ["Eco Max Energía", "+30.000 € de beneficio mensual extra; somos su canal nº1 de ventas"],
-          ["Pulso Solar", "+20 % de ventas"],
+          ["Pulso Solar", "+28 % de ventas"],
           ["Efistar", "10-15 estudios extra para empresas al mes en Andalucía"],
           ["Vadesol Energía y Solarclic", "Más instalaciones y un flujo mensual estable"],
         ]}
