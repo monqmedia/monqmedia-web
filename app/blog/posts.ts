@@ -96,6 +96,8 @@ export const posts: Post[] = [
   },
   {
     slug: "marketing-para-empresas-fotovoltaicas",
+    updated: "2026-10-30",
+    updatedLabel: "30 de octubre de 2026",
     title: "Marketing para empresas fotovoltaicas: cómo conseguir más clientes e instalaciones",
     description:
       "Guía práctica de marketing para empresas fotovoltaicas e instaladores de paneles solares: qué canales funcionan, qué medir y cómo llenar la agenda de visitas técnicas con clientes que instalan.",
