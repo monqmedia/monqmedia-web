@@ -474,7 +474,7 @@ export default function HomePage() {
                 />
                 <div>
                   <div className="text-[42px] sm:text-[54px] font-extrabold tracking-[-0.04em] leading-[0.9] text-white">
-                    +18%
+                    +28%
                   </div>
                   <div className="text-[14px] font-semibold text-[#ffe1ec] mt-3 leading-snug">
                     de aumento en sus ventas desde que trabajan con nosotros
@@ -495,7 +495,7 @@ export default function HomePage() {
                 <p className="relative text-[15.5px] sm:text-[16.5px] leading-relaxed text-[#e7e9ef] italic mb-6 max-w-[640px]">
                   Desde que trabajamos con Monq Media{" "}
                   <strong className="text-white not-italic font-bold">
-                    {" "}hemos aumentado nuestras ventas en un 18%
+                    {" "}hemos aumentado nuestras ventas en un 28%
                   </strong>
                   , lo que refleja la efectividad de su estrategia y su enfoque
                   orientado a resultados. Destacamos su trato cercano, resolutivo y
