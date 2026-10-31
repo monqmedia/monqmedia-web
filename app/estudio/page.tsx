@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Lora } from "next/font/google";
 import FormSection from "./FormSection";
 import CaseVideo from "./CaseVideo";
 
-// Cursiva suave y legible para citas y acentos
-const serif = Lora({ subsets: ["latin"], style: ["italic"], weight: ["400"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Estudio gratuito para tu instaladora",
@@ -156,7 +153,7 @@ export default function EstudioPage() {
                 <div className="relative">
                   <div className="text-[44px] font-extrabold tracking-[-0.04em] leading-none text-[#437EEF]">+28%</div>
                   <div className="mt-1 text-[13px] font-semibold text-[#CFE0FF]">de aumento en sus ventas</div>
-                  <p className={`${serif.className} italic mt-5 text-[15.5px] leading-relaxed text-[#e7e9ef]`}>
+                  <p className="mt-5 text-[16.5px] sm:text-[17px] leading-relaxed font-medium text-[#e7e9ef]">
                     &ldquo;Desde que trabajamos con Monq Media hemos aumentado nuestras ventas en un 28%. Destacamos su trato cercano, resolutivo y proactivo: su implicación marca realmente la diferencia.&rdquo;
                   </p>
                   <div className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
@@ -177,7 +174,7 @@ export default function EstudioPage() {
           <div className="max-w-[720px] mx-auto text-center">
             <div className="text-[12px] font-bold tracking-[0.16em] uppercase text-[#8a8f99]">Testimonios reales</div>
             <h2 className="mt-3 text-[30px] sm:text-[40px] leading-[1.08] tracking-[-0.03em] font-extrabold text-[#14161b]">
-              Resultados reales. <span className={`${serif.className} italic font-normal text-[#52575f]`}>No promesas vacías.</span>
+              Resultados reales. <span className="font-normal text-[#6b7079]">No promesas vacías.</span>
             </h2>
             <p className="mt-2 text-[14px] text-[#8a8f99]">Pulsa cualquier vídeo para verlo completo</p>
           </div>
@@ -195,7 +192,7 @@ export default function EstudioPage() {
                     <div className="text-[23px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] font-extrabold uppercase text-[#14161b]">
                       <span className="text-[#437EEF]">{c.stat}</span> {c.statRest}
                     </div>
-                    <p className={`${serif.className} italic mt-3 text-[15.5px] sm:text-[16.5px] leading-relaxed text-[#52575f]`}>&ldquo;{c.quote}&rdquo;</p>
+                    <p className="mt-3 text-[17px] sm:text-[18.5px] leading-relaxed font-medium text-[#52575f]">&ldquo;{c.quote}&rdquo;</p>
                   </div>
                 </article>
                 <CtaButton className="mt-7 w-full sm:w-auto" />
