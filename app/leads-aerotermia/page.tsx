@@ -45,6 +45,14 @@ const faqs: Faq[] = [
     a: "Sí. Las campañas son personalizadas, así que se adaptan a los servicios que ofreces y a la capacidad de tu equipo.",
   },
   {
+    q: "¿Cómo se cualifica un lead de aerotermia?",
+    a: "Preguntando por el tipo de vivienda o negocio, el sistema de calefacción y agua caliente actual, la superficie aproximada y el plazo en que quiere hacer el cambio. Así la visita técnica se dedica a clientes con un proyecto real.",
+  },
+  {
+    q: "¿Qué precio tiene un lead de aerotermia?",
+    a: "Depende de la zona, la competencia y si es vivienda o negocio. Lo que importa es el coste por instalación cerrada; en el asesoramiento gratuito te damos una estimación para tu zona.",
+  },
+  {
     q: "¿Cómo evitáis que los leads se enfríen?",
     a: "Con un sistema de inteligencia artificial que contacta a cada lead al momento, también en fin de semana o fuera de horario.",
   },
@@ -72,8 +80,8 @@ export default function LeadsAerotermiaPage() {
       crumb="Leads de aerotermia"
       eyebrow="Aerotermia"
       title={TITLE}
-      updated="2026-10-16"
-      updatedLabel="16 de octubre de 2026"
+      updated="2026-10-31"
+      updatedLabel="31 de octubre de 2026"
       summary={
         <>
           Monq Media capta clientes interesados en aerotermia y{" "}
@@ -104,6 +112,30 @@ export default function LeadsAerotermiaPage() {
           ["Agenda llena", "Visitas técnicas con clientes que quieren instalar"],
         ]}
       />
+
+      <h2 className={h2}>Cómo cualificamos cada lead de aerotermia</h2>
+      <Table
+        head={["Pregunta", "Por qué importa"]}
+        rows={[
+          ["Tipo de vivienda o negocio", "Saber si el proyecto encaja con tu servicio"],
+          ["Sistema actual de calefacción y agua caliente", "Detectar el ahorro y el tipo de instalación"],
+          ["Superficie aproximada", "Preparar la visita y una primera idea del equipo"],
+          ["Plazo para el cambio", "Priorizar a quien quiere instalar pronto"],
+          ["¿Tiene o quiere placas solares?", "Abrir la puerta a una propuesta combinada"],
+        ]}
+      />
+
+      <h2 className={h2}>Aerotermia y placas solares: más valor por cliente</h2>
+      <p className={p}>
+        Muchas instaladoras ofrecen ambas cosas. Un cliente que pide
+        aerotermia puede interesarse por el autoconsumo, y al revés. Por eso
+        las campañas pueden plantear propuestas combinadas y aprovechar la
+        base de clientes actual. Más en{" "}
+        <Link href="/blog/vender-aerotermia-y-cargadores-a-clientes-de-placas-solares" className={a}>
+          cómo vender aerotermia a tus clientes de placas solares
+        </Link>
+        .
+      </p>
 
       <h2 className={h2}>Para quién es</h2>
       <ul className="list-disc pl-6 space-y-3 mb-4">
