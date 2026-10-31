@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     title: "Leads filtrados de calidad",
-    text: "Recibes solo clientes con intención real de instalar. Nada de curiosos ni llamadas perdidas.",
+    text: "Recibes clientes con intención real de instalar, que te envían la factura de la luz y agendan una visita técnica.",
     icon: <path d="M4 5h16l-6 7.5V18l-4 2v-7.5z" />,
   },
   {
@@ -42,17 +42,17 @@ const CASES: Case[] = [
     cover: "/vira-video-v5.webp",
     stat: "40%",
     statRest: "de sus instalaciones vienen de Monq Media",
-    quote: "El 40% de nuestras instalaciones vienen de Monq Media.",
+    quote: "Han sabido entender nuestro negocio y adaptar la estrategia de captación a nuestras necesidades. Nos ha permitido seguir creciendo y mejorar año tras año los resultados.",
   },
   {
-    company: "Subvenziona",
-    person: "Noel, CEO de Subvenziona.es",
-    src: "/videos/subvenziona.mp4",
-    cover: "/cover-natural-subvenziona.webp",
-    stat: "Más leads",
-    statRest: "gastando mucho menos",
+    company: "Vadesol Insular",
+    person: "Sergio, CEO de Vadesolinsular.es",
+    src: "/videos/vadesol.mp4",
+    cover: "/cover-natural-vadesol.webp",
+    stat: "+60%",
+    statRest: "en instalaciones",
     quote:
-      "Antes hacíamos nuestras propias campañas y no teníamos los resultados esperados. Ahora gastamos muchísimo menos y obtenemos muchos más leads, que luego convertimos en clientes finales.",
+      "Antes tenía mucha incertidumbre porque me llegaban pocos clientes. Ahora sé que todos los meses voy a tener bastantes clientes potenciales y he crecido en las instalaciones un 60%.",
   },
   {
     company: "Solar Clic",
@@ -65,14 +65,14 @@ const CASES: Case[] = [
       "Hemos pasado de 6-8 instalaciones mensuales a una media de 10-12 de manera constante. Recomendamos sus servicios.",
   },
   {
-    company: "Vadesol Insular",
-    person: "Sergio, CEO de Vadesolinsular.es",
-    src: "/videos/vadesol.mp4",
-    cover: "/cover-natural-vadesol.webp",
-    stat: "+60%",
-    statRest: "en instalaciones",
+    company: "Subvenziona",
+    person: "Noel, CEO de Subvenziona.es",
+    src: "/videos/subvenziona.mp4",
+    cover: "/cover-natural-subvenziona.webp",
+    stat: "Más leads",
+    statRest: "gastando mucho menos",
     quote:
-      "Antes tenía mucha incertidumbre porque me llegaban pocos clientes. Ahora sé que todos los meses voy a tener bastantes clientes potenciales y he crecido en las instalaciones un 60%.",
+      "Antes hacíamos nuestras propias campañas y no teníamos los resultados esperados. Ahora gastamos muchísimo menos y obtenemos muchos más leads, que luego convertimos en clientes finales.",
   },
 ];
 
@@ -104,10 +104,14 @@ export default function EstudioPage() {
               <span className="text-[17px] font-extrabold tracking-[0.04em] uppercase">monq media</span>
             </div>
 
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#C9DAFC] bg-[#F2F6FF] px-4 py-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#437EEF]" />
-              <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.06em] uppercase text-[#2F66D6]">
-                Para instaladoras de placas solares y energías renovables
+            <div className="mt-8 inline-block max-w-full rounded-2xl sm:rounded-full border border-[#C9DAFC] bg-[#F2F6FF] px-3.5 sm:px-4 py-1.5 sm:py-2">
+              <span className="text-[10.5px] sm:text-[12px] leading-[1.55] font-bold tracking-[0.02em] sm:tracking-[0.06em] uppercase text-[#2F66D6]">
+                {/* punto en línea con el texto: queda junto a la primera palabra y centrado en la línea */}
+                <span className="relative inline-flex w-2 h-2 mr-2 align-middle -translate-y-px">
+                  <span className="absolute inset-0 rounded-full bg-[#437EEF] animate-ping opacity-60" />
+                  <span className="relative w-2 h-2 rounded-full bg-[#437EEF] animate-pulse" />
+                </span>
+                Para instaladores de paneles solares, cargadores de coches eléctricos y aerotermia
               </span>
             </div>
 
