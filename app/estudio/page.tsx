@@ -48,7 +48,7 @@ const CASES: Case[] = [
     company: "Subvenziona",
     person: "Noel, CEO de Subvenziona.es",
     src: "/videos/subvenziona.mp4",
-    cover: "/duo-subvenziona.png",
+    cover: "/cover-natural-subvenziona.webp",
     stat: "Más leads",
     statRest: "gastando mucho menos",
     quote:
@@ -58,7 +58,7 @@ const CASES: Case[] = [
     company: "Solar Clic",
     person: "Antonio, CEO de Solarclic.es",
     src: "/videos/solarclic.mp4",
-    cover: "/duo-solarclic.png",
+    cover: "/cover-natural-solarclic.webp",
     stat: "10-12",
     statRest: "instalaciones al mes",
     quote:
@@ -68,7 +68,7 @@ const CASES: Case[] = [
     company: "Vadesol Insular",
     person: "Sergio, CEO de Vadesolinsular.es",
     src: "/videos/vadesol.mp4",
-    cover: "/duo-vadesol.png",
+    cover: "/cover-natural-vadesol.webp",
     stat: "+60%",
     statRest: "en instalaciones",
     quote:
