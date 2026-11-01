@@ -10,6 +10,9 @@ export type Post = {
   // Última revisión sustancial (dateModified); si no hay, se usa `date`.
   updated?: string;
   updatedLabel?: string;
+  // Título corto para la etiqueta <title> cuando el título del artículo es
+  // largo y Google lo cortaría.
+  seoTitle?: string;
 };
 
 // Más recientes primero.
@@ -24,6 +27,7 @@ export const posts: Post[] = [
   },
   {
     slug: "vender-aerotermia-y-cargadores-a-clientes-de-placas-solares",
+    seoTitle: "Vender aerotermia y cargadores a clientes de placas solares",
     title: "Cómo vender aerotermia y cargadores a tus clientes de placas solares",
     description:
       "Venta cruzada para empresas de energía solar: cuándo ofrecer aerotermia, baterías o un cargador de coche eléctrico a quien ya tiene autoconsumo, y cómo hacerlo sin presionar.",
@@ -32,6 +36,7 @@ export const posts: Post[] = [
   },
   {
     slug: "crm-para-instaladores-de-placas-solares",
+    seoTitle: "CRM para instaladores de placas solares",
     title: "CRM para instaladores de placas solares: qué debe tener para vender más",
     description:
       "Qué funciones necesita un CRM para una empresa de paneles solares o instalaciones fotovoltaicas: entrada de leads, contacto inmediato, agenda de visitas técnicas y seguimiento.",
@@ -48,6 +53,7 @@ export const posts: Post[] = [
   },
   {
     slug: "presupuesto-de-placas-solares-que-convierte",
+    seoTitle: "Presupuesto de placas solares que el cliente acepte",
     title: "Cómo hacer un presupuesto de placas solares que el cliente acepte",
     description:
       "Qué debe incluir un presupuesto de instalación fotovoltaica para que el cliente lo entienda, confíe y lo firme: ahorro, componentes, plazos, garantías y siguiente paso.",
@@ -56,6 +62,7 @@ export const posts: Post[] = [
   },
   {
     slug: "resenas-google-instaladora-placas-solares",
+    seoTitle: "Reseñas en Google para instaladoras de placas solares",
     title: "Reseñas en Google para instaladoras de placas solares: cómo conseguirlas",
     description:
       "Por qué las reseñas en Google pesan tanto al elegir empresa de paneles solares y cómo pedirlas a tus clientes de autoconsumo de forma sencilla y constante.",
@@ -64,6 +71,7 @@ export const posts: Post[] = [
   },
   {
     slug: "por-que-fallan-las-campanas-de-una-instaladora-solar",
+    seoTitle: "Por qué fallan las campañas de una instaladora solar",
     title: "Por qué fallan las campañas de Facebook y Google de una instaladora solar",
     description:
       "Los errores más comunes en campañas de Meta Ads y Google Ads para placas solares y fotovoltaica, y cómo corregirlos para conseguir leads cualificados y visitas técnicas.",
@@ -72,6 +80,7 @@ export const posts: Post[] = [
   },
   {
     slug: "ayudas-placas-solares-como-argumento-de-venta",
+    seoTitle: "Ayudas para placas solares: cómo usarlas para vender",
     title: "Ayudas y bonificaciones para placas solares: cómo usarlas para vender",
     description:
       "Cómo una empresa de paneles solares puede usar subvenciones, deducciones y bonificaciones como argumento de venta sin prometer de más ni frenar la decisión del cliente.",
@@ -96,6 +105,7 @@ export const posts: Post[] = [
   },
   {
     slug: "marketing-para-empresas-fotovoltaicas",
+    seoTitle: "Marketing para empresas fotovoltaicas: más clientes",
     updated: "2026-10-30",
     updatedLabel: "30 de octubre de 2026",
     title: "Marketing para empresas fotovoltaicas: cómo conseguir más clientes e instalaciones",
@@ -106,6 +116,7 @@ export const posts: Post[] = [
   },
   {
     slug: "coste-de-captar-un-cliente-de-autoconsumo",
+    seoTitle: "Cuánto cuesta captar un cliente de autoconsumo",
     title: "Cuánto cuesta captar un cliente de autoconsumo y cómo calcularlo",
     description:
       "Cómo calcular el coste real de captar un cliente de placas solares, qué gastos incluir y qué palancas lo bajan sin reducir la calidad de los leads.",
@@ -114,6 +125,7 @@ export const posts: Post[] = [
   },
   {
     slug: "seguimiento-de-presupuestos-de-placas-solares",
+    seoTitle: "Seguimiento de presupuestos de placas solares",
     title: "Seguimiento de presupuestos de placas solares: cómo cerrar más instalaciones",
     description:
       "Qué hacer después de entregar un presupuesto de placas solares para que no se quede en un cajón: cuándo llamar, qué decir y cómo automatizar el seguimiento.",
@@ -122,6 +134,7 @@ export const posts: Post[] = [
   },
   {
     slug: "marketing-local-para-instaladoras-solares",
+    seoTitle: "Marketing local para instaladores de placas solares",
     updated: "2026-10-29",
     updatedLabel: "29 de octubre de 2026",
     title: "Marketing local para instaladores de placas solares: clientes en tu zona",
@@ -132,6 +145,7 @@ export const posts: Post[] = [
   },
   {
     slug: "como-cualificar-un-lead-de-placas-solares",
+    seoTitle: "Cómo cualificar un lead de placas solares",
     title: "Cómo cualificar un lead de placas solares antes de enviar al técnico",
     description:
       "Las preguntas y señales que separan a un curioso de un cliente que quiere instalar placas solares, para que tus técnicos solo hagan visitas que pueden cerrarse.",
@@ -140,6 +154,7 @@ export const posts: Post[] = [
   },
   {
     slug: "leads-exclusivos-o-compartidos-placas-solares",
+    seoTitle: "Leads exclusivos o compartidos: qué es más rentable",
     title: "Leads exclusivos o compartidos: qué le sale más rentable a una instaladora",
     description:
       "Por qué el precio por lead engaña y cómo calcular lo que de verdad cuesta cada instalación cuando compras leads compartidos frente a leads exclusivos.",
@@ -148,6 +163,7 @@ export const posts: Post[] = [
   },
   {
     slug: "como-llenar-la-agenda-de-visitas-de-tus-tecnicos",
+    seoTitle: "Cómo llenar la agenda de visitas de tus técnicos",
     title: "Cómo llenar la agenda de visitas de tus técnicos de placas solares",
     description:
       "Guía para instaladoras solares: cómo pasar de leads sueltos a una agenda de visitas técnicas llena y predecible, sin saturar al equipo ni perder clientes.",
@@ -156,6 +172,7 @@ export const posts: Post[] = [
   },
   {
     slug: "que-pedir-a-una-agencia-de-marketing-para-instaladores-solares",
+    seoTitle: "Qué pedir a una agencia de marketing solar",
     title: "Qué pedir a una agencia de marketing para instaladores solares",
     description:
       "Las preguntas que debes hacer antes de contratar una agencia de marketing para tu empresa de placas solares, para no pagar por leads que no acaban en instalación.",
@@ -164,6 +181,7 @@ export const posts: Post[] = [
   },
   {
     slug: "por-que-se-enfrian-los-leads-de-placas-solares",
+    seoTitle: "Por qué se enfrían los leads de placas solares",
     title: "Por qué se enfrían los leads de placas solares (y cómo evitarlo)",
     description:
       "Las causas por las que una instaladora de placas solares o fotovoltaica pierde clientes potenciales antes de la visita técnica, y cómo evitarlo con contacto inmediato y un buen filtro.",
@@ -190,10 +208,14 @@ export function postUrl(post: Post): string {
   return `${SITE}/blog/${post.slug}`;
 }
 
+const BRAND = " | Monq Media";
+
 export function postMetadata(post: Post): Metadata {
   const url = postUrl(post);
+  const title = post.seoTitle ?? post.title;
   return {
-    title: post.title,
+    // Sin la marca si no cabe: Google corta los títulos de más de ~60 caracteres.
+    title: (title + BRAND).length <= 60 ? title : { absolute: title },
     description: post.description,
     alternates: { canonical: url },
     openGraph: {

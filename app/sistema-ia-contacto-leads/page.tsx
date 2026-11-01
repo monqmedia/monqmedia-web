@@ -14,7 +14,7 @@ import ContentPage, {
 import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = `${SITE}/sistema-ia-contacto-leads`;
-const TITLE = "IA que contacta tus leads de placas solares y fotovoltaica al instante";
+const TITLE = "IA que contacta tus leads de placas solares al instante";
 const DESCRIPTION =
   "Sistema de inteligencia artificial que contacta automáticamente cada lead de placas solares o fotovoltaica en cuanto entra, también en fin de semana, para que no se enfríe y tu comercial reciba visitas técnicas listas para agendar.";
 
