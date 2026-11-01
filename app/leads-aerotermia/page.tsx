@@ -13,7 +13,7 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 
 const URL = `${SITE}/leads-aerotermia`;
-const TITLE = "Leads de aerotermia cualificados y exclusivos para instaladores";
+const TITLE = "Leads de aerotermia exclusivos para instaladores";
 const DESCRIPTION =
   "Leads de aerotermia exclusivos para instaladores y empresas de climatización de toda España: clientes interesados de verdad, contactados al momento y visitas técnicas agendadas.";
 
