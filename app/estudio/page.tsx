@@ -25,7 +25,7 @@ const FEATURES = [
   },
   {
     title: "Crecimiento predecible",
-    text: "Sin depender del boca a boca ni de la puerta fría: un flujo constante de clientes cada mes.",
+    text: "Sin depender del boca a boca, puerta fría ni plataformas: un flujo constante de clientes cada mes.",
     icon: <path d="M4 17l6-6 4 4 6-7M14 8h6v6" />,
   },
 ];
@@ -109,7 +109,7 @@ export default function EstudioPage() {
                   <span className="absolute inset-0 rounded-full bg-[#437EEF] animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-[#437EEF] animate-pulse" />
                 </span>
-                Para instaladores de paneles solares, cargadores de coches eléctricos y aerotermia
+                Para instaladores de paneles solares, cargadores de coches y aerotermia
               </span>
             </div>
 
