@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { pageview } from "@vercel/analytics";
 
 type Slot = { start: string; end: string };
 type Day = { date: string; slots: Slot[] };
@@ -72,6 +73,8 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
         body: JSON.stringify(lead),
       });
       if (!r.ok) throw new Error();
+      // Conversión medible en el plan gratuito de Vercel Analytics.
+      pageview({ route: "/_contacto/formulario/estudio", path: "/_contacto/formulario/estudio" });
       setStep(2);
       loadSlots();
     } catch {
@@ -93,6 +96,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
       const j = await r.json();
       if (!r.ok || !j.ok) throw new Error(j.error);
       setBooking({ start: j.start, end: j.end, meetUrl: j.meetUrl });
+      pageview({ route: "/_contacto/cita/estudio", path: "/_contacto/cita/estudio" });
       setStep(3);
     } catch (err) {
       setError((err as Error).message || "No se ha podido reservar. Elige otro hueco.");
