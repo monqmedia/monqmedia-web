@@ -33,6 +33,14 @@ const faqs: Faq[] = [
     a: "Es rápido de empezar, pero esos leads se suelen vender a varias instaladoras a la vez, que compiten por el mismo cliente. El resultado suele ser guerra de precios y menos cierres.",
   },
   {
+    q: "¿Cómo conseguir clientes para placas solares rápido?",
+    a: "Con publicidad en Google y en Facebook e Instagram limitada a tu zona, formularios que filtren a los curiosos y contacto inmediato a cada lead. A la vez, recupera los presupuestos y leads antiguos que tengas sin cerrar.",
+  },
+  {
+    q: "¿Cómo conseguir clientes de placas solares entre empresas?",
+    a: "Con campañas y mensajes específicos para negocios (ahorro en la factura, retorno, imagen sostenible), cualificando por consumo y cubierta, y ofreciendo un estudio energético. Más en nuestra guía para vender autoconsumo a empresas.",
+  },
+  {
     q: "¿Cuánto tarda en notarse un canal propio?",
     a: "Depende de cada empresa y zona. Como referencia, los clientes de Monq Media añaden de media entre 7 y 10 instalaciones extra al mes en los primeros 60 días.",
   },
@@ -44,6 +52,7 @@ const jsonLd = [
     description: post.description,
     url: URL,
     published: post.date,
+    modified: post.updated,
   }),
   faqJsonLd(faqs),
   breadcrumbJsonLd(post.title, URL, { name: "Blog", href: "/blog" }),
@@ -57,8 +66,8 @@ export default function Article() {
       parent={{ name: "Blog", href: "/blog" }}
       eyebrow="Blog · Captación"
       title={post.title}
-      updated={post.date}
-      updatedLabel={post.dateLabel}
+      updated={post.updated ?? post.date}
+      updatedLabel={post.updatedLabel ?? post.dateLabel}
       summary={
         <>
           para conseguir clientes de placas solares sin puerta fría necesitas
@@ -115,6 +124,32 @@ export default function Article() {
           instalaciones, no solo clics, para invertir donde funciona.
         </li>
       </ol>
+
+      <h2 className={h2}>Plan de 30 días para conseguir clientes de placas solares</h2>
+      <Table
+        head={["Semana", "Qué hacer"]}
+        rows={[
+          ["Semana 1", "Define zona, tipo de cliente y capacidad de visitas; prepara una página y un formulario que filtre"],
+          ["Semana 2", "Lanza anuncios en Google y Meta con tu marca; contacta cada lead en minutos"],
+          ["Semana 3", "Reactiva presupuestos y leads antiguos; pide reseñas a clientes recientes"],
+          ["Semana 4", "Mide coste por visita y por instalación; invierte más en lo que funciona"],
+        ]}
+      />
+      <p className={p}>
+        Para la semana 3, lee{" "}
+        <Link href="/blog/reactivar-leads-antiguos-placas-solares" className={a}>
+          cómo reactivar leads antiguos
+        </Link>
+        ; para la 4, usa la{" "}
+        <Link href="/calculadora-leads-placas-solares" className={a}>
+          calculadora de leads
+        </Link>
+        . Si vendes a negocios, mira{" "}
+        <Link href="/blog/como-vender-autoconsumo-a-empresas" className={a}>
+          cómo vender autoconsumo a empresas
+        </Link>
+        .
+      </p>
 
       <h2 className={h2}>Errores frecuentes al dejar la puerta fría</h2>
       <ul className="list-disc pl-6 space-y-3 mb-4">
