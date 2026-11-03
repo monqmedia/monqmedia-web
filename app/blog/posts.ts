@@ -190,6 +190,8 @@ export const posts: Post[] = [
   },
   {
     slug: "conseguir-clientes-placas-solares-sin-puerta-fria",
+    updated: "2026-11-03",
+    updatedLabel: "3 de noviembre de 2026",
     title: "Cómo conseguir clientes de placas solares sin puerta fría",
     description:
       "Alternativas a la puerta fría, el boca a boca y los leads compartidos para que una instaladora de placas solares o empresa fotovoltaica tenga la agenda de visitas llena de forma predecible.",
