@@ -1,6 +1,6 @@
 // Envío al webhook de Make (MAKE_WEBHOOK_URL). Si falla, no bloquea al usuario.
 export async function sendToMake(data: Record<string, unknown>) {
-  const url = process.env.MAKE_WEBHOOK_URL;
+  const url = (process.env.MAKE_WEBHOOK_URL ?? "").trim().replace(/^["']|["']$/g, "");
   if (!url) return;
   try {
     const r = await fetch(url, {

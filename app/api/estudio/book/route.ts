@@ -29,13 +29,17 @@ export async function POST(req: Request) {
 
   let meetUrl: string | null = null;
   let eventId: string | null = null;
+  // Si Google falla, la reserva se acepta igualmente y Make recibe calendarError para gestionarla a mano.
+  let calendarError: string | null = null;
   if (googleConfigured()) {
     try {
       ({ meetUrl, eventId } = await createEvent({ start, end, name, email, phone }));
     } catch (e) {
       console.error("[estudio/book] createEvent", e);
-      return NextResponse.json({ ok: false, error: "No hemos podido reservar ahora mismo. Inténtalo de nuevo en un momento." }, { status: 502 });
+      calendarError = String((e as Error).message).slice(0, 300);
     }
+  } else {
+    calendarError = "Google Calendar no configurado";
   }
 
   const fmt = (o: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("es-ES", { timeZone: "Europe/Madrid", ...o }).format(new Date(start));
@@ -45,7 +49,7 @@ export async function POST(req: Request) {
     date: fmt({ year: "numeric", month: "2-digit", day: "2-digit" }),
     time: fmt({ hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
     when: fmt({ weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
-    meetUrl, eventId,
+    meetUrl, eventId, calendarError,
   });
   return NextResponse.json({ ok: true, start, end, meetUrl });
 }

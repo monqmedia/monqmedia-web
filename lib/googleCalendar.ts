@@ -3,10 +3,12 @@
 //   GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN, GOOGLE_CALENDAR_ID (opcional, por defecto "primary")
 import type { Busy } from "@/lib/estudioSlots";
 
-const CAL_ID = () => process.env.GOOGLE_CALENDAR_ID || "primary";
+// Limpia valores pegados con espacios, saltos de línea o comillas
+const env = (k: string) => (process.env[k] ?? "").trim().replace(/^["']|["']$/g, "").trim();
+const CAL_ID = () => env("GOOGLE_CALENDAR_ID") || "primary";
 
 export const googleConfigured = () =>
-  !!(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET && process.env.GOOGLE_REFRESH_TOKEN);
+  !!(env("GOOGLE_CLIENT_ID") && env("GOOGLE_CLIENT_SECRET") && env("GOOGLE_REFRESH_TOKEN"));
 
 let cached: { token: string; exp: number } | null = null;
 
@@ -16,9 +18,9 @@ async function accessToken() {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({
-      client_id: process.env.GOOGLE_CLIENT_ID!,
-      client_secret: process.env.GOOGLE_CLIENT_SECRET!,
-      refresh_token: process.env.GOOGLE_REFRESH_TOKEN!,
+      client_id: env("GOOGLE_CLIENT_ID"),
+      client_secret: env("GOOGLE_CLIENT_SECRET"),
+      refresh_token: env("GOOGLE_REFRESH_TOKEN"),
       grant_type: "refresh_token",
     }),
     cache: "no-store",
