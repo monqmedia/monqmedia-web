@@ -1,21 +1,51 @@
 import { NextResponse } from "next/server";
-import { buildDays } from "@/lib/estudioSlots";
+import { buildDays, SLOT_MINUTES } from "@/lib/estudioSlots";
+import { createEvent, getBusy, googleConfigured } from "@/lib/googleCalendar";
+import { sendToMake } from "@/lib/make";
 
-// Paso 2: reserva del estudio.
-// TODO (conexión Google Calendar): crear el evento con enlace de Meet y devolver meetUrl.
+export const dynamic = "force-dynamic";
+
+// Paso 2: comprueba que el hueco sigue libre, crea la cita en Google Calendar (con Meet) y avisa a Make.
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
+  const name = String(body?.name ?? "").trim();
+  const phone = String(body?.phone ?? "").trim();
+  const email = String(body?.email ?? "").trim();
   const start = String(body?.start ?? "");
-  const valid = buildDays().some((d) => d.slots.some((s) => s.start === start));
-  if (!valid) return NextResponse.json({ ok: false, error: "Ese hueco ya no está disponible" }, { status: 409 });
-  const end = new Date(Date.parse(start) + 30 * 60000).toISOString();
-  const url = process.env.MAKE_WEBHOOK_URL;
-  if (url) {
-    await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ step: "booking", name: body?.name, phone: body?.phone, email: body?.email, start, end, source: "monqmedia.com/estudio" }),
-    }).catch(() => {});
+  if (!name || !phone || !/^\S+@\S+\.\S+$/.test(email)) {
+    return NextResponse.json({ ok: false, error: "Faltan tus datos. Vuelve al paso 1." }, { status: 400 });
   }
-  return NextResponse.json({ ok: true, start, end, meetUrl: null as string | null });
+
+  const now = new Date();
+  let busy: Awaited<ReturnType<typeof getBusy>> = [];
+  try {
+    busy = await getBusy(now, new Date(now.getTime() + 14 * 86400000));
+  } catch (e) {
+    console.error("[estudio/book] freebusy", e);
+  }
+  const valid = buildDays(now, busy).some((d) => d.slots.some((s) => s.start === start));
+  if (!valid) return NextResponse.json({ ok: false, error: "Ese hueco ya no está disponible. Elige otro." }, { status: 409 });
+  const end = new Date(Date.parse(start) + SLOT_MINUTES * 60000).toISOString();
+
+  let meetUrl: string | null = null;
+  let eventId: string | null = null;
+  if (googleConfigured()) {
+    try {
+      ({ meetUrl, eventId } = await createEvent({ start, end, name, email, phone }));
+    } catch (e) {
+      console.error("[estudio/book] createEvent", e);
+      return NextResponse.json({ ok: false, error: "No hemos podido reservar ahora mismo. Inténtalo de nuevo en un momento." }, { status: 502 });
+    }
+  }
+
+  const fmt = (o: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("es-ES", { timeZone: "Europe/Madrid", ...o }).format(new Date(start));
+  await sendToMake({
+    step: "booking", name, phone, email, start, end, timeZone: "Europe/Madrid",
+    // Ya en hora de España, listos para usar en emails/WhatsApp desde Make
+    date: fmt({ year: "numeric", month: "2-digit", day: "2-digit" }),
+    time: fmt({ hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
+    when: fmt({ weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
+    meetUrl, eventId,
+  });
+  return NextResponse.json({ ok: true, start, end, meetUrl });
 }

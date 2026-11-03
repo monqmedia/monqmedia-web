@@ -222,7 +222,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
           </span>
           <h3 className="mt-4 text-[22px] font-extrabold tracking-tight text-[#14161b]">Tu estudio está reservado</h3>
           <p className="mt-2 text-[14.5px] leading-relaxed text-[#52575f]">
-            Gracias, {lead.name.split(" ")[0]}. Te enviaremos los detalles a <strong className="text-[#14161b]">{lead.email}</strong>.
+            Gracias, {lead.name.split(" ")[0]}. {booking.meetUrl ? "Te hemos enviado la invitación a" : "Te enviaremos los detalles a"}{" "}<strong className="text-[#14161b]">{lead.email}</strong>.
           </p>
           <div className="mt-5 rounded-2xl border border-[#ececf0] p-4 text-left text-[14.5px] text-[#2b2f37] flex flex-col gap-3">
             <Row icon="clock">30 min</Row>
