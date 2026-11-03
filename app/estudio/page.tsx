@@ -80,7 +80,7 @@ function CtaButton({ className = "" }: { className?: string }) {
       href="#formulario"
       className={`inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#437EEF] px-8 py-4 text-[16px] font-bold text-white shadow-[0_14px_32px_-12px_rgba(67,126,239,.75)] hover:bg-[#2F66D6] transition-colors ${className}`}
     >
-      Recibe tu estudio gratuito
+      Recibe tu estudio online gratuito
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h13" /><path d="M12 5l7 7-7 7" /></svg>
     </a>
   );
@@ -103,7 +103,7 @@ export default function EstudioPage() {
             </div>
 
             <div className="mt-8 inline-block max-w-full rounded-2xl sm:rounded-full border border-[#C9DAFC] bg-[#F2F6FF] px-3.5 sm:px-4 py-1.5 sm:py-2">
-              <span className="text-[10.5px] sm:text-[12px] leading-[1.55] font-bold tracking-[0.02em] sm:tracking-[0.06em] uppercase text-[#2F66D6]">
+              <span className="text-[11.5px] sm:text-[13px] leading-[1.55] font-bold tracking-[0.02em] sm:tracking-[0.06em] uppercase text-[#2F66D6]">
                 {/* punto en línea con el texto: queda junto a la primera palabra y centrado en la línea */}
                 <span className="relative inline-flex w-2 h-2 mr-2 align-middle -translate-y-px">
                   <span className="absolute inset-0 rounded-full bg-[#437EEF] animate-ping opacity-60" />
@@ -134,7 +134,7 @@ export default function EstudioPage() {
                 </span>
                 <div>
                   <h3 className="text-[15.5px] font-extrabold text-[#14161b] leading-snug">{f.title}</h3>
-                  <p className="mt-1 text-[13.5px] leading-relaxed text-[#6b7079]">{f.text}</p>
+                  <p className="mt-1 text-[14.5px] sm:text-[15px] leading-relaxed text-[#6b7079]">{f.text}</p>
                 </div>
               </div>
             ))}
@@ -146,8 +146,25 @@ export default function EstudioPage() {
           <div className="max-w-[1080px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 lg:gap-14 items-start">
             <FormSection />
 
-            <aside className="lg:pt-2">
-              <div className="text-[12px] font-bold tracking-[0.16em] uppercase text-[#8a8f99] mb-3 text-center lg:text-left">Caso de éxito</div>
+            <aside className="lg:pt-2 flex flex-col">
+              <div className="text-[12px] font-bold tracking-[0.16em] uppercase text-[#8a8f99] mb-3 text-center lg:text-left">Casos de éxito</div>
+              <div className="relative overflow-hidden rounded-[22px] mb-4 bg-[#14161b] p-6 sm:p-7 text-white">
+                <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(67,126,239,.35), transparent 70%)" }} />
+                <div className="relative">
+                  <div className="text-[44px] font-extrabold tracking-[-0.04em] leading-none text-[#437EEF]">x3</div>
+                  <div className="mt-1 text-[13px] font-semibold text-[#CFE0FF]">instalaciones · +30.000 € de beneficio neto al mes</div>
+                  <p className="mt-5 text-[16.5px] sm:text-[17px] leading-relaxed font-medium text-[#e7e9ef]">
+                    Eco Max Energía ha triplicado sus instalaciones trabajando con Monq Media, sumando más de 30.000 € de beneficio neto cada mes.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
+                    <span className="flex-none grid place-items-center w-10 h-10 rounded-full bg-[#437EEF] text-[14px] font-extrabold">EM</span>
+                    <div>
+                      <div className="text-[13.5px] font-extrabold tracking-[0.04em] uppercase">Eco Max Energía</div>
+                      <div className="text-[12.5px] text-[#9aa0aa]">Instaladora de placas solares</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="relative overflow-hidden rounded-[22px] bg-[#14161b] p-6 sm:p-7 text-white">
                 <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(67,126,239,.35), transparent 70%)" }} />
                 <div className="relative">

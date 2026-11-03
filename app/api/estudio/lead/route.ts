@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { emptyMeeting, newLeadId, sendToMake } from "@/lib/make";
+import { normalizePhone } from "@/lib/phone";
 
 export const dynamic = "force-dynamic";
 
@@ -7,7 +8,7 @@ export const dynamic = "force-dynamic";
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
   const nombre = String(body?.name ?? "").trim();
-  const telefono = String(body?.phone ?? "").trim();
+  const telefono = normalizePhone(String(body?.phone ?? "")) ?? "";
   const email = String(body?.email ?? "").trim();
   if (!nombre || !telefono || !/^\S+@\S+\.\S+$/.test(email)) {
     return NextResponse.json({ ok: false, error: "Datos incompletos" }, { status: 400 });

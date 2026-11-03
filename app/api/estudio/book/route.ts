@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { buildDays, SLOT_MINUTES } from "@/lib/estudioSlots";
 import { createEvent, getBusy, googleConfigured } from "@/lib/googleCalendar";
 import { newLeadId, sendToMake } from "@/lib/make";
+import { normalizePhone } from "@/lib/phone";
 
 export const dynamic = "force-dynamic";
 
@@ -9,7 +10,7 @@ export const dynamic = "force-dynamic";
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
   const name = String(body?.name ?? "").trim();
-  const phone = String(body?.phone ?? "").trim();
+  const phone = normalizePhone(String(body?.phone ?? "")) ?? "";
   const email = String(body?.email ?? "").trim();
   const start = String(body?.start ?? "");
   if (!name || !phone || !/^\S+@\S+\.\S+$/.test(email)) {

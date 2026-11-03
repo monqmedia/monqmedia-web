@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { pageview } from "@vercel/analytics";
+import { normalizePhone } from "@/lib/phone";
 
 type Slot = { start: string; end: string };
 type Day = { date: string; slots: Slot[] };
@@ -27,7 +28,7 @@ function dayLabel(d: string, i: number) {
 
 // Enlaces "Añadir al calendario"
 const gDate = (iso: string) => iso.replace(/[-:]/g, "").replace(/\.\d{3}/, "");
-const TITLE = "Estudio gratuito con Monq Media";
+const TITLE = "Estudio online gratuito con Monq Media";
 function calendarLinks(b: Booking) {
   const details = b.meetUrl ? `Enlace de Google Meet: ${b.meetUrl}` : "Te enviaremos el enlace de Google Meet por email.";
   const google = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(TITLE)}&dates=${gDate(b.start)}/${gDate(b.end)}&details=${encodeURIComponent(details)}${b.meetUrl ? `&location=${encodeURIComponent(b.meetUrl)}` : ""}`;
@@ -54,8 +55,26 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
   const [dayIdx, setDayIdx] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [booking, setBooking] = useState<Booking | null>(null);
+  const [phoneError, setPhoneError] = useState("");
+  const rootRef = useRef<HTMLDivElement>(null);
+  const leadReq = useRef<Promise<string> | null>(null);
 
   useEffect(() => onStepChange?.(step), [step, onStepChange]);
+
+  // Al cambiar de paso, mantener el formulario en pantalla (sin saltar a los casos de éxito).
+  useEffect(() => {
+    if (step === 1) return;
+    const el = document.getElementById("formulario") ?? rootRef.current;
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 12;
+    if (Math.abs(window.scrollY - top) > 40) window.scrollTo({ top, behavior: "smooth" });
+  }, [step]);
+
+  // Huecos precargados para que el paso 2 aparezca al instante.
+  useEffect(() => {
+    loadSlots();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const loadSlots = () =>
     fetch("/api/estudio/slots", { cache: "no-store" })
@@ -63,38 +82,44 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
       .then((j) => setDays(j.days ?? []))
       .catch(() => setDays([]));
 
-  const submitLead = async (e: React.FormEvent) => {
+  const submitLead = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    setSending(true);
-    try {
-      const r = await fetch("/api/estudio/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(lead),
-      });
-      if (!r.ok) throw new Error();
-      const j = await r.json().catch(() => ({}));
-      setLeadId(j.leadId ?? "");
-      // Conversión medible en el plan gratuito de Vercel Analytics.
-      pageview({ route: "/_contacto/formulario/estudio", path: "/_contacto/formulario/estudio" });
-      setStep(2);
-      loadSlots();
-    } catch {
-      setError("Revisa tus datos e inténtalo de nuevo.");
-    } finally {
-      setSending(false);
+    const phone = normalizePhone(lead.phone);
+    if (!phone) {
+      setPhoneError("Introduce un teléfono válido, por ejemplo 600 123 456.");
+      return;
     }
+    setPhoneError("");
+    const data = { ...lead, phone };
+    setLead(data);
+    // El envío a Make va en paralelo: el paso 2 aparece al momento.
+    leadReq.current = fetch("/api/estudio/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((r) => r.json())
+      .then((j) => {
+        setLeadId(j.leadId ?? "");
+        return (j.leadId as string) ?? "";
+      })
+      .catch(() => "");
+    // Conversión medible en el plan gratuito de Vercel Analytics.
+    pageview({ route: "/_contacto/formulario/estudio", path: "/_contacto/formulario/estudio" });
+    setStep(2);
+    loadSlots();
   };
 
   const confirm = async (start: string) => {
     setError("");
     setSending(true);
     try {
+      const id = leadId || (await leadReq.current) || "";
       const r = await fetch("/api/estudio/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...lead, leadId, start }),
+        body: JSON.stringify({ ...lead, leadId: id, start }),
       });
       const j = await r.json();
       if (!r.ok || !j.ok) throw new Error(j.error);
@@ -111,7 +136,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
   };
 
   return (
-    <div className="rounded-[22px] border border-[#ececf0] bg-white p-5 sm:p-8 shadow-[0_24px_60px_-34px_rgba(20,22,27,.35)]">
+    <div ref={rootRef} className="rounded-[22px] border border-[#ececf0] bg-white p-5 sm:p-8 shadow-[0_24px_60px_-34px_rgba(20,22,27,.35)]">
       {/* Indicador de pasos */}
       <div className="flex items-center gap-2 mb-6">
         {[1, 2].map((n) => (
@@ -132,8 +157,13 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
           </label>
           <label className="flex flex-col gap-1.5">
             <span className="text-[13.5px] font-bold text-[#2b2f37]">Teléfono</span>
-            <input required type="tel" autoComplete="tel" inputMode="tel" className={inputCls} placeholder="600 000 000"
-              value={lead.phone} onChange={(e) => setLead({ ...lead, phone: e.target.value })} />
+            <input required type="tel" autoComplete="tel" inputMode="tel" placeholder="600 000 000"
+              className={`${inputCls} ${phoneError ? "border-[#d11a4f] focus:border-[#d11a4f] focus:ring-[#d11a4f]/10" : ""}`}
+              aria-invalid={!!phoneError}
+              value={lead.phone}
+              onChange={(e) => { setLead({ ...lead, phone: e.target.value }); if (phoneError) setPhoneError(""); }}
+              onBlur={() => lead.phone && !normalizePhone(lead.phone) && setPhoneError("Introduce un teléfono válido, por ejemplo 600 123 456.")} />
+            {phoneError && <span className="text-[13px] font-semibold text-[#d11a4f]">{phoneError}</span>}
           </label>
           <label className="flex flex-col gap-1.5">
             <span className="text-[13.5px] font-bold text-[#2b2f37]">Email</span>
@@ -143,10 +173,9 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
           {error && <p className="text-[13.5px] font-semibold text-[#d11a4f]">{error}</p>}
           <button
             type="submit"
-            disabled={sending}
             className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[#437EEF] px-6 py-4 text-[16px] font-bold text-white shadow-[0_14px_32px_-12px_rgba(67,126,239,.7)] hover:bg-[#2F66D6] transition-colors disabled:opacity-60"
           >
-            {sending ? "Enviando…" : "Siguiente"}
+            Siguiente
             <Arrow />
           </button>
           <p className="text-center text-[12.5px] text-[#8a8f99]">Sin compromiso. Tus datos solo se usan para preparar tu estudio.</p>
@@ -156,7 +185,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
       {step === 2 && (
         <div>
           {!days ? (
-            <p className="py-10 text-center text-[14.5px] text-[#8a8f99]">Cargando huecos disponibles…</p>
+            <p className="py-24 text-center text-[14.5px] text-[#8a8f99]">Cargando huecos disponibles…</p>
           ) : days.length === 0 ? (
             <p className="py-10 text-center text-[14.5px] text-[#52575f]">No quedan huecos libres estos días. Te llamaremos para buscar uno.</p>
           ) : (
@@ -184,7 +213,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
                 <div className="text-[17px] font-bold text-[#14161b]">
                   {cap(new Intl.DateTimeFormat("es-ES", { timeZone: "UTC", weekday: "long", day: "numeric", month: "long" }).format(dayDate(days[dayIdx].date)))}
                 </div>
-                <div className="text-[13px] text-[#8a8f99] mt-0.5">Elige una hora · 30 min · hora de España</div>
+                <div className="text-[13.5px] text-[#8a8f99] mt-0.5">Agenda tu estudio online · Duración: 30 minutos</div>
               </div>
 
               <div className="mt-4 grid grid-cols-2 gap-2.5">
@@ -220,12 +249,12 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
 
       {step === 3 && booking && (
         <div className="text-center">
-          <span className="mx-auto grid place-items-center w-14 h-14 rounded-full bg-[#EEF4FF]">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke={PINK} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
-          </span>
-          <h3 className="mt-4 text-[22px] font-extrabold tracking-tight text-[#14161b]">Tu estudio está reservado</h3>
-          <p className="mt-2 text-[14.5px] leading-relaxed text-[#52575f]">
-            Gracias, {lead.name.split(" ")[0]}. {booking.meetUrl ? "Te hemos enviado la invitación a" : "Te enviaremos los detalles a"}{" "}<strong className="text-[#14161b]">{lead.email}</strong>.
+          <h3 className="text-[24px] font-extrabold tracking-tight text-[#14161b]">✅ Reunión programada</h3>
+          <p className="mt-3 text-[15px] leading-relaxed text-[#52575f]">
+            {lead.name.split(" ")[0]}, gracias por tu solicitud para reunirnos. Te contactaremos en breve para confirmar tu reunión.
+          </p>
+          <p className="mt-3 text-[15px] leading-relaxed text-[#52575f]">
+            Te hemos enviado la invitación a<br /><strong className="text-[#14161b] [overflow-wrap:anywhere]">{lead.email}</strong>
           </p>
           <div className="mt-5 rounded-2xl border border-[#ececf0] p-4 text-left text-[14.5px] text-[#2b2f37] flex flex-col gap-3">
             <Row icon="clock">30 min</Row>

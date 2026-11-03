@@ -5,8 +5,8 @@ import BookingForm from "./BookingForm";
 
 const TITLES = {
   1: { n: "PASO 1:", t: "Rellena este breve formulario" },
-  2: { n: "PASO 2:", t: "Elige el día y la hora de tu estudio" },
-  3: { n: "¡LISTO!", t: "Nos vemos en tu estudio gratuito" },
+  2: { n: "PASO 2:", t: "Elige el día y la hora de tu estudio online" },
+  3: { n: "¡LISTO!", t: "Nos vemos en tu estudio online gratuito" },
 } as const;
 
 export default function FormSection() {
