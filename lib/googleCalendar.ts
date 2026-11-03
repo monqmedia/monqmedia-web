@@ -56,7 +56,7 @@ export async function createEvent(o: { start: string; end: string; name: string;
   const ev = await gfetch(`/calendars/${encodeURIComponent(CAL_ID())}/events?conferenceDataVersion=1&sendUpdates=all`, {
     method: "POST",
     body: JSON.stringify({
-      summary: `Estudio gratuito Monq Media · ${o.name}`,
+      summary: `Videollamada clientes fotovoltaica - ${o.name}`,
       description: `Estudio gratuito reservado desde monqmedia.com/estudio\n\nNombre: ${o.name}\nTeléfono: ${o.phone}\nEmail: ${o.email}`,
       start: { dateTime: o.start, timeZone: "Europe/Madrid" },
       end: { dateTime: o.end, timeZone: "Europe/Madrid" },
