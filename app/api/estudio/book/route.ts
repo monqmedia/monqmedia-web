@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { buildDays, SLOT_MINUTES } from "@/lib/estudioSlots";
 import { createEvent, getBusy, googleConfigured } from "@/lib/googleCalendar";
-import { sendToMake } from "@/lib/make";
+import { newLeadId, sendToMake } from "@/lib/make";
 
 export const dynamic = "force-dynamic";
 
@@ -28,12 +28,11 @@ export async function POST(req: Request) {
   const end = new Date(Date.parse(start) + SLOT_MINUTES * 60000).toISOString();
 
   let meetUrl: string | null = null;
-  let eventId: string | null = null;
   // Si Google falla, la reserva se acepta igualmente y Make recibe calendarError para gestionarla a mano.
   let calendarError: string | null = null;
   if (googleConfigured()) {
     try {
-      ({ meetUrl, eventId } = await createEvent({ start, end, name, email, phone }));
+      ({ meetUrl } = await createEvent({ start, end, name, email, phone }));
     } catch (e) {
       console.error("[estudio/book] createEvent", e);
       calendarError = String((e as Error).message).slice(0, 300);
@@ -43,13 +42,16 @@ export async function POST(req: Request) {
   }
 
   const fmt = (o: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("es-ES", { timeZone: "Europe/Madrid", ...o }).format(new Date(start));
+  const leadId = String(body?.leadId ?? "").trim() || newLeadId();
   await sendToMake({
-    step: "booking", name, phone, email, start, end, timeZone: "Europe/Madrid",
-    // Ya en hora de España, listos para usar en emails/WhatsApp desde Make
-    date: fmt({ year: "numeric", month: "2-digit", day: "2-digit" }),
-    time: fmt({ hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
-    when: fmt({ weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
-    meetUrl, eventId, calendarError,
+    lead_id: leadId, nombre: name, telefono: phone, email,
+    reunion_reservada: "sí",
+    reunion_fecha: fmt({ year: "numeric", month: "2-digit", day: "2-digit" }),
+    reunion_hora: fmt({ hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
+    reunion_texto: fmt({ weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }),
+    reunion_inicio: start, reunion_fin: end,
+    meet_url: meetUrl ?? "",
+    error_calendario: calendarError ?? "",
   });
   return NextResponse.json({ ok: true, start, end, meetUrl });
 }

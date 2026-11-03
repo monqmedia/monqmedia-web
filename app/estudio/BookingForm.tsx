@@ -47,6 +47,7 @@ const inputCls =
 export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 | 2 | 3) => void }) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [lead, setLead] = useState<Lead>({ name: "", phone: "", email: "" });
+  const [leadId, setLeadId] = useState("");
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const [days, setDays] = useState<Day[] | null>(null);
@@ -73,6 +74,8 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
         body: JSON.stringify(lead),
       });
       if (!r.ok) throw new Error();
+      const j = await r.json().catch(() => ({}));
+      setLeadId(j.leadId ?? "");
       // Conversión medible en el plan gratuito de Vercel Analytics.
       pageview({ route: "/_contacto/formulario/estudio", path: "/_contacto/formulario/estudio" });
       setStep(2);
@@ -91,7 +94,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
       const r = await fetch("/api/estudio/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...lead, start }),
+        body: JSON.stringify({ ...lead, leadId, start }),
       });
       const j = await r.json();
       if (!r.ok || !j.ok) throw new Error(j.error);
