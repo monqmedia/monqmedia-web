@@ -114,7 +114,7 @@ export default function EstudioPage() {
             </div>
 
             <h1 className="mt-5 text-[32px] sm:text-[46px] lg:text-[54px] leading-[1.04] tracking-[-0.035em] font-extrabold text-[#14161b] text-balance">
-              Te conseguimos <span className="text-[#437EEF]">clientes interesados de verdad</span> en instalar placas solares, cada mes.
+              Te ayudamos a <span className="text-[#437EEF]">duplicar tus instalaciones</span> en menos de 60 días
             </h1>
 
             <CtaButton className="mt-8 w-full sm:w-auto" />

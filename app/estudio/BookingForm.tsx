@@ -87,7 +87,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
     setError("");
     const phone = normalizePhone(lead.phone);
     if (!phone) {
-      setPhoneError("Introduce un teléfono válido, por ejemplo 600 123 456.");
+      setPhoneError("Introduce un teléfono válido.");
       return;
     }
     setPhoneError("");
@@ -162,7 +162,7 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
               aria-invalid={!!phoneError}
               value={lead.phone}
               onChange={(e) => { setLead({ ...lead, phone: e.target.value }); if (phoneError) setPhoneError(""); }}
-              onBlur={() => lead.phone && !normalizePhone(lead.phone) && setPhoneError("Introduce un teléfono válido, por ejemplo 600 123 456.")} />
+              onBlur={() => lead.phone && !normalizePhone(lead.phone) && setPhoneError("Introduce un teléfono válido.")} />
             {phoneError && <span className="text-[13px] font-semibold text-[#d11a4f]">{phoneError}</span>}
           </label>
           <label className="flex flex-col gap-1.5">
