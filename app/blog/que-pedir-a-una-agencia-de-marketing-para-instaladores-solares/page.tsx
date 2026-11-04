@@ -35,6 +35,14 @@ const faqs: Faq[] = [
     a: "Sí. Una agencia que confía en su sistema puede comprometerse por contrato. Monq Media ofrece garantía de resultados por contrato.",
   },
   {
+    q: "¿Cómo comparo propuestas de varias agencias?",
+    a: "Con los mismos criterios para todas: exclusividad de los leads, cómo filtran y quién contacta, qué miden, casos del sector, garantía y permanencia. Pide que te estimen el coste por instalación, no solo por lead.",
+  },
+  {
+    q: "¿Qué debe incluir el contrato con una agencia de captación?",
+    a: "Qué se entrega (leads, visitas agendadas), con qué criterios de calidad, qué datos e informes recibirás, quién es propietario de las campañas y las cuentas, condiciones de la garantía y permanencia.",
+  },
+  {
     q: "¿Las campañas deben ir con mi marca?",
     a: "Sí. Si el cliente conoce tu marca desde el primer anuncio, llega con más confianza a la visita. Y construyes un canal propio a largo plazo en lugar de depender de un intermediario.",
   },
@@ -46,6 +54,7 @@ const jsonLd = [
     description: post.description,
     url: URL,
     published: post.date,
+    modified: post.updated,
   }),
   faqJsonLd(faqs),
   breadcrumbJsonLd(post.title, URL, { name: "Blog", href: "/blog" }),
@@ -59,8 +68,8 @@ export default function Article() {
       parent={{ name: "Blog", href: "/blog" }}
       eyebrow="Blog · Marketing"
       title={post.title}
-      updated={post.date}
-      updatedLabel={post.dateLabel}
+      updated={post.updated ?? post.date}
+      updatedLabel={post.updatedLabel ?? post.dateLabel}
       summary={
         <>
           antes de contratar una agencia de marketing para tu empresa de placas
@@ -126,6 +135,30 @@ export default function Article() {
           ["Sin compromiso de resultados", "El riesgo es solo tuyo"],
         ]}
       />
+
+      <h2 className={h2}>Cómo comparar propuestas de agencias</h2>
+      <Table
+        head={["Criterio", "Qué pedir por escrito"]}
+        rows={[
+          ["Exclusividad", "Que cada lead sea solo para tu empresa"],
+          ["Calidad", "Cómo se cualifica un lead y qué pasa con los que no lo son"],
+          ["Contacto", "Quién llama al lead, en cuánto tiempo y fuera de horario"],
+          ["Medición", "Informes con visitas, instalaciones y coste por cliente"],
+          ["Propiedad", "De quién son las campañas, las cuentas y los datos"],
+          ["Garantía", "Qué resultados se comprometen y qué pasa si no se cumplen"],
+        ]}
+      />
+      <p className={p}>
+        Para poner números a cada propuesta, usa la{" "}
+        <Link href="/calculadora-leads-placas-solares" className={a}>
+          calculadora de leads
+        </Link>{" "}
+        y repasa los términos en el{" "}
+        <Link href="/glosario-captacion-placas-solares" className={a}>
+          glosario de captación
+        </Link>
+        .
+      </p>
 
       <h2 className={h2}>Cómo respondemos en Monq Media</h2>
       <p className={p}>

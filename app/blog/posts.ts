@@ -172,6 +172,8 @@ export const posts: Post[] = [
   },
   {
     slug: "que-pedir-a-una-agencia-de-marketing-para-instaladores-solares",
+    updated: "2026-11-04",
+    updatedLabel: "4 de noviembre de 2026",
     seoTitle: "Qué pedir a una agencia de marketing solar",
     title: "Qué pedir a una agencia de marketing para instaladores solares",
     description:
