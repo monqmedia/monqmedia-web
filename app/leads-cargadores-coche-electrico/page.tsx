@@ -13,9 +13,9 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 
 const URL = `${SITE}/leads-cargadores-coche-electrico`;
-const TITLE = "Leads para instaladores de cargadores de coche eléctrico";
+const TITLE = "Leads de cargadores de coche eléctrico para instaladores";
 const DESCRIPTION =
-  "Captamos clientes interesados en instalar un cargador de coche eléctrico (punto de recarga) y llenamos la agenda de visitas de tu empresa con leads cualificados y exclusivos en toda España.";
+  "Leads exclusivos de clientes que quieren instalar un cargador de coche eléctrico o punto de recarga en casa o en su empresa. Contacto inmediato y visitas agendadas en toda España.";
 
 export const metadata: Metadata = {
   title: TITLE,
