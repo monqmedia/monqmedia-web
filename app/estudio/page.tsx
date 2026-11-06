@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import FormSection from "./FormSection";
 import CaseVideo from "./CaseVideo";
+import MetaPixel from "./MetaPixel";
 
 
 export const metadata: Metadata = {
@@ -89,6 +90,7 @@ function CtaButton({ className = "" }: { className?: string }) {
 export default function EstudioPage() {
   return (
     <div className="bg-white">
+      <MetaPixel />
       <main>
         {/* ===== HERO ===== */}
         <section className="relative overflow-hidden px-4 sm:px-8 pt-8 sm:pt-10 pb-10 sm:pb-14">

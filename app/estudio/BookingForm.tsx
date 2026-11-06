@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { pageview } from "@vercel/analytics";
 import { normalizePhone } from "@/lib/phone";
+import { getFbclid, trackPixel } from "./MetaPixel";
+
+const newEventId = (p: string) => `${p}-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 
 type Slot = { start: string; end: string };
 type Day = { date: string; slots: Slot[] };
@@ -93,11 +96,13 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
     setPhoneError("");
     const data = { ...lead, phone };
     setLead(data);
+    const metaEventId = newEventId("lead");
+    trackPixel("Lead", metaEventId);
     // El envío a Make va en paralelo: el paso 2 aparece al momento.
     leadReq.current = fetch("/api/estudio/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ ...data, metaEventId, ...getFbclid(), pageUrl: window.location.href }),
     })
       .then((r) => r.json())
       .then((j) => {
@@ -116,14 +121,16 @@ export default function BookingForm({ onStepChange }: { onStepChange?: (step: 1 
     setSending(true);
     try {
       const id = leadId || (await leadReq.current) || "";
+      const metaEventId = newEventId("schedule");
       const r = await fetch("/api/estudio/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...lead, leadId: id, start }),
+        body: JSON.stringify({ ...lead, leadId: id, start, metaEventId, ...getFbclid(), pageUrl: window.location.href }),
       });
       const j = await r.json();
       if (!r.ok || !j.ok) throw new Error(j.error);
       setBooking({ start: j.start, end: j.end, meetUrl: j.meetUrl });
+      trackPixel("Schedule", metaEventId);
       pageview({ route: "/_contacto/cita/estudio", path: "/_contacto/cita/estudio" });
       setStep(3);
     } catch (err) {

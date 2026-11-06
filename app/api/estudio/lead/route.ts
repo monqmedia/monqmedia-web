@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { emptyMeeting, newLeadId, sendToMake } from "@/lib/make";
 import { normalizePhone } from "@/lib/phone";
+import { sendMetaEvent } from "@/lib/metaCapi";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +15,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "Datos incompletos" }, { status: 400 });
   }
   const lead_id = newLeadId();
-  await sendToMake({ lead_id, nombre, telefono, email, ...emptyMeeting() });
+  await Promise.all([
+    sendToMake({ lead_id, nombre, telefono, email, ...emptyMeeting() }),
+    sendMetaEvent(req, {
+      eventName: "Lead", eventId: String(body?.metaEventId ?? ""), email, phone: telefono, name: nombre,
+      externalId: lead_id, fbclid: body?.fbclid, fbclidTs: body?.fbclidTs, sourceUrl: body?.pageUrl,
+    }),
+  ]);
   return NextResponse.json({ ok: true, leadId: lead_id });
 }

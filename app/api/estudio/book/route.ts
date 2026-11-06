@@ -3,6 +3,7 @@ import { buildDays, SLOT_MINUTES } from "@/lib/estudioSlots";
 import { createEvent, getBusy, googleConfigured } from "@/lib/googleCalendar";
 import { newLeadId, sendToMake } from "@/lib/make";
 import { normalizePhone } from "@/lib/phone";
+import { sendMetaEvent } from "@/lib/metaCapi";
 
 export const dynamic = "force-dynamic";
 
@@ -44,7 +45,8 @@ export async function POST(req: Request) {
 
   const fmt = (o: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("es-ES", { timeZone: "Europe/Madrid", ...o }).format(new Date(start));
   const leadId = String(body?.leadId ?? "").trim() || newLeadId();
-  await sendToMake({
+  await Promise.all([
+    sendToMake({
     lead_id: leadId, nombre: name, telefono: phone, email,
     reunion_reservada: "sí",
     reunion_fecha: fmt({ year: "numeric", month: "2-digit", day: "2-digit" }),
@@ -53,6 +55,11 @@ export async function POST(req: Request) {
     reunion_inicio: start, reunion_fin: end,
     meet_url: meetUrl ?? "",
     error_calendario: calendarError ?? "",
-  });
+  }),
+    sendMetaEvent(req, {
+      eventName: "Schedule", eventId: String(body?.metaEventId ?? ""), email, phone, name,
+      externalId: leadId, fbclid: body?.fbclid, fbclidTs: body?.fbclidTs, sourceUrl: body?.pageUrl,
+    }),
+  ]);
   return NextResponse.json({ ok: true, start, end, meetUrl });
 }
