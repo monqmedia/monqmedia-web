@@ -16,7 +16,7 @@ import RelatedPosts from "@/app/blog/RelatedPosts";
 const URL = `${SITE}/agencia-marketing-placas-solares`;
 const TITLE = "Agencia de marketing para empresas de placas solares";
 const DESCRIPTION =
-  "Agencia de marketing especializada en instaladores de placas solares y empresas fotovoltaicas de toda España: captación de clientes, publicidad e IA para llenar tu agenda de visitas técnicas, con garantía por contrato.";
+  "Marketing digital para empresas de energía solar y renovables: captación de clientes, publicidad e IA para llenar la agenda de visitas técnicas de tu instaladora. Garantía por contrato.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -94,7 +94,7 @@ export default function AgenciaMarketingPlacasSolaresPage() {
       faqs={faqs}
       ctaTitle="¿Buscas una agencia que se mida en instalaciones?"
     >
-      <h2 className={h2}>Qué hacemos por tu empresa de energía solar</h2>
+      <h2 className={h2}>Marketing digital para empresas de energía solar: qué hacemos</h2>
       <Table
         head={["Servicio", "Qué consigues"]}
         rows={[
@@ -121,7 +121,7 @@ export default function AgenciaMarketingPlacasSolaresPage() {
         .
       </p>
 
-      <h2 className={h2}>Agencia especializada frente a agencia generalista</h2>
+      <h2 className={h2}>Agencia de marketing de energía renovable especializada frente a generalista</h2>
       <Table
         head={["", "Agencia especializada en solar", "Agencia generalista"]}
         rows={[

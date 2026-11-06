@@ -4,6 +4,8 @@ Una consulta principal por URL para evitar canibalización. Antes de crear o
 reescribir contenido, comprobar aquí que la consulta no está ya asignada.
 Fuentes: Search Console (exportación quincenal en Drive) y Keyword Planner.
 
+Search Console 06/11/2026 (3 meses): ~550 impresiones (x3,6 vs 23/10), 17 clics. /leads-placas-solares 111 impr pos 11 (antes 33, pos 18). "presupuestos placas solares" (32 impr, pos 59) es intención de consumidor: no se persigue. Nuevas: "leads para energía solar" pos 21,6; "marketing digital para empresas de energía solar" pos 32,6; "agencia marketing energía renovable" pos 12; "generar leads instaladores" pos 32 (antes 42).
+
 Notas de datos (23/10/2026):
 - Nicho B2B con volumen muy bajo: "leads placas solares", "marketing fotovoltaica",
   "agencia marketing placas solares", "conseguir clientes placas solares" salen sin
@@ -19,7 +21,7 @@ Notas de datos (23/10/2026):
 | URL | Consulta principal | Variantes |
 | --- | --- | --- |
 | / | monq media (marca) | leads exclusivos para instaladores de paneles solares |
-| /agencia-marketing-placas-solares | agencia de marketing para instaladores de placas solares | agencia marketing fotovoltaica, agencia marketing energía solar, agencia para empresas fotovoltaicas |
+| /agencia-marketing-placas-solares | agencia de marketing para instaladores de placas solares | marketing digital para empresas de energía solar, agencia marketing energía renovable, marketing fotovoltaico, agencia para empresas fotovoltaicas |
 | /leads-placas-solares | leads placas solares | leads fotovoltaica, comprar leads placas solares, generar leads instaladores, precio lead placas solares, clientes para instaladores solares |
 | /glosario-captacion-placas-solares | glosario captación placas solares | qué es un lead cualificado, speed to lead, coste por instalación, no-show |
 | /casos-de-exito/vira-energy | caso de éxito instaladora placas solares (Vira Energy) | resultados marketing autoconsumo |

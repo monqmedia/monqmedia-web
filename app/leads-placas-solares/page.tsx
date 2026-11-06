@@ -7,7 +7,7 @@ import RelatedPosts from "@/app/blog/RelatedPosts";
 const URL = "https://www.monqmedia.com/leads-placas-solares";
 const TITLE = "Leads de placas solares exclusivos para instaladores";
 const DESCRIPTION =
-  "Leads de placas solares exclusivos (no compartidos) para instaladores y empresas fotovoltaicas de toda España. Visitas técnicas agendadas, IA que contacta cada lead al instante y garantía de resultados por contrato.";
+  "Leads de placas solares y energía solar exclusivos (no compartidos) para instaladores y empresas fotovoltaicas de toda España. Visitas técnicas agendadas, contacto inmediato con IA y garantía por contrato.";
 const UPDATED = "2026-11-06";
 
 export const metadata: Metadata = {

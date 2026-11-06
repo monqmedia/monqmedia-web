@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/agencia-marketing-placas-solares`,
-      lastModified: new Date("2026-10-26"),
+      lastModified: new Date("2026-11-06"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -89,7 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/leads-cargadores-coche-electrico`,
-      lastModified: new Date("2026-10-17"),
+      lastModified: new Date("2026-11-06"),
       changeFrequency: "monthly",
       priority: 0.6,
     },
