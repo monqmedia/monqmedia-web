@@ -8,7 +8,7 @@ const URL = "https://www.monqmedia.com/leads-placas-solares";
 const TITLE = "Leads de placas solares exclusivos para instaladores";
 const DESCRIPTION =
   "Leads de placas solares exclusivos (no compartidos) para instaladores y empresas fotovoltaicas de toda España. Visitas técnicas agendadas, IA que contacta cada lead al instante y garantía de resultados por contrato.";
-const UPDATED = "2026-10-23";
+const UPDATED = "2026-11-06";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -135,7 +135,7 @@ export default function LeadsPlacasSolaresPage() {
           </h1>
           <p className="text-[14px] text-[#9aa0aa] mb-10 pb-8 border-b border-[#f0f0f2]">
             Actualizado el{" "}
-            <time dateTime={UPDATED}>23 de octubre de 2026</time> · Monq Media
+            <time dateTime={UPDATED}>6 de noviembre de 2026</time> · Monq Media
           </p>
 
           <div className="rounded-2xl bg-[#fdf2f6] border border-[#f4d4e1] px-6 py-5 mb-8">
@@ -152,6 +152,22 @@ export default function LeadsPlacasSolaresPage() {
               por contrato.
             </p>
           </div>
+
+          <h2 className={h2}>Qué es un lead de placas solares</h2>
+          <p className={p}>
+            Un lead de placas solares es una persona o empresa que ha pedido
+            información o presupuesto para instalar paneles solares y ha
+            dejado sus datos de contacto. Un{" "}
+            <strong>lead cualificado</strong> además cumple los requisitos para
+            comprar (vivienda o negocio adecuado, tejado viable, consumo e
+            intención de instalar pronto), y un{" "}
+            <strong>lead exclusivo</strong> solo lo recibe tu empresa. Más
+            términos en el{" "}
+            <Link href="/glosario-captacion-placas-solares" className="text-[#EB0A5C] font-semibold hover:underline">
+              glosario de captación
+            </Link>
+            .
+          </p>
 
           <h2 className={h2}>Por qué a muchos instaladores no les salen las cuentas</h2>
           <ul className="list-disc pl-6 space-y-3 mb-4">
@@ -249,6 +265,52 @@ export default function LeadsPlacasSolaresPage() {
             o aprende a calcularlo en{" "}
             <Link href="/blog/coste-de-captar-un-cliente-de-autoconsumo" className="text-[#EB0A5C] font-semibold hover:underline">
               cuánto cuesta captar un cliente de autoconsumo
+            </Link>
+            .
+          </p>
+
+          <h2 className={h2}>Cómo elegir un proveedor de leads de placas solares</h2>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-left text-[15px] border-collapse">
+              <thead>
+                <tr className="border-b border-[#ececf0]">
+                  <th className="py-3 pr-4 font-bold text-[#14161b]">Opción</th>
+                  <th className="py-3 pr-4 font-bold text-[#14161b]">Ventaja</th>
+                  <th className="py-3 font-bold text-[#14161b]">Riesgo</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#3a3d46]">
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Plataformas de leads</td>
+                  <td className="py-3 pr-4">Empiezas rápido</td>
+                  <td className="py-3">El mismo lead se vende a varias instaladoras</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Agencia generalista</td>
+                  <td className="py-3 pr-4">Campañas con tu marca</td>
+                  <td className="py-3">No conoce el sector; mide clics, no visitas</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Captación propia</td>
+                  <td className="py-3 pr-4">Control total</td>
+                  <td className="py-3">Requiere equipo, tiempo y aprendizaje</td>
+                </tr>
+                <tr>
+                  <td className="py-3 pr-4 font-semibold">Agencia especializada en solar</td>
+                  <td className="py-3 pr-4">Leads exclusivos, visitas y medición</td>
+                  <td className="py-3">Elegir una con casos reales y garantía</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            Antes de decidir, revisa{" "}
+            <Link href="/blog/que-pedir-a-una-agencia-de-marketing-para-instaladores-solares" className="text-[#EB0A5C] font-semibold hover:underline">
+              qué pedir a una agencia de marketing
+            </Link>{" "}
+            y conoce nuestra{" "}
+            <Link href="/agencia-marketing-placas-solares" className="text-[#EB0A5C] font-semibold hover:underline">
+              agencia de marketing para empresas de placas solares
             </Link>
             .
           </p>
