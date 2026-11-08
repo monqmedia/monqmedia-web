@@ -162,6 +162,14 @@ export default function SistemaIaContactoLeadsPage() {
         <a href="https://ia.monqmedia.com/agente-ia-whatsapp/" className={a}>
           agente de IA para WhatsApp
         </a>
+        , y sobre la llamada inmediata en{" "}
+        <a href="https://ia.monqmedia.com/agente-voz-ia/" className={a}>
+          agente de voz con IA
+        </a>
+        . Si quieres entender por qué la rapidez de contacto es clave, lee{" "}
+        <a href="https://ia.monqmedia.com/speed-to-lead/" className={a}>
+          qué es Speed to Lead
+        </a>
         .
       </p>
       <p className={p}>
