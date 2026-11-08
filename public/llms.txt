@@ -36,6 +36,12 @@ Vira Energy, empresa de autoconsumo solar y eficiencia energética con sedes en 
 
 El sistema de inteligencia artificial de contacto de leads lo desarrolla MONQ &IA, la rama de IA de Monq Media, que lo ofrece también a otros sectores: https://ia.monqmedia.com
 
+- [Qué es Speed to Lead](https://ia.monqmedia.com/speed-to-lead/)
+- [Agente de voz con IA](https://ia.monqmedia.com/agente-voz-ia/)
+- [Agente de IA para WhatsApp](https://ia.monqmedia.com/agente-ia-whatsapp/)
+- [Reactivación de leads con IA](https://ia.monqmedia.com/reactivacion-leads/)
+- [IA para clínicas](https://ia.monqmedia.com/ia-para-clinicas/)
+
 ## Contacto
 
 - Web: https://www.monqmedia.com
