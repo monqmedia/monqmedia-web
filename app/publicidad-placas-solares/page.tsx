@@ -50,6 +50,14 @@ const faqs: Faq[] = [
     a: "Un sistema de inteligencia artificial los contacta al momento por llamada y WhatsApp, los cualifica y agenda la visita técnica. Así no se enfrían, ni siquiera de noche o en fin de semana.",
   },
   {
+    q: "¿Qué anuncio funciona mejor para vender placas solares en Facebook?",
+    a: "Los que muestran instalaciones reales de tu zona, hablan del ahorro en la factura y llevan a un formulario que filtra (tipo de vivienda, tejado, factura). Evita promesas como «placas gratis»: atraen curiosos.",
+  },
+  {
+    q: "¿Formulario de Facebook o página propia?",
+    a: "El formulario instantáneo da más volumen pero más curiosos; una página propia con preguntas de cualificación da menos leads y de más calidad. Lo ideal es probar ambos y medir el coste por visita técnica.",
+  },
+  {
     q: "¿Ofrecéis garantía?",
     a: "Sí, trabajamos con garantía de resultados por contrato. De media, nuestros clientes suman entre 7 y 10 instalaciones extra al mes en los primeros 60 días.",
   },
@@ -77,8 +85,8 @@ export default function PublicidadPlacasSolaresPage() {
       crumb="Publicidad para placas solares"
       eyebrow="Publicidad y anuncios"
       title={TITLE}
-      updated="2026-10-23"
-      updatedLabel="23 de octubre de 2026"
+      updated="2026-11-09"
+      updatedLabel="9 de noviembre de 2026"
       summary={
         <>
           la publicidad para empresas de placas solares funciona cuando{" "}
@@ -128,6 +136,25 @@ export default function PublicidadPlacasSolaresPage() {
           por cliente, campaña a campaña.
         </li>
       </ul>
+
+      <h2 className={h2}>Anuncios de placas solares en Facebook e Instagram que convierten</h2>
+      <Table
+        head={["Elemento", "Qué funciona"]}
+        rows={[
+          ["Creatividad", "Fotos o vídeos de instalaciones reales de tu zona y de tu equipo"],
+          ["Mensaje", "Ahorro en la factura y confianza; sin promesas de «placas gratis»"],
+          ["Segmentación", "Radio o códigos postales donde instalas; vivienda unifamiliar o negocio"],
+          ["Formulario", "Preguntas de cualificación: vivienda, tejado, factura y plazo"],
+          ["Después del clic", "Contacto inmediato y visita técnica agendada"],
+        ]}
+      />
+      <p className={p}>
+        Calcula cuántos leads necesitas con la{" "}
+        <Link href="/calculadora-leads-placas-solares" className={a}>
+          calculadora de leads
+        </Link>
+        .
+      </p>
 
       <h2 className={h2}>Errores habituales en la publicidad de paneles solares</h2>
       <p className={p}>
