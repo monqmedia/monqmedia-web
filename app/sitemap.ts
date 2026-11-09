@@ -77,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/publicidad-placas-solares`,
-      lastModified: new Date("2026-10-23"),
+      lastModified: new Date("2026-11-09"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
