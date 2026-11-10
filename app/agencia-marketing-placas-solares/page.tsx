@@ -50,6 +50,14 @@ const faqs: Faq[] = [
     a: "De media, nuestros clientes suman entre 7 y 10 instalaciones extra al mes en los primeros 60 días, y trabajamos con garantía de resultados por contrato.",
   },
   {
+    q: "¿Cuándo le conviene a una instaladora contratar una agencia de marketing?",
+    a: "Cuando la agenda de visitas depende del boca a boca o de plataformas de leads compartidos, cuando el equipo no da abasto para contactar a tiempo o cuando quiere crecer de forma predecible en nuevas zonas.",
+  },
+  {
+    q: "¿Por dónde empezar con el marketing digital de una empresa de energía solar?",
+    a: "Por definir zona y capacidad de visitas, lanzar campañas en Google y Meta con tu marca, filtrar a los curiosos y contactar cada lead en minutos. Después, medir el coste por instalación y reforzar lo que funciona.",
+  },
+  {
     q: "¿Las campañas llevan mi marca?",
     a: "Sí. Cada campaña es personalizada y respeta la marca de tu empresa, con visión a largo plazo para crear un canal de captación propio.",
   },
@@ -77,8 +85,8 @@ export default function AgenciaMarketingPlacasSolaresPage() {
       crumb="Agencia de marketing para placas solares"
       eyebrow="Agencia especializada"
       title={TITLE}
-      updated="2026-10-26"
-      updatedLabel="26 de octubre de 2026"
+      updated="2026-11-10"
+      updatedLabel="10 de noviembre de 2026"
       summary={
         <>
           Monq Media es una agencia de marketing especializada en{" "}
@@ -131,6 +139,34 @@ export default function AgenciaMarketingPlacasSolaresPage() {
           ["Cómo se mide", "Coste por instalación y retorno", "Coste por clic o por lead"],
         ]}
       />
+
+      <h2 className={h2}>Señales de que tu instaladora necesita una agencia especializada</h2>
+      <ul className="list-disc pl-6 space-y-3 mb-4">
+        <li className={li}>
+          <strong>La agenda depende del boca a boca</strong> y hay meses buenos
+          y meses vacíos.
+        </li>
+        <li className={li}>
+          <strong>Compras leads a plataformas</strong> y compites por el mismo
+          cliente con otras empresas.
+        </li>
+        <li className={li}>
+          <strong>Ya probaste una agencia generalista</strong> y no funcionó
+          por calidad o por volumen de leads.
+        </li>
+        <li className={li}>
+          <strong>Los leads se enfrían</strong> porque nadie los llama a
+          tiempo, sobre todo fuera de horario.
+        </li>
+        <li className={li}>
+          <strong>No sabes cuánto te cuesta cada instalación</strong> ni qué
+          canal la trae. Calcúlalo con la{" "}
+          <Link href="/calculadora-leads-placas-solares" className={a}>
+            calculadora de leads
+          </Link>
+          .
+        </li>
+      </ul>
 
       <h2 className={h2}>Cómo trabajamos</h2>
       <ol className="list-decimal pl-6 space-y-3 mb-4">
