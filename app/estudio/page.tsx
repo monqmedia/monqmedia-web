@@ -13,24 +13,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-const FEATURES = [
-  {
-    title: "Leads filtrados de calidad",
-    text: "Recibes clientes con intención real de instalar, que te envían la factura de la luz y agendan una visita técnica.",
-    icon: <path d="M4 5h16l-6 7.5V18l-4 2v-7.5z" />,
-  },
-  {
-    title: "Resultados medibles",
-    text: "Sabes en todo momento cuánto inviertes, cuántos clientes entran y cuánto facturas.",
-    icon: <path d="M4 19h16M7 15l3-4 3 2 4-6" />,
-  },
-  {
-    title: "Crecimiento predecible",
-    text: "Sin depender del boca a boca, puerta fría ni plataformas: un flujo constante de clientes cada mes.",
-    icon: <path d="M4 17l6-6 4 4 6-7M14 8h6v6" />,
-  },
-];
-
 type Case = { company: string; person: string; src: string; cover: string; stat: string; statRest: string; quote: string };
 
 const CASES: Case[] = [
@@ -93,7 +75,7 @@ export default function EstudioPage() {
       <MetaPixel />
       <main>
         {/* ===== HERO ===== */}
-        <section className="relative overflow-hidden px-4 sm:px-8 pt-8 sm:pt-10 pb-10 sm:pb-14">
+        <section className="relative overflow-hidden px-4 sm:px-8 pt-8 sm:pt-10 pb-2 sm:pb-4">
           <div
             className="absolute pointer-events-none"
             style={{ top: "-160px", left: "50%", transform: "translateX(-50%)", width: "820px", height: "520px", borderRadius: "50%", background: "radial-gradient(circle, rgba(67,126,239,.09), transparent 70%)" }}
@@ -111,7 +93,7 @@ export default function EstudioPage() {
                   <span className="absolute inset-0 rounded-full bg-[#437EEF] animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-[#437EEF] animate-pulse" />
                 </span>
-                Para instaladores de paneles solares, cargadores de coches y aerotermia
+                Para empresas de fotovoltaica ☀️
               </span>
             </div>
 
@@ -119,27 +101,10 @@ export default function EstudioPage() {
               Te ayudamos a <span className="text-[#437EEF]">duplicar tus instalaciones</span> en menos de 60 días
             </h1>
 
-            <CtaButton className="mt-8 w-full sm:w-auto" />
-
-            <div className="mt-4 flex items-center justify-center gap-2 text-[14px] text-[#52575f]">
+            <div className="mt-5 flex items-center justify-center gap-2 text-[14px] text-[#52575f]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#437EEF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 17l6-6 4 4 6-7M14 8h6v6" /></svg>
               <span><strong className="text-[#14161b]">+9M€</strong> facturados para nuestros clientes</span>
             </div>
-          </div>
-
-          {/* Ventajas */}
-          <div className="relative max-w-[920px] mx-auto mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-3 rounded-[22px] border border-[#ececf0] bg-white shadow-[0_20px_50px_-36px_rgba(20,22,27,.35)] divide-y md:divide-y-0 md:divide-x divide-[#f0f0f3]">
-            {FEATURES.map((f) => (
-              <div key={f.title} className="flex gap-4 p-5 sm:p-6">
-                <span className="flex-none grid place-items-center w-10 h-10 rounded-full bg-[#E8F0FE]">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#437EEF" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">{f.icon}</svg>
-                </span>
-                <div>
-                  <h3 className="text-[15.5px] font-extrabold text-[#14161b] leading-snug">{f.title}</h3>
-                  <p className="mt-1 text-[14.5px] sm:text-[15px] leading-relaxed text-[#6b7079]">{f.text}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </section>
 
