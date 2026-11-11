@@ -216,7 +216,11 @@ export default function LeadsPlacasSolaresPage() {
           <p className={p}>
             Una empresa fotovoltaica puede conseguir clientes potenciales por
             varias vías. La clave no es usarlas todas, sino que cada una traiga
-            visitas que acaben en instalación:
+            visitas que acaben en instalación (guía completa en{" "}
+            <Link href="/blog/como-generar-leads-para-instaladores" className="text-[#EB0A5C] font-semibold hover:underline">
+              cómo generar leads para instaladores
+            </Link>
+            ):
           </p>
           <ol className="list-decimal pl-6 space-y-3 mb-4">
             <li className={li}>

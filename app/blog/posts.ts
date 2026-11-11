@@ -18,6 +18,14 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "como-generar-leads-para-instaladores",
+    title: "Cómo generar leads para instaladores: guía práctica",
+    description:
+      "Cómo generar leads para empresas instaladoras de placas solares, aerotermia o cargadores: canales, formularios que filtran, contacto inmediato y cómo medir el coste por instalación.",
+    date: "2026-11-11",
+    dateLabel: "11 de noviembre de 2026",
+  },
+  {
     slug: "reactivar-leads-antiguos-placas-solares",
     title: "Cómo reactivar leads antiguos de placas solares",
     description:
