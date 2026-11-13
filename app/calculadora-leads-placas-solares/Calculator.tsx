@@ -10,12 +10,12 @@ const DEFAULTS = {
   costeLead: 30,
 };
 
-const fmt = (n: number, d = 0) =>
+export const fmt = (n: number, d = 0) =>
   Number.isFinite(n)
     ? n.toLocaleString("es-ES", { maximumFractionDigits: d, minimumFractionDigits: d })
     : "—";
 
-function Field({
+export function Field({
   id,
   label,
   hint,

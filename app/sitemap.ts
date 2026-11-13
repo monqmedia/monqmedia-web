@@ -71,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/calculadora-leads-placas-solares`,
-      lastModified: new Date("2026-10-24"),
+      lastModified: new Date("2026-11-13"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
