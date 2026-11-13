@@ -13,11 +13,12 @@ import ContentPage, {
 } from "@/app/components/ContentPage";
 import RelatedPosts from "@/app/blog/RelatedPosts";
 import Calculator from "./Calculator";
+import RoiCalculator from "./RoiCalculator";
 
 const URL = `${SITE}/calculadora-leads-placas-solares`;
 const TITLE = "Calculadora de leads para instaladores de placas solares";
 const DESCRIPTION =
-  "Calcula cuántos leads y visitas técnicas necesita tu empresa de placas solares para cerrar las instalaciones que quieres cada mes, y cuánto te cuesta captar cada cliente. Gratis.";
+  "Calcula gratis cuántos leads y visitas técnicas necesita tu empresa de placas solares, cuánto te cuesta cada cliente y qué retorno te da la inversión en captación.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -45,6 +46,10 @@ const faqs: Faq[] = [
   {
     q: "¿Qué tasa de cierre es buena en placas solares?",
     a: "Varía mucho según la zona, el tipo de cliente y la calidad de los leads. Lo útil es medir la tuya y mejorarla: cualificar mejor y contactar antes sube tanto el paso de lead a visita como el de visita a venta.",
+  },
+  {
+    q: "¿Cómo calculo la rentabilidad de mi captación de clientes?",
+    a: "Multiplica las instalaciones que traen tus campañas por el importe medio y por tu margen, y divide entre lo que inviertes en captación. Si el resultado es mayor que 1, cada euro invertido te devuelve más de un euro de margen.",
   },
   {
     q: "¿Cómo reduzco el número de leads que necesito?",
@@ -76,8 +81,8 @@ export default function CalculadoraLeadsPage() {
       crumb="Calculadora de leads"
       eyebrow="Herramienta gratuita"
       title={TITLE}
-      updated="2026-10-24"
-      updatedLabel="24 de octubre de 2026"
+      updated="2026-11-13"
+      updatedLabel="13 de noviembre de 2026"
       summary={
         <>
           para saber cuántos leads necesitas al mes,{" "}
@@ -109,6 +114,23 @@ export default function CalculadoraLeadsPage() {
         Ejemplo: para 10 instalaciones con un 30&nbsp;% de cierre en visita
         necesitas unas 34 visitas; si el 40&nbsp;% de los leads acepta la
         visita, necesitas unos 84 leads al mes.
+      </p>
+
+      <h2 className={h2}>Calculadora de rentabilidad de la captación</h2>
+      <p className={p}>
+        Una vez sabes cuántas instalaciones traen tus campañas, calcula si
+        compensan: introduce tu importe medio por instalación, tu margen y lo
+        que inviertes al mes en captación.
+      </p>
+      <RoiCalculator />
+      <p className={p}>
+        Retorno = (instalaciones × importe medio × margen) ÷ inversión en
+        captación. Como referencia real, Vira Energy consiguió un retorno de
+        x11 por cada euro invertido. Lee el{" "}
+        <Link href="/casos-de-exito/vira-energy" className={a}>
+          caso completo
+        </Link>
+        .
       </p>
 
       <h2 className={h2}>Qué palanca mueve más tus números</h2>
