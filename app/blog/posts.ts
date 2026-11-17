@@ -44,10 +44,12 @@ export const posts: Post[] = [
   },
   {
     slug: "crm-para-instaladores-de-placas-solares",
-    seoTitle: "CRM para instaladores de placas solares",
+    seoTitle: "CRM para energía solar: guía para instaladores",
+    updated: "2026-11-17",
+    updatedLabel: "17 de noviembre de 2026",
     title: "CRM para instaladores de placas solares: qué debe tener para vender más",
     description:
-      "Qué funciones necesita un CRM para una empresa de paneles solares o instalaciones fotovoltaicas: entrada de leads, contacto inmediato, agenda de visitas técnicas y seguimiento.",
+      "Qué debe tener un CRM para empresas de energía solar e instaladores de placas solares: entrada de leads, contacto inmediato, agenda de visitas técnicas, seguimiento y cómo elegirlo.",
     date: "2026-10-22",
     dateLabel: "22 de octubre de 2026",
   },
