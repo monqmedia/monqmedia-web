@@ -33,6 +33,10 @@ const faqs: Faq[] = [
     a: "No. Le quita tareas repetitivas y le da orden. Con un sistema de IA conectado, el primer contacto y los recordatorios se automatizan y el comercial se dedica a las visitas y al cierre.",
   },
   {
+    q: "¿Cómo elijo un CRM para mi empresa de energía solar?",
+    a: "Prioriza que se conecte con tus formularios y anuncios, que tenga agenda para las visitas técnicas, recordatorios y tareas de seguimiento, que se use bien desde el móvil y que permita medir el origen de cada instalación. Más vale uno sencillo que el equipo use que uno completo que nadie actualiza.",
+  },
+  {
     q: "¿Qué métricas debería mostrar?",
     a: "Leads recibidos, tiempo hasta el primer contacto, visitas técnicas agendadas, presupuestos enviados, instalaciones cerradas y coste por instalación por cada fuente.",
   },
@@ -44,6 +48,7 @@ const jsonLd = [
     description: post.description,
     url: URL,
     published: post.date,
+    modified: post.updated,
   }),
   faqJsonLd(faqs),
   breadcrumbJsonLd(post.title, URL, { name: "Blog", href: "/blog" }),
@@ -57,8 +62,8 @@ export default function Article() {
       parent={{ name: "Blog", href: "/blog" }}
       eyebrow="Blog · Ventas"
       title={post.title}
-      updated={post.date}
-      updatedLabel={post.dateLabel}
+      updated={post.updated ?? post.date}
+      updatedLabel={post.updatedLabel ?? post.dateLabel}
       summary={
         <>
           un buen CRM para instaladores de placas solares{" "}
@@ -82,6 +87,19 @@ export default function Article() {
           ["Agenda de visitas técnicas", "Asignar visitas por zona y técnico sin solapes"],
           ["Seguimientos programados", "Que ningún presupuesto se quede olvidado"],
           ["Origen de cada lead", "Saber qué campaña trae instalaciones y no solo contactos"],
+        ]}
+      />
+
+      <h2 className={h2}>Cómo elegir un CRM para energía solar</h2>
+      <Table
+        head={["Criterio", "Qué comprobar"]}
+        rows={[
+          ["Integraciones", "Que reciba leads de tu web, Google y Meta sin copiar datos"],
+          ["Agenda", "Calendario de visitas técnicas por técnico y zona"],
+          ["Automatización", "Recordatorios, tareas de seguimiento y avisos de leads nuevos"],
+          ["Móvil", "Que los técnicos y comerciales lo usen desde el teléfono"],
+          ["Informes", "Coste por instalación y origen de cada cliente"],
+          ["Sencillez", "Que el equipo lo use de verdad desde el primer día"],
         ]}
       />
 
