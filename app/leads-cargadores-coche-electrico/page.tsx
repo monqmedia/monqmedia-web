@@ -45,6 +45,14 @@ const faqs: Faq[] = [
     a: "Sí. Cada lead es solo para tu empresa; no se reparte entre varias instaladoras.",
   },
   {
+    q: "¿Cómo se cualifica un lead de cargador de coche eléctrico?",
+    a: "Preguntando si ya tiene coche eléctrico o fecha de entrega, si es vivienda unifamiliar, garaje comunitario o empresa, la distancia al cuadro eléctrico y si tiene o quiere placas solares. Así cada visita técnica es para un cliente con un proyecto real.",
+  },
+  {
+    q: "¿Qué tipo de clientes piden un punto de recarga?",
+    a: "Particulares que acaban de comprar un coche eléctrico, comunidades de vecinos con garaje y empresas que quieren cargadores para su flota, sus empleados o sus clientes.",
+  },
+  {
     q: "¿Cómo evitáis que se enfríen?",
     a: "Con un sistema de inteligencia artificial que contacta a cada lead al momento, también en fin de semana o fuera de horario.",
   },
@@ -72,8 +80,8 @@ export default function LeadsCargadoresPage() {
       crumb="Leads de cargadores de coche eléctrico"
       eyebrow="Movilidad eléctrica"
       title={TITLE}
-      updated="2026-10-17"
-      updatedLabel="17 de octubre de 2026"
+      updated="2026-11-18"
+      updatedLabel="18 de noviembre de 2026"
       summary={
         <>
           Monq Media capta clientes que quieren instalar un cargador de coche
@@ -103,6 +111,44 @@ export default function LeadsCargadoresPage() {
           ["Agenda llena", "Visitas con clientes listos para instalar"],
         ]}
       />
+
+      <h2 className={h2}>Cómo cualificamos cada lead de cargador</h2>
+      <Table
+        head={["Pregunta", "Por qué importa"]}
+        rows={[
+          ["¿Tiene ya coche eléctrico o fecha de entrega?", "Indica la urgencia real"],
+          ["Vivienda, garaje comunitario o empresa", "Cambia el tipo de instalación y los permisos"],
+          ["Distancia aproximada al cuadro eléctrico", "Prepara la visita técnica y el presupuesto"],
+          ["¿Tiene o quiere placas solares?", "Abre una propuesta combinada con autoconsumo"],
+        ]}
+      />
+
+      <h2 className={h2}>Particulares, comunidades y empresas</h2>
+      <ul className="list-disc pl-6 space-y-3 mb-4">
+        <li className={li}>
+          <strong>Particulares:</strong> el cliente más habitual, justo
+          después de comprar el coche.
+        </li>
+        <li className={li}>
+          <strong>Comunidades de vecinos:</strong> garajes comunitarios con
+          varias plazas interesadas.
+        </li>
+        <li className={li}>
+          <strong>Empresas:</strong> recarga para flota, empleados o clientes,
+          a menudo junto con{" "}
+          <Link href="/leads-autoconsumo-empresas" className={a}>
+            autoconsumo para empresas
+          </Link>
+          .
+        </li>
+      </ul>
+      <p className={p}>
+        Y si ya tienes clientes con placas solares, mira{" "}
+        <Link href="/blog/vender-aerotermia-y-cargadores-a-clientes-de-placas-solares" className={a}>
+          cómo venderles un cargador
+        </Link>
+        .
+      </p>
 
       <h2 className={h2}>Para quién es</h2>
       <ul className="list-disc pl-6 space-y-3 mb-4">
