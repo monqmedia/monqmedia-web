@@ -1,5 +1,7 @@
 # Mapa de palabras clave
 
+Verticales principales del negocio (usuario, 20/11/2026): instalación fotovoltaica para particulares y empresas, renting fotovoltaico para empresas, aerotermia, y mejora de tarifa de luz / comparativa energética.
+
 Una consulta principal por URL para evitar canibalización. Antes de crear o
 reescribir contenido, comprobar aquí que la consulta no está ya asignada.
 Fuentes: Search Console (exportación quincenal en Drive) y Keyword Planner.
@@ -33,6 +35,8 @@ Notas de datos (23/10/2026):
 | /casos-de-exito | casos de éxito marketing placas solares | resultados agencia instaladores solares |
 | /leads-autoconsumo-empresas | leads autoconsumo empresas | clientes autoconsumo industrial, leads fotovoltaica empresas |
 | /leads-baterias-solares | leads baterías solares | clientes baterías placas solares |
+| /leads-renting-fotovoltaico | leads renting fotovoltaico | renting placas solares empresas, leads renting solar, clientes renting fotovoltaico |
+| /leads-ahorro-factura-luz | leads ahorro factura luz | leads comparador de luz, leads asesoría energética, leads comercializadora eléctrica, mejorar tarifa de luz |
 | /leads-aerotermia | leads de aerotermia | clientes aerotermia, captación aerotermia |
 | /leads-cargadores-coche-electrico | leads cargadores coche eléctrico | clientes puntos de recarga |
 
