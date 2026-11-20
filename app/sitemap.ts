@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/agencia-marketing-placas-solares`,
-      lastModified: new Date("2026-11-10"),
+      lastModified: new Date("2026-11-20"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/casos-de-exito/vira-energy`,
-      lastModified: new Date("2026-10-25"),
+      lastModified: new Date("2026-11-20"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -77,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/publicidad-placas-solares`,
-      lastModified: new Date("2026-11-09"),
+      lastModified: new Date("2026-11-20"),
       changeFrequency: "monthly",
       priority: 0.8,
     },

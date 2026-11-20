@@ -122,7 +122,11 @@ export default function ViraEnergyPage() {
       <p className={p}>
         Vira Energy es una empresa de autoconsumo solar y eficiencia
         energética para viviendas y empresas, con sedes en Cataluña,
-        Comunidad Valenciana y Madrid.
+        Comunidad Valenciana y Madrid. Su web es{" "}
+        <a href="https://viraenergy.es" className={a} rel="noopener" target="_blank">
+          viraenergy.es
+        </a>
+        .
       </p>
 
       <h2 className={h2}>El reto</h2>
