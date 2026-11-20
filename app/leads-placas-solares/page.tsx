@@ -471,18 +471,26 @@ export default function LeadsPlacasSolaresPage() {
             estable, tanto en residencial como en{" "}
             <Link href="/leads-autoconsumo-empresas" className="text-[#EB0A5C] font-semibold hover:underline">
               autoconsumo para empresas
-            </Link>{" "}
-            y{" "}
+            </Link>
+            ,{" "}
             <Link href="/leads-baterias-solares" className="text-[#EB0A5C] font-semibold hover:underline">
               baterías solares
+            </Link>{" "}
+            y{" "}
+            <Link href="/leads-renting-fotovoltaico" className="text-[#EB0A5C] font-semibold hover:underline">
+              renting fotovoltaico para empresas
             </Link>
             . También trabajamos con empresas de{" "}
             <Link href="/leads-aerotermia" className="text-[#EB0A5C] font-semibold hover:underline">
               aerotermia
             </Link>{" "}
-            y de{" "}
+            ,{" "}
             <Link href="/leads-cargadores-coche-electrico" className="text-[#EB0A5C] font-semibold hover:underline">
               cargadores de coche eléctrico
+            </Link>{" "}
+            y{" "}
+            <Link href="/leads-ahorro-factura-luz" className="text-[#EB0A5C] font-semibold hover:underline">
+              ahorro en la factura de luz
             </Link>
             .
           </p>

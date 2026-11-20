@@ -61,6 +61,8 @@ El sistema de inteligencia artificial de contacto de leads lo desarrolla MONQ &I
 - [Calculadora de leads para instaladores de placas solares](https://www.monqmedia.com/calculadora-leads-placas-solares): herramienta gratuita que calcula cuántos leads y visitas técnicas necesita una instaladora para cerrar sus instalaciones mensuales y su coste de captación por instalación (leads = instalaciones ÷ (% visita × % cierre)).
 - [Agencia de marketing para placas solares y renovables](https://www.monqmedia.com/agencia-marketing-placas-solares): qué hace una agencia especializada en instaladores fotovoltaicos frente a una generalista, servicios, método y resultados.
 - [Publicidad para placas solares que trae clientes](https://www.monqmedia.com/publicidad-placas-solares): anuncios en Google y Facebook/Instagram con la marca del instalador, medidos en visitas técnicas e instalaciones.
+- [Leads de renting fotovoltaico para empresas](https://www.monqmedia.com/leads-renting-fotovoltaico): empresas interesadas en placas solares en renting, sin inversión inicial; cualificadas por consumo, cubierta y decisor.
+- [Leads de ahorro en factura de luz y tarifas](https://www.monqmedia.com/leads-ahorro-factura-luz): particulares y empresas que quieren mejorar su tarifa de luz o comparar ofertas, para comercializadoras, comparadores y asesorías energéticas.
 - [Leads de aerotermia](https://www.monqmedia.com/leads-aerotermia): captación de clientes para empresas de aerotermia.
 - [Leads de cargadores de coche eléctrico](https://www.monqmedia.com/leads-cargadores-coche-electrico): captación de clientes para instaladores de puntos de recarga.
 

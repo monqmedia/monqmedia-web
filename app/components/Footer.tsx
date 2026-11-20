@@ -43,6 +43,12 @@ export default function Footer() {
         <Link href="/leads-baterias-solares" className="text-[12.5px] hover:text-white transition-colors">
           Baterías solares
         </Link>
+        <Link href="/leads-renting-fotovoltaico" className="text-[12.5px] hover:text-white transition-colors">
+          Renting fotovoltaico
+        </Link>
+        <Link href="/leads-ahorro-factura-luz" className="text-[12.5px] hover:text-white transition-colors">
+          Ahorro en factura de luz
+        </Link>
         <Link href="/leads-aerotermia" className="text-[12.5px] hover:text-white transition-colors">
           Aerotermia
         </Link>

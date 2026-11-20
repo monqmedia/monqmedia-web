@@ -145,6 +145,13 @@ export default function LeadsAutoconsumoEmpresasPage() {
           visitas con empresas que quieren instalar.
         </li>
       </ol>
+      <p className={p}>
+        ¿Ofreces la instalación sin inversión inicial? Mira nuestros{" "}
+        <Link href="/leads-renting-fotovoltaico" className={a}>
+          leads de renting fotovoltaico para empresas
+        </Link>
+        .
+      </p>
 
       <h2 className={h2}>Resultados</h2>
       <p className={p}>

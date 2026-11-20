@@ -217,19 +217,31 @@ export default function AgenciaMarketingPlacasSolaresPage() {
         .
       </p>
 
-      <h2 className={h2}>También para aerotermia, baterías y cargadores</h2>
+      <h2 className={h2}>Nuestras verticales: fotovoltaica, renting, aerotermia y ahorro energético</h2>
       <p className={p}>
-        Nuestra especialidad es el autoconsumo solar, residencial y para{" "}
+        Nuestra especialidad es la instalación fotovoltaica para{" "}
+        <Link href="/leads-placas-solares" className={a}>
+          particulares
+        </Link>{" "}
+        y{" "}
         <Link href="/leads-autoconsumo-empresas" className={a}>
           empresas
         </Link>
-        , y también captamos clientes de{" "}
-        <Link href="/leads-baterias-solares" className={a}>
-          baterías solares
+        , el{" "}
+        <Link href="/leads-renting-fotovoltaico" className={a}>
+          renting fotovoltaico para empresas
         </Link>
-        ,{" "}
+        , la{" "}
         <Link href="/leads-aerotermia" className={a}>
           aerotermia
+        </Link>{" "}
+        y el{" "}
+        <Link href="/leads-ahorro-factura-luz" className={a}>
+          ahorro en la factura de luz
+        </Link>
+        . También captamos clientes de{" "}
+        <Link href="/leads-baterias-solares" className={a}>
+          baterías solares
         </Link>{" "}
         y{" "}
         <Link href="/leads-cargadores-coche-electrico" className={a}>

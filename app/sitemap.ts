@@ -82,6 +82,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/leads-renting-fotovoltaico`,
+      lastModified: new Date("2026-11-20"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/leads-ahorro-factura-luz`,
+      lastModified: new Date("2026-11-20"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/leads-aerotermia`,
       lastModified: new Date("2026-10-31"),
       changeFrequency: "monthly",
