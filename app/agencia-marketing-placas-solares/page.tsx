@@ -14,7 +14,7 @@ import ContentPage, {
 import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = `${SITE}/agencia-marketing-placas-solares`;
-const TITLE = "Agencia de marketing para empresas de placas solares";
+const TITLE = "Agencia de marketing para placas solares y renovables";
 const DESCRIPTION =
   "Marketing digital para empresas de energía solar y renovables: captación de clientes, publicidad e IA para llenar la agenda de visitas técnicas de tu instaladora. Garantía por contrato.";
 

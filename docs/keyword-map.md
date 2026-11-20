@@ -4,6 +4,8 @@ Una consulta principal por URL para evitar canibalización. Antes de crear o
 reescribir contenido, comprobar aquí que la consulta no está ya asignada.
 Fuentes: Search Console (exportación quincenal en Drive) y Keyword Planner.
 
+Search Console 20/11/2026 (3 meses): ~1.090 impresiones (x2 vs 06/11), 26 clics; posición diaria 7-10 en los últimos días. /leads-placas-solares 189 impr pos 11, 5 clics; /agencia 103 impr pos 12,5; /publicidad 88 pos 10,2 (0 clics → título nuevo); /leads-aerotermia 52 pos 6,4, 2 clics. "vira energy" (70 impr, pos 7) muestra el caso de Vira: búsqueda de marca del cliente, se enlaza su web. "generar leads instaladores" pos 24 (antes 32). "leads para energía solar" pos 23,6 con 1 clic. "agencia de marketing digital para empresas de energías renovables" pos 19,8. /sitemap.xml aparecía en resultados → noindex por cabecera.
+
 Search Console 06/11/2026 (3 meses): ~550 impresiones (x3,6 vs 23/10), 17 clics. /leads-placas-solares 111 impr pos 11 (antes 33, pos 18). "presupuestos placas solares" (32 impr, pos 59) es intención de consumidor: no se persigue. Nuevas: "leads para energía solar" pos 21,6; "marketing digital para empresas de energía solar" pos 32,6; "agencia marketing energía renovable" pos 12; "generar leads instaladores" pos 32 (antes 42).
 
 Notas de datos (23/10/2026):

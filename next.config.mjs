@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // El sitemap es para los buscadores, no para mostrarse como resultado.
+  async headers() {
+    return [
+      {
+        source: "/sitemap.xml",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+    ];
+  },
   async redirects() {
     return [
       {

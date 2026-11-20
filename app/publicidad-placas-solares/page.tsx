@@ -14,9 +14,9 @@ import ContentPage, {
 import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = `${SITE}/publicidad-placas-solares`;
-const TITLE = "Publicidad para empresas de placas solares";
+const TITLE = "Publicidad para placas solares que trae clientes";
 const DESCRIPTION =
-  "Publicidad en Google y Facebook/Instagram para empresas de placas solares y paneles solares: anuncios con tu marca que traen leads cualificados y visitas técnicas, con garantía de resultados.";
+  "Anuncios en Google, Facebook e Instagram para empresas de placas solares: campañas con tu marca que llenan la agenda de visitas técnicas. Garantía de resultados por contrato.";
 
 export const metadata: Metadata = {
   title: TITLE,
