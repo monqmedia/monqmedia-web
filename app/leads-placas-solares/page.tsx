@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import RelatedPosts from "@/app/blog/RelatedPosts";
+import Testimonials from "@/app/components/Testimonials";
 
 const URL = "https://www.monqmedia.com/leads-placas-solares";
 const TITLE = "Leads de placas solares exclusivos para instaladores";
@@ -501,6 +502,8 @@ export default function LeadsPlacasSolaresPage() {
             ))}
           </div>
 
+          <Testimonials />
+
           <div className="rounded-[24px] bg-[#0f1015] text-white px-6 py-8 sm:px-10 sm:py-10">
             <p className="text-[22px] sm:text-[26px] font-extrabold mb-3">
               ¿Quieres la agenda de tus técnicos llena de visitas?
@@ -509,10 +512,10 @@ export default function LeadsPlacasSolaresPage() {
               Asesoramiento gratuito y 100% sin compromiso. Garantía de resultados por contrato.
             </p>
             <Link
-              href="/#contacto"
+              href="/estudio"
               className="inline-flex items-center px-[22px] py-[12px] rounded-full bg-[#EB0A5C] text-white text-[15px] font-bold hover:bg-[#c40a4d] transition-colors"
             >
-              Contáctanos
+              Pide tu estudio gratuito
             </Link>
           </div>
         </article>

@@ -20,7 +20,7 @@ export default function ContactTracker() {
           ? "email"
           : /wa\.me|whatsapp/i.test(href)
             ? "whatsapp"
-            : href.endsWith("#contacto")
+            : href.endsWith("#contacto") || href === "/estudio"
               ? "cta"
               : null;
       if (!type) return;

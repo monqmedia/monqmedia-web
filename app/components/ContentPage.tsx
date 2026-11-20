@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Testimonials from "@/app/components/Testimonials";
 
 export const SITE = "https://www.monqmedia.com";
 
@@ -188,6 +189,8 @@ export default function ContentPage({
             ))}
           </div>
 
+          <Testimonials />
+
           <div className="rounded-[24px] bg-[#0f1015] text-white px-6 py-8 sm:px-10 sm:py-10">
             <p className="text-[22px] sm:text-[26px] font-extrabold mb-3">
               {ctaTitle}
@@ -197,10 +200,10 @@ export default function ContentPage({
               resultados por contrato.
             </p>
             <Link
-              href="/#contacto"
+              href="/estudio"
               className="inline-flex items-center px-[22px] py-[12px] rounded-full bg-[#EB0A5C] text-white text-[15px] font-bold hover:bg-[#c40a4d] transition-colors"
             >
-              Contáctanos
+              Pide tu estudio gratuito
             </Link>
           </div>
         </article>
