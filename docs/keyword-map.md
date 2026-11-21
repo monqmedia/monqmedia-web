@@ -36,6 +36,7 @@ Notas de datos (23/10/2026):
 | /leads-autoconsumo-empresas | leads autoconsumo empresas | clientes autoconsumo industrial, leads fotovoltaica empresas |
 | /leads-baterias-solares | leads baterías solares | clientes baterías placas solares |
 | /leads-renting-fotovoltaico | leads renting fotovoltaico | renting placas solares empresas, leads renting solar, clientes renting fotovoltaico |
+| /blog/como-vender-renting-fotovoltaico-a-empresas | cómo vender renting fotovoltaico | vender placas solares en renting, renting solar empresas argumentos, objeciones renting fotovoltaico |
 | /leads-ahorro-factura-luz | leads ahorro factura luz | leads comparador de luz, leads asesoría energética, leads comercializadora eléctrica, mejorar tarifa de luz |
 | /leads-aerotermia | leads de aerotermia | clientes aerotermia, captación aerotermia |
 | /leads-cargadores-coche-electrico | leads cargadores coche eléctrico | clientes puntos de recarga |

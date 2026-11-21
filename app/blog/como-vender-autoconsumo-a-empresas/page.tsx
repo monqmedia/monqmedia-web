@@ -129,6 +129,10 @@ export default function Article() {
         <Link href="/casos-de-exito" className={a}>
           casos de éxito
         </Link>
+        . Si la empresa no quiere invertir, lee{" "}
+        <Link href="/blog/como-vender-renting-fotovoltaico-a-empresas" className={a}>
+          cómo vender renting fotovoltaico a empresas
+        </Link>
         .
       </p>
       <RelatedPosts slug={post.slug} />

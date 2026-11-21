@@ -18,6 +18,15 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "como-vender-renting-fotovoltaico-a-empresas",
+    seoTitle: "Cómo vender renting fotovoltaico a empresas",
+    title: "Cómo vender renting fotovoltaico a empresas: guía comercial",
+    description:
+      "Cómo presentar el renting de placas solares a una empresa: a quién dirigirse, cómo comparar cuota y ahorro, qué objeciones aparecen y cómo captar empresas interesadas.",
+    date: "2026-11-21",
+    dateLabel: "21 de noviembre de 2026",
+  },
+  {
     slug: "como-generar-leads-para-instaladores",
     title: "Cómo generar leads para instaladores: guía práctica",
     description:
