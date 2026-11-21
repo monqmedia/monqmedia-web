@@ -160,8 +160,8 @@ export default function LeadsRentingFotovoltaicoPage() {
       <RelatedPosts
         title="Guías para empresas fotovoltaicas"
         slugs={[
+          "como-vender-renting-fotovoltaico-a-empresas",
           "como-vender-autoconsumo-a-empresas",
-          "marketing-para-empresas-fotovoltaicas",
           "coste-de-captar-un-cliente-de-autoconsumo",
         ]}
       />
