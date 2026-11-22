@@ -11,6 +11,7 @@ import ContentPage, {
   p,
   type Faq,
 } from "@/app/components/ContentPage";
+import RelatedPosts from "@/app/blog/RelatedPosts";
 
 const URL = `${SITE}/leads-ahorro-factura-luz`;
 const TITLE = "Leads de ahorro en factura de luz y tarifas";
@@ -155,6 +156,15 @@ export default function LeadsAhorroFacturaLuzPage() {
         </Link>
         .
       </p>
+
+      <RelatedPosts
+        title="Guías para empresas de energía"
+        slugs={[
+          "como-captar-clientes-comercializadora-de-luz",
+          "como-cualificar-un-lead-de-placas-solares",
+          "por-que-se-enfrian-los-leads-de-placas-solares",
+        ]}
+      />
     </ContentPage>
   );
 }

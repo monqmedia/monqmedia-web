@@ -18,6 +18,15 @@ export type Post = {
 // Más recientes primero.
 export const posts: Post[] = [
   {
+    slug: "como-captar-clientes-comercializadora-de-luz",
+    seoTitle: "Cómo captar clientes para una comercializadora de luz",
+    title: "Cómo captar clientes para una comercializadora de luz o asesoría energética",
+    description:
+      "Cómo conseguir particulares y empresas que quieren bajar su factura de luz: canales, formularios que piden la factura, contacto inmediato y cómo medir el coste por contrato.",
+    date: "2026-11-22",
+    dateLabel: "22 de noviembre de 2026",
+  },
+  {
     slug: "como-vender-renting-fotovoltaico-a-empresas",
     seoTitle: "Cómo vender renting fotovoltaico a empresas",
     title: "Cómo vender renting fotovoltaico a empresas: guía comercial",
