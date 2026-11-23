@@ -175,6 +175,15 @@ export default function ContentPage({
             <p className="text-[16px] sm:text-[17px] leading-[1.7] text-[#14161b]">
               <strong>En resumen:</strong> {summary}
             </p>
+            <p className="mt-4 text-[15px] text-[#14161b]">
+              ¿Quieres saber cuántos clientes puedes conseguir en tu zona?{" "}
+              <Link
+                href="/estudio"
+                className="font-bold text-[#EB0A5C] underline underline-offset-2 hover:text-[#c40a4d]"
+              >
+                Pide tu estudio gratuito →
+              </Link>
+            </p>
           </div>
 
           {children}
