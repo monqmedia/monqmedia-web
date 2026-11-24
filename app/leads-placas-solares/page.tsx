@@ -9,7 +9,7 @@ const URL = "https://www.monqmedia.com/leads-placas-solares";
 const TITLE = "Leads de placas solares exclusivos para instaladores";
 const DESCRIPTION =
   "Leads de placas solares y energía solar exclusivos (no compartidos) para instaladores y empresas fotovoltaicas de toda España. Visitas técnicas agendadas, contacto inmediato con IA y garantía por contrato.";
-const UPDATED = "2026-11-06";
+const UPDATED = "2026-11-24";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -136,7 +136,7 @@ export default function LeadsPlacasSolaresPage() {
           </h1>
           <p className="text-[14px] text-[#9aa0aa] mb-10 pb-8 border-b border-[#f0f0f2]">
             Actualizado el{" "}
-            <time dateTime={UPDATED}>6 de noviembre de 2026</time> · Monq Media
+            <time dateTime={UPDATED}>24 de noviembre de 2026</time> · Monq Media
           </p>
 
           <div className="rounded-2xl bg-[#fdf2f6] border border-[#f4d4e1] px-6 py-5 mb-8">
@@ -151,6 +151,15 @@ export default function LeadsPlacasSolaresPage() {
               . De media, nuestros clientes añaden entre 7 y 10 instalaciones
               extra al mes en los primeros 60 días, con garantía de resultados
               por contrato.
+            </p>
+            <p className="mt-4 text-[15px] text-[#14161b]">
+              ¿Quieres saber cuántos clientes puedes conseguir en tu zona?{" "}
+              <Link
+                href="/estudio"
+                className="font-bold text-[#EB0A5C] underline underline-offset-2 hover:text-[#c40a4d]"
+              >
+                Pide tu estudio gratuito →
+              </Link>
             </p>
           </div>
 
@@ -256,6 +265,57 @@ export default function LeadsPlacasSolaresPage() {
               .
             </li>
           </ol>
+
+          <h2 className={h2}>Leads de placas solares para particulares y para empresas</h2>
+          <p className={p}>
+            Un lead residencial y un lead de empresa no se captan ni se venden
+            igual. Por eso cada campaña se diseña según el cliente que tu
+            equipo quiere visitar.
+          </p>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-left text-[15px] border-collapse">
+              <thead>
+                <tr className="border-b border-[#ececf0]">
+                  <th className="py-3 pr-4 font-bold text-[#14161b]"></th>
+                  <th className="py-3 pr-4 font-bold text-[#14161b]">Particulares</th>
+                  <th className="py-3 font-bold text-[#14161b]">Empresas</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#3a3d46]">
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Quién decide</td>
+                  <td className="py-3 pr-4">La familia, a menudo en pareja</td>
+                  <td className="py-3">Gerente, propietario o financiero</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Qué se pregunta</td>
+                  <td className="py-3 pr-4">Vivienda, tejado, factura y plazo</td>
+                  <td className="py-3">Actividad, consumo, cubierta y decisor</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Qué se agenda</td>
+                  <td className="py-3 pr-4">Visita técnica en la vivienda</td>
+                  <td className="py-3">Reunión o estudio energético</td>
+                </tr>
+                <tr className="border-b border-[#f0f0f2]">
+                  <td className="py-3 pr-4 font-semibold">Fórmulas</td>
+                  <td className="py-3 pr-4">Compra o financiación</td>
+                  <td className="py-3">Compra, renting o PPA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            Más detalle en{" "}
+            <Link href="/leads-autoconsumo-empresas" className="text-[#EB0A5C] font-semibold hover:underline">
+              leads de autoconsumo para empresas
+            </Link>{" "}
+            y{" "}
+            <Link href="/leads-renting-fotovoltaico" className="text-[#EB0A5C] font-semibold hover:underline">
+              leads de renting fotovoltaico
+            </Link>
+            .
+          </p>
 
           <h2 className={h2}>¿Cuánto cuesta un lead de placas solares?</h2>
           <p className={p}>
