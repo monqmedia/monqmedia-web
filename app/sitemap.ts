@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/leads-placas-solares`,
-      lastModified: new Date("2026-11-06"),
+      lastModified: new Date("2026-11-24"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
