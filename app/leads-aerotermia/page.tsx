@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedPosts from "@/app/blog/RelatedPosts";
 import ContentPage, {
   SITE,
   Table,
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
 const faqs: Faq[] = [
   {
     q: "¿Trabajáis con empresas de aerotermia?",
-    a: "Sí. Aunque nuestra especialidad principal es el autoconsumo solar, también captamos clientes para empresas de aerotermia y de cargadores de coche eléctrico en toda España.",
+    a: "Sí. La aerotermia es una de nuestras verticales principales, junto con las placas solares, el renting fotovoltaico y el ahorro en la factura de luz. Trabajamos con empresas de aerotermia y climatización de toda España.",
   },
   {
     q: "¿Los leads son exclusivos?",
@@ -55,6 +56,14 @@ const faqs: Faq[] = [
   {
     q: "¿Cómo evitáis que los leads se enfríen?",
     a: "Con un sistema de inteligencia artificial que contacta a cada lead al momento, también en fin de semana o fuera de horario.",
+  },
+  {
+    q: "¿Cuándo hay más demanda de aerotermia?",
+    a: "El interés suele crecer en otoño e invierno, cuando llegan las facturas de calefacción, y cuando una caldera se avería o se queda vieja. Conviene tener las campañas listas antes de esos picos para no perder clientes.",
+  },
+  {
+    q: "¿Qué mensaje funciona para anunciar aerotermia?",
+    a: "El ahorro frente a la caldera actual de gas o gasóleo, el confort de tener calefacción, refrigeración y agua caliente con un solo equipo, y la confianza en tu empresa con instalaciones reales de tu zona. Mejor evitar promesas de ahorro sin un estudio previo.",
   },
 ];
 
@@ -80,8 +89,8 @@ export default function LeadsAerotermiaPage() {
       crumb="Leads de aerotermia"
       eyebrow="Aerotermia"
       title={TITLE}
-      updated="2026-10-31"
-      updatedLabel="31 de octubre de 2026"
+      updated="2026-11-25"
+      updatedLabel="25 de noviembre de 2026"
       summary={
         <>
           Monq Media capta clientes interesados en aerotermia y{" "}
@@ -125,6 +134,43 @@ export default function LeadsAerotermiaPage() {
         ]}
       />
 
+      <h2 className={h2}>Cómo conseguir clientes de aerotermia</h2>
+      <ol className="list-decimal pl-6 space-y-3 mb-4">
+        <li className={li}>
+          <strong>Anuncios en tu zona</strong> dirigidos a viviendas
+          unifamiliares y negocios con calefacción de gas o gasóleo.
+        </li>
+        <li className={li}>
+          <strong>Mensaje de ahorro y confort:</strong> calefacción,
+          refrigeración y agua caliente con un solo equipo.
+        </li>
+        <li className={li}>
+          <strong>Formulario que cualifica</strong> con las preguntas de la
+          tabla anterior, para que el técnico visite proyectos reales.
+        </li>
+        <li className={li}>
+          <strong>Contacto en minutos</strong> y visita técnica agendada antes
+          de que el cliente pida otro presupuesto.
+        </li>
+        <li className={li}>
+          <strong>Seguimiento del presupuesto</strong> hasta la firma. Ver{" "}
+          <Link href="/blog/seguimiento-de-presupuestos-de-placas-solares" className={a}>
+            cómo hacer seguimiento de presupuestos
+          </Link>
+          .
+        </li>
+      </ol>
+
+      <h2 className={h2}>Aerotermia para viviendas y para empresas</h2>
+      <Table
+        head={["", "Viviendas", "Empresas"]}
+        rows={[
+          ["Motivo habitual", "Cambiar una caldera vieja y pagar menos", "Reducir el gasto en climatización"],
+          ["Quién decide", "La familia", "Gerente o propietario"],
+          ["Qué se agenda", "Visita técnica en casa", "Visita o estudio del edificio"],
+        ]}
+      />
+
       <h2 className={h2}>Aerotermia y placas solares: más valor por cliente</h2>
       <p className={p}>
         Muchas instaladoras ofrecen ambas cosas. Un cliente que pide
@@ -163,6 +209,15 @@ export default function LeadsAerotermiaPage() {
         </Link>
         .
       </p>
+
+      <RelatedPosts
+        title="Guías para instaladores de aerotermia"
+        slugs={[
+          "vender-aerotermia-y-cargadores-a-clientes-de-placas-solares",
+          "como-generar-leads-para-instaladores",
+          "como-cualificar-un-lead-de-placas-solares",
+        ]}
+      />
     </ContentPage>
   );
 }
