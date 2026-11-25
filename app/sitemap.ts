@@ -95,7 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/leads-aerotermia`,
-      lastModified: new Date("2026-10-31"),
+      lastModified: new Date("2026-11-25"),
       changeFrequency: "monthly",
       priority: 0.6,
     },
