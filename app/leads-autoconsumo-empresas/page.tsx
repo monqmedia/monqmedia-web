@@ -53,6 +53,14 @@ const faqs: Faq[] = [
     q: "¿Ofrecéis garantía?",
     a: "Sí, ofrecemos garantía de resultados por contrato. En el asesoramiento gratuito te explicamos cómo funciona en tu caso.",
   },
+  {
+    q: "¿Qué empresas se interesan más por el autoconsumo fotovoltaico?",
+    a: "Las que consumen mucha electricidad de día y tienen cubierta o terreno disponible: naves industriales y logísticas, comercios, explotaciones agrícolas, hoteles, talleres o almacenes frigoríficos, entre otras.",
+  },
+  {
+    q: "¿Cómo cualificáis un lead de autoconsumo industrial?",
+    a: "Preguntando por la actividad, la factura o el consumo eléctrico, la cubierta disponible, si la nave es propia y quién decide. Así tu equipo solo prepara estudios para empresas que pueden invertir o contratar renting.",
+  },
 ];
 
 const jsonLd = [
@@ -81,8 +89,8 @@ export default function LeadsAutoconsumoEmpresasPage() {
       crumb="Leads de autoconsumo para empresas"
       eyebrow="Autoconsumo industrial y comercial"
       title={TITLE}
-      updated="2026-10-17"
-      updatedLabel="17 de octubre de 2026"
+      updated="2026-11-26"
+      updatedLabel="26 de noviembre de 2026"
       summary={
         <>
           Monq Media capta empresas, comercios, naves e industrias interesadas
@@ -123,6 +131,38 @@ export default function LeadsAutoconsumoEmpresasPage() {
         ]}
       />
 
+      <h2 className={h2}>Cómo cualificamos cada empresa</h2>
+      <Table
+        head={["Pregunta", "Por qué importa"]}
+        rows={[
+          ["Actividad y horario", "El consumo diurno es el que más aprovecha el autoconsumo"],
+          ["Factura o consumo eléctrico", "Dimensionar la instalación y el ahorro"],
+          ["Cubierta o terreno disponible", "Confirmar que el proyecto es viable"],
+          ["Nave propia o alquilada", "Saber quién debe autorizar la instalación"],
+          ["Quién decide y cómo quiere pagar", "Compra, financiación o renting"],
+        ]}
+      />
+
+      <h2 className={h2}>Sectores con más interés en el autoconsumo</h2>
+      <ul className="list-disc pl-6 space-y-3 mb-4">
+        <li className={li}>
+          <strong>Industria y naves logísticas:</strong> grandes cubiertas y
+          consumo en horario laboral.
+        </li>
+        <li className={li}>
+          <strong>Comercio y supermercados:</strong> iluminación y frío
+          durante todo el día.
+        </li>
+        <li className={li}>
+          <strong>Agricultura y ganadería:</strong> bombeo, riego y
+          refrigeración.
+        </li>
+        <li className={li}>
+          <strong>Hoteles y residencias:</strong> climatización y agua
+          caliente todo el año.
+        </li>
+      </ul>
+
       <h2 className={h2}>Cómo llenamos tu agenda de estudios para empresas</h2>
       <ol className="list-decimal pl-6 space-y-3 mb-4">
         <li className={li}>
@@ -157,7 +197,8 @@ export default function LeadsAutoconsumoEmpresasPage() {
       <p className={p}>
         De media, nuestros clientes añaden entre 7 y 10 instalaciones extra al
         mes en los primeros 60 días, con garantía de resultados por contrato.
-        Mira cómo lo han conseguido otras instaladoras en nuestros{" "}
+        En el segmento de empresas, Efistar suma entre 10 y 15 estudios extra
+        al mes en Andalucía. Mira cómo lo han conseguido otras instaladoras en nuestros{" "}
         <Link href="/casos-de-exito" className={a}>
           casos de éxito
         </Link>
@@ -169,7 +210,7 @@ export default function LeadsAutoconsumoEmpresasPage() {
       </p>
       <RelatedPosts
         title="Guías para instaladores"
-        slugs={["como-vender-autoconsumo-a-empresas", "marketing-para-empresas-fotovoltaicas", "coste-de-captar-un-cliente-de-autoconsumo"]}
+        slugs={["como-vender-autoconsumo-a-empresas", "como-vender-renting-fotovoltaico-a-empresas", "coste-de-captar-un-cliente-de-autoconsumo"]}
       />
     </ContentPage>
   );
