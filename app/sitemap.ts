@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/agencia-marketing-placas-solares`,
-      lastModified: new Date("2026-11-20"),
+      lastModified: new Date("2026-11-27"),
       changeFrequency: "monthly",
       priority: 0.9,
     },

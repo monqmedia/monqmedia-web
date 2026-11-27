@@ -58,6 +58,10 @@ const faqs: Faq[] = [
     a: "Por definir zona y capacidad de visitas, lanzar campañas en Google y Meta con tu marca, filtrar a los curiosos y contactar cada lead en minutos. Después, medir el coste por instalación y reforzar lo que funciona.",
   },
   {
+    q: "¿Cuánto cuesta una agencia de marketing para placas solares?",
+    a: "Depende del modelo de trabajo, la inversión en publicidad y las zonas. Hay agencias con cuota fija, otras que cobran por lead y otras que se comprometen con resultados. Lo importante es comparar el coste por instalación cerrada. En Monq Media trabajamos con garantía de resultados por contrato y te damos una estimación en el asesoramiento gratuito.",
+  },
+  {
     q: "¿Las campañas llevan mi marca?",
     a: "Sí. Cada campaña es personalizada y respeta la marca de tu empresa, con visión a largo plazo para crear un canal de captación propio.",
   },
@@ -85,8 +89,8 @@ export default function AgenciaMarketingPlacasSolaresPage() {
       crumb="Agencia de marketing para placas solares"
       eyebrow="Agencia especializada"
       title={TITLE}
-      updated="2026-11-10"
-      updatedLabel="10 de noviembre de 2026"
+      updated="2026-11-27"
+      updatedLabel="27 de noviembre de 2026"
       summary={
         <>
           Monq Media es una agencia de marketing especializada en{" "}
@@ -139,6 +143,28 @@ export default function AgenciaMarketingPlacasSolaresPage() {
           ["Cómo se mide", "Coste por instalación y retorno", "Coste por clic o por lead"],
         ]}
       />
+
+      <h2 className={h2}>Cuánto cuesta una agencia de marketing solar</h2>
+      <Table
+        head={["Modelo", "Cómo funciona", "Qué vigilar"]}
+        rows={[
+          ["Cuota fija", "Pagas un importe mensual por la gestión", "Que se comprometa con visitas o instalaciones"],
+          ["Pago por lead", "Pagas por cada contacto entregado", "Calidad y exclusividad de cada lead"],
+          ["Con garantía de resultados", "La agencia se compromete por contrato", "Qué resultado se garantiza y cómo se mide"],
+        ]}
+      />
+      <p className={p}>
+        Más allá del modelo, la cifra que importa es el coste por instalación
+        cerrada. Calcúlalo con la{" "}
+        <Link href="/calculadora-leads-placas-solares" className={a}>
+          calculadora de leads
+        </Link>{" "}
+        y revisa{" "}
+        <Link href="/blog/que-pedir-a-una-agencia-de-marketing-para-instaladores-solares" className={a}>
+          qué pedir a una agencia de marketing para instaladores solares
+        </Link>
+        .
+      </p>
 
       <h2 className={h2}>Señales de que tu instaladora necesita una agencia especializada</h2>
       <ul className="list-disc pl-6 space-y-3 mb-4">
