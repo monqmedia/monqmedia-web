@@ -68,6 +68,20 @@ const groups: { title: string; terms: Term[] }[] = [
       { term: "Batería solar", def: "Equipo que almacena la energía sobrante para usarla cuando las placas no producen, por ejemplo de noche.", href: "/leads-baterias-solares" },
       { term: "Inversor", def: "Equipo que convierte la corriente continua de los módulos solares en corriente alterna utilizable en la vivienda o negocio." },
       { term: "Módulo solar (panel o placa)", def: "Cada uno de los paneles que transforman la luz del sol en electricidad." },
+      { term: "Autoconsumo para empresas", def: "Instalación fotovoltaica en una nave, comercio, explotación agrícola o industria para reducir su factura eléctrica. Suele empezar con un estudio energético.", href: "/leads-autoconsumo-empresas" },
+      { term: "Renting fotovoltaico", def: "Fórmula en la que una empresa instala placas solares sin inversión inicial y paga una cuota periódica durante el contrato, mientras ahorra en su factura.", href: "/leads-renting-fotovoltaico" },
+      { term: "PPA (contrato de compra de energía)", def: "Acuerdo en el que la empresa paga la energía que consume de una instalación solar a un precio pactado durante varios años, en lugar de comprar la instalación.", href: "/blog/como-vender-renting-fotovoltaico-a-empresas" },
+      { term: "Estudio energético", def: "Análisis del consumo, la factura y la cubierta de una empresa o vivienda para dimensionar la instalación y estimar el ahorro." },
+    ],
+  },
+  {
+    title: "Aerotermia y ahorro energético",
+    terms: [
+      { term: "Aerotermia", def: "Sistema que extrae energía del aire exterior con una bomba de calor para dar calefacción, refrigeración y agua caliente con un solo equipo.", href: "/leads-aerotermia" },
+      { term: "Lead de aerotermia", def: "Vivienda o negocio que pide información o presupuesto para instalar aerotermia, normalmente para sustituir una caldera de gas o gasóleo.", href: "/leads-aerotermia" },
+      { term: "Comparativa de tarifas de luz", def: "Análisis de la factura de un cliente para proponerle una tarifa o comercializadora más barata según su consumo y su potencia contratada.", href: "/leads-ahorro-factura-luz" },
+      { term: "Asesoría energética", def: "Servicio que revisa la factura, la potencia contratada y los hábitos de consumo de un hogar o empresa para reducir su gasto en energía.", href: "/blog/como-captar-clientes-comercializadora-de-luz" },
+      { term: "Potencia contratada", def: "Máxima potencia eléctrica que el cliente puede usar a la vez según su contrato. Ajustarla bien es una de las formas más directas de bajar la factura." },
     ],
   },
 ];
@@ -125,8 +139,8 @@ export default function GlosarioPage() {
       crumb="Glosario"
       eyebrow="Glosario"
       title={TITLE}
-      updated="2026-10-27"
-      updatedLabel="27 de octubre de 2026"
+      updated="2026-11-28"
+      updatedLabel="28 de noviembre de 2026"
       summary={
         <>
           los términos clave para captar clientes de placas solares son{" "}
